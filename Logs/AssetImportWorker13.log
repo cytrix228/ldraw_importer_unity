@@ -358,3 +358,81 @@ Memory consumption went from 77.8 MB to 77.3 MB.
 Total: 12.426789 ms (FindLiveObjects: 0.486746 ms CreateObjectMapping: 0.408080 ms MarkObjects: 10.041932 ms  DeleteObjects: 1.489163 ms)
 
 Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 7234.877033 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2-4con10.asset
+  artifactKey: Guid(b1fad29da890b04048da2cfd1b31fcf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2-4con10.asset using Guid(b1fad29da890b04048da2cfd1b31fcf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '23518776023a2bbebc1a8c5064786846') in 0.103611694 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.499760 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3-8ring12.asset
+  artifactKey: Guid(d771485479fad3c158bccc2514302217) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3-8ring12.asset using Guid(d771485479fad3c158bccc2514302217) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1024b2f9ac9a503ca24fb09cc4959ba5') in 0.014400331 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.437956 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/4-4ring12.asset
+  artifactKey: Guid(21a7c26b82ccfca19a9eb1316f661a6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/4-4ring12.asset using Guid(21a7c26b82ccfca19a9eb1316f661a6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c9e4af01950d21e32e2edff4c025a4f0') in 0.009095372 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.600422 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2865s05.asset
+  artifactKey: Guid(1e50236d6b85a3141937508ba75a9851) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2865s05.asset using Guid(1e50236d6b85a3141937508ba75a9851) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8c91c515808d189877207cd2a02ae0bf') in 0.008572231 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.164449 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2867s05.asset
+  artifactKey: Guid(95b2b6c6eff32354e8f9ba325bbd43de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2867s05.asset using Guid(95b2b6c6eff32354e8f9ba325bbd43de) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'dd9814fdd422f8b018d1559aaa1482f0') in 0.011332802 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.161660 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2878.asset
+  artifactKey: Guid(9329ad844c6cdb9479b5793b79bdcf60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2878.asset using Guid(9329ad844c6cdb9479b5793b79bdcf60) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '541dcac839c1f4666486217b2356bf26') in 0.01184169 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2893.asset
+  artifactKey: Guid(87d49724420c30944b077daa29ad615c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2893.asset using Guid(87d49724420c30944b077daa29ad615c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7f77ccf5e54764be10a9358cebfdaa24') in 0.009591714 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000122 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2871a.asset
+  artifactKey: Guid(c135da49512cae14da4536a4e5d5b6c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2871a.asset using Guid(c135da49512cae14da4536a4e5d5b6c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '23efeeecb2878749f864fb06fae9eed8') in 0.005778281 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000173 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2876.asset
+  artifactKey: Guid(fd668b646d0409d418e2519461743667) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2876.asset using Guid(fd668b646d0409d418e2519461743667) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '77572153596e9730e578093088681f9b') in 0.005927075 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+
+SDL leaked 2 allocations
+Internal: Possible leak. All render target surfaces should be removed from IdMap when destructed using RenderTargetMap::Remove(RenderSurfaceBase* rs).
