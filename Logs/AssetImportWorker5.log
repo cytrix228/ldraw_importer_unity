@@ -1,0 +1,2203 @@
+Unity Editor version:    6000.0.37f1 (090b7797214c)
+Branch:                  6000.0/staging
+Build type:              Release
+Batch mode:              YES
+System name:             Linux
+Distro version:          #53-Ubuntu SMP PREEMPT_DYNAMIC Sat Jan 11 00:06:25 UTC 2025
+Kernel version:          6.8.0-52-generic
+Architecture:            x86_64
+Available memory:        128490 MB
+Using pre-set license
+Pro License: YES
+The selected window backend is (null) 
+Desktop is 11520 x 2160 @ 60 Hz
+Initialize udev device monitor.
+
+COMMAND LINE ARGUMENTS:
+Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker5
+-projectPath
+/media/cytrix/usbdata1/project/Lets3DGame/ldraw_importer_unity
+-logFile
+Logs/AssetImportWorker5.log
+-srvPort
+44255
+-job-worker-count
+13
+-background-job-worker-count
+8
+-gc-helper-count
+1
+Successfully changed project path to: /media/cytrix/usbdata1/project/Lets3DGame/ldraw_importer_unity
+
+(Unity:640030): Gtk-CRITICAL **: 13:53:59.263: gtk_label_set_text: assertion 'GTK_IS_LABEL (label)' failed
+
+(Unity:640030): Gtk-CRITICAL **: 13:53:59.272: gtk_label_set_text: assertion 'GTK_IS_LABEL (label)' failed
+/media/cytrix/usbdata1/project/Lets3DGame/ldraw_importer_unity
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [126130612249920]  Target information:
+
+Player connection [126130612249920]  * "[IP] 172.30.1.30 [Port] 0 [Flags] 2 [Guid] 4132813084 [EditorId] 4132813084 [Version] 1048832 [Id] LinuxEditor(16,172.30.1.30) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" 
+
+Player connection [126130612249920]  * "[IP] 172.17.0.1 [Port] 0 [Flags] 2 [Guid] 4132813084 [EditorId] 4132813084 [Version] 1048832 [Id] LinuxEditor(16,172.30.1.30) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" 
+
+Player connection [126130612249920] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [126130612249920] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 13
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 1.74 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.0.37f1 (090b7797214c)
+[Subsystems] Discovering subsystems at path /home/cytrix/Unity/Hub/Editor/6000.0.37f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /media/cytrix/usbdata1/project/Lets3DGame/ldraw_importer_unity/Assets
+kGfxThreadingModeNonThreaded is not supported on OpenGL Core. Reverting to kGfxThreadingModeDirect instead.
+GfxDevice: creating device client; kGfxThreadingModeDirect
+GLX Extensions: GLX_ARB_get_proc_address GLX_ARB_multisample GLX_EXT_visual_info GLX_EXT_visual_rating GLX_EXT_import_context GLX_SGI_video_sync GLX_SGIX_fbconfig GLX_SGIX_pbuffer GLX_SGI_swap_control GLX_EXT_swap_control GLX_EXT_swap_control_tear GLX_EXT_buffer_age GLX_ARB_create_context GLX_ARB_create_context_profile GLX_NV_float_buffer GLX_ARB_fbconfig_float GLX_EXT_texture_from_pixmap GLX_EXT_framebuffer_sRGB GLX_NV_copy_image GLX_EXT_create_context_es_profile GLX_EXT_create_context_es2_profile GLX_ARB_create_context_no_error GLX_ARB_create_context_robustness GLX_NV_delay_before_swap GLX_EXT_stereo_tree GLX_ARB_context_flush_control GLX_NV_robustness_video_memory_purge GLX_NV_multigpu_context 
+Renderer: NVIDIA GeForce RTX 3090/PCIe/SSE2
+Vendor:   NVIDIA Corporation
+Version:  4.5.0 NVIDIA 550.120
+GLES:     0
+ GL_AMD_multi_draw_indirect GL_AMD_seamless_cubemap_per_texture GL_AMD_vertex_shader_viewport_index GL_AMD_vertex_shader_layer GL_ARB_arrays_of_arrays GL_ARB_base_instance GL_ARB_bindless_texture GL_ARB_blend_func_extended GL_ARB_buffer_storage GL_ARB_clear_buffer_object GL_ARB_clear_texture GL_ARB_clip_control GL_ARB_color_buffer_float GL_ARB_compressed_texture_pixel_storage GL_ARB_conservative_depth GL_ARB_compute_shader GL_ARB_compute_variable_group_size GL_ARB_conditional_render_inverted GL_ARB_copy_buffer GL_ARB_copy_image GL_ARB_cull_distance GL_ARB_debug_output GL_ARB_depth_buffer_float GL_ARB_depth_clamp GL_ARB_depth_texture GL_ARB_derivative_control GL_ARB_direct_state_access GL_ARB_draw_buffers GL_ARB_draw_buffers_blend GL_ARB_draw_indirect GL_ARB_draw_elements_base_vertex GL_ARB_draw_instanced GL_ARB_enhanced_layouts GL_ARB_ES2_compatibility GL_ARB_ES3_compatibility GL_ARB_ES3_1_compatibility GL_ARB_ES3_2_compatibility GL_ARB_explicit_attrib_location GL_ARB_explicit_uniform_location GL_ARB_fragmen
+t_coord_conventions GL_ARB_fragment_layer_viewport GL_ARB_fragment_program GL_ARB_fragment_program_shadow GL_ARB_fragment_shader GL_ARB_fragment_shader_interlock GL_ARB_framebuffer_no_attachments GL_ARB_framebuffer_object GL_ARB_framebuffer_sRGB GL_ARB_geometry_shader4 GL_ARB_get_program_binary GL_ARB_get_texture_sub_image GL_ARB_gl_spirv GL_ARB_gpu_shader5 GL_ARB_gpu_shader_fp64 GL_ARB_gpu_shader_int64 GL_ARB_half_float_pixel GL_ARB_half_float_vertex GL_ARB_imaging GL_ARB_indirect_parameters GL_ARB_instanced_arrays GL_ARB_internalformat_query GL_ARB_internalformat_query2 GL_ARB_invalidate_subdata GL_ARB_map_buffer_alignment GL_ARB_map_buffer_range GL_ARB_multi_bind GL_ARB_multi_draw_indirect GL_ARB_multisample GL_ARB_multitexture GL_ARB_occlusion_query GL_ARB_occlusion_query2 GL_ARB_parallel_shader_compile GL_ARB_pipeline_statistics_query GL_ARB_pixel_buffer_object GL_ARB_point_parameters GL_ARB_point_sprite GL_ARB_polygon_offset_clamp GL_ARB_post_depth_coverage GL_ARB_program_interface_query GL_ARB_provoki
+ng_vertex GL_ARB_query_buffer_object GL_ARB_robust_buffer_access_behavior GL_ARB_robustness GL_ARB_sample_locations GL_ARB_sample_shading GL_ARB_sampler_objects GL_ARB_seamless_cube_map GL_ARB_seamless_cubemap_per_texture GL_ARB_separate_shader_objects GL_ARB_shader_atomic_counter_ops GL_ARB_shader_atomic_counters GL_ARB_shader_ballot GL_ARB_shader_bit_encoding GL_ARB_shader_clock GL_ARB_shader_draw_parameters GL_ARB_shader_group_vote GL_ARB_shader_image_load_store GL_ARB_shader_image_size GL_ARB_shader_objects GL_ARB_shader_precision GL_ARB_shader_storage_buffer_object GL_ARB_shader_subroutine GL_ARB_shader_texture_image_samples GL_ARB_shader_texture_lod GL_ARB_shading_language_100 GL_ARB_shader_viewport_layer_array GL_ARB_shading_language_420pack GL_ARB_shading_language_include GL_ARB_shading_language_packing GL_ARB_shadow GL_ARB_sparse_buffer GL_ARB_sparse_texture GL_ARB_sparse_texture2 GL_ARB_sparse_texture_clamp GL_ARB_spirv_extensions GL_ARB_stencil_texturing GL_ARB_sync GL_ARB_tessellation_shader GL_A
+RB_texture_barrier GL_ARB_texture_border_clamp GL_ARB_texture_buffer_object GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_buffer_range GL_ARB_texture_compression GL_ARB_texture_compression_bptc GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map GL_ARB_texture_cube_map_array GL_ARB_texture_env_add GL_ARB_texture_env_combine GL_ARB_texture_env_crossbar GL_ARB_texture_env_dot3 GL_ARB_texture_filter_anisotropic GL_ARB_texture_filter_minmax GL_ARB_texture_float GL_ARB_texture_gather GL_ARB_texture_mirror_clamp_to_edge GL_ARB_texture_mirrored_repeat GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_levels GL_ARB_texture_query_lod GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_stencil8 GL_ARB_texture_storage GL_ARB_texture_storage_multisample GL_ARB_texture_swizzle GL_ARB_texture_view GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_transform_feedback_instanced GL_ARB_transform_feedback_overflow_query GL_ARB_t
+ranspose_matrix GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_64bit GL_ARB_vertex_attrib_binding GL_ARB_vertex_buffer_object GL_ARB_vertex_program GL_ARB_vertex_shader GL_ARB_vertex_type_10f_11f_11f_rev GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array GL_ARB_window_pos GL_ATI_draw_buffers GL_ATI_texture_float GL_ATI_texture_mirror_once GL_S3_s3tc GL_EXT_texture_env_add GL_EXT_abgr GL_EXT_bgra GL_EXT_bindable_uniform GL_EXT_blend_color GL_EXT_blend_equation_separate GL_EXT_blend_func_separate GL_EXT_blend_minmax GL_EXT_blend_subtract GL_EXT_compiled_vertex_array GL_EXT_Cg_shader GL_EXT_depth_bounds_test GL_EXT_direct_state_access GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_draw_range_elements GL_EXT_fog_coord GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXTX_framebuffer_mixed_formats GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_geometry_shader4 GL_EXT_gpu_program_parameters 
+GL_EXT_gpu_shader4 GL_EXT_multi_draw_arrays GL_EXT_multiview_texture_multisample GL_EXT_multiview_timer_query GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_packed_pixels GL_EXT_pixel_buffer_object GL_EXT_point_parameters GL_EXT_polygon_offset_clamp GL_EXT_post_depth_coverage GL_EXT_provoking_vertex GL_EXT_raster_multisample GL_EXT_rescale_normal GL_EXT_secondary_color GL_EXT_separate_shader_objects GL_EXT_separate_specular_color GL_EXT_shader_image_load_formatted GL_EXT_shader_image_load_store GL_EXT_shader_integer_mix GL_EXT_shadow_funcs GL_EXT_sparse_texture2 GL_EXT_stencil_two_side GL_EXT_stencil_wrap GL_EXT_texture3D GL_EXT_texture_array GL_EXT_texture_buffer_object GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_latc GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_cube_map GL_EXT_texture_edge_clamp GL_EXT_texture_env_combine GL_EXT_texture_env_dot3 GL_EXT_texture_filter_anisotropic GL_EXT_texture_filter_minmax GL_EXT_texture_integer GL_EXT_texture_lod G
+L_EXT_texture_lod_bias GL_EXT_texture_mirror_clamp GL_EXT_texture_object GL_EXT_texture_shadow_lod GL_EXT_texture_shared_exponent GL_EXT_texture_sRGB GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_decode GL_EXT_texture_storage GL_EXT_texture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback2 GL_EXT_vertex_array GL_EXT_vertex_array_bgra GL_EXT_vertex_attrib_64bit GL_EXT_window_rectangles GL_EXT_x11_sync_object GL_EXT_import_sync_object GL_NV_robustness_video_memory_purge GL_IBM_rasterpos_clip GL_IBM_texture_mirrored_repeat GL_KHR_context_flush_control GL_KHR_debug GL_EXT_memory_object GL_EXT_memory_object_fd GL_NV_memory_object_sparse GL_KHR_parallel_shader_compile GL_KHR_no_error GL_KHR_robust_buffer_access_behavior GL_KHR_robustness GL_EXT_semaphore GL_EXT_semaphore_fd GL_NV_timeline_semaphore GL_KHR_shader_subgroup GL_KTX_buffer_region GL_NV_alpha_to_coverage_dither_control GL_NV_bindless_multi_draw_indirect GL_NV_bindless_multi_draw_indirect_count GL_NV_bindless_texture GL_NV_blend_equation_advanced GL_NV_
+blend_equation_advanced_coherent GL_NVX_blend_equation_advanced_multi_draw_buffers GL_NV_blend_minmax_factor GL_NV_blend_square GL_NV_clip_space_w_scaling GL_NV_command_list GL_NV_compute_program5 GL_NV_compute_shader_derivatives GL_NV_conditional_render GL_NV_conservative_raster GL_NV_conservative_raster_dilate GL_NV_conservative_raster_pre_snap GL_NV_conservative_raster_pre_snap_triangles GL_NV_conservative_raster_underestimation GL_NV_copy_depth_to_color GL_NV_copy_image GL_NV_depth_buffer_float GL_NV_depth_clamp GL_NV_draw_texture GL_NV_draw_vulkan_image GL_NV_ES1_1_compatibility GL_NV_ES3_1_compatibility GL_NV_explicit_multisample GL_NV_feature_query GL_NV_fence GL_NV_fill_rectangle GL_NV_float_buffer GL_NV_fog_distance GL_NV_fragment_coverage_to_color GL_NV_fragment_program GL_NV_fragment_program_option GL_NV_fragment_program2 GL_NV_fragment_shader_barycentric GL_NV_fragment_shader_interlock GL_NV_framebuffer_mixed_samples GL_NV_framebuffer_multisample_coverage GL_NV_geometry_shader4 GL_NV_geometry_sha
+der_passthrough GL_NV_gpu_program4 GL_NV_internalformat_sample_query GL_NV_gpu_program4_1 GL_NV_gpu_program5 GL_NV_gpu_program5_mem_extended GL_NV_gpu_program_fp64 GL_NV_gpu_shader5 GL_NV_half_float GL_NV_light_max_exponent GL_NV_memory_attachment GL_NV_mesh_shader GL_NV_multisample_coverage GL_NV_multisample_filter_hint GL_NV_occlusion_query GL_NV_packed_depth_stencil GL_NV_parameter_buffer_object GL_NV_parameter_buffer_object2 GL_NV_path_rendering GL_NV_path_rendering_shared_edge GL_NV_pixel_data_range GL_NV_point_sprite GL_NV_primitive_restart GL_NV_primitive_shading_rate GL_NV_query_resource GL_NV_query_resource_tag GL_NV_register_combiners GL_NV_register_combiners2 GL_NV_representative_fragment_test GL_NV_sample_locations GL_NV_sample_mask_override_coverage GL_NV_scissor_exclusive GL_NV_shader_atomic_counters GL_NV_shader_atomic_float GL_NV_shader_atomic_float64 GL_NV_shader_atomic_fp16_vector GL_NV_shader_atomic_int64 GL_NV_shader_buffer_load GL_NV_shader_storage_buffer_object GL_NV_shader_subgroup_par
+titioned GL_NV_shader_texture_footprint GL_NV_shading_rate_image GL_NV_stereo_view_rendering GL_NV_texgen_reflection GL_NV_texture_barrier GL_NV_texture_compression_vtc GL_NV_texture_dirty_tile_map GL_NV_texture_env_combine4 GL_NV_texture_multisample GL_NV_texture_rectangle GL_NV_texture_rectangle_compressed GL_NV_texture_shader GL_NV_texture_shader2 GL_NV_texture_shader3 GL_NV_transform_feedback GL_NV_transform_feedback2 GL_NV_uniform_buffer_unified_memory GL_NV_uniform_buffer_std430_layout GL_NV_vdpau_interop GL_NV_vdpau_interop2 GL_NV_vertex_array_range GL_NV_vertex_array_range2 GL_NV_vertex_attrib_integer_64bit GL_NV_vertex_buffer_unified_memory GL_NV_vertex_program GL_NV_vertex_program1_1 GL_NV_vertex_program2 GL_NV_vertex_program2_option GL_NV_vertex_program3 GL_NV_viewport_array2 GL_NV_viewport_swizzle GL_NVX_conditional_render GL_NV_gpu_multicast GL_NVX_progress_fence GL_NVX_gpu_memory_info GL_NVX_nvenc_interop GL_NV_shader_thread_group GL_NV_shader_thread_shuffle GL_KHR_blend_equation_advanced GL_KH
+R_blend_equation_advanced_coherent GL_OVR_multiview GL_OVR_multiview2 GL_SGIS_generate_mipmap GL_SGIS_texture_lod GL_SGIX_depth_texture GL_SGIX_shadow GL_SUN_slice_accum
+OPENGL LOG: Creating OpenGL 4.5 graphics device ; Context level  <OpenGL 4.5> ; Context handle -2097617128
+Initialize mono
+Mono path[0] = '/home/cytrix/Unity/Hub/Editor/6000.0.37f1/Editor/Data/Managed'
+Mono path[1] = '/home/cytrix/Unity/Hub/Editor/6000.0.37f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-linux'
+Mono config path = '/home/cytrix/Unity/Hub/Editor/6000.0.37f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56030
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /home/cytrix/Unity/Hub/Editor/6000.0.37f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: /home/cytrix/Unity/Hub/Editor/6000.0.37f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: /home/cytrix/Unity/Hub/Editor/6000.0.37f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: /home/cytrix/Unity/Hub/Editor/6000.0.37f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Registered in 0.001957 seconds.
+- Loaded All Assemblies, in  0.375 seconds
+Native extension for LinuxStandalone target not found
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+Native extension for iOS target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 238 ms
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.724 seconds
+Domain Reload Profiling: 1099ms
+	BeginReloadAssembly (91ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (2ms)
+	RebuildCommonClasses (40ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (54ms)
+	LoadAllAssembliesAndSetupDomain (179ms)
+		LoadAssemblies (90ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (176ms)
+			TypeCache.Refresh (174ms)
+				TypeCache.ScanAssembly (158ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (725ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (676ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (398ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (74ms)
+			ProcessInitializeOnLoadAttributes (133ms)
+			ProcessInitializeOnLoadMethodAttributes (65ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.643 seconds
+Refreshing native plugins compatible for Editor in 1.30 ms, found 0 plugins.
+Native extension for LinuxStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.43 ms, found 0 plugins.
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.788 seconds
+Domain Reload Profiling: 1430ms
+	BeginReloadAssembly (166ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (66ms)
+	RebuildCommonClasses (42ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (43ms)
+	LoadAllAssembliesAndSetupDomain (381ms)
+		LoadAssemblies (267ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (176ms)
+			TypeCache.Refresh (141ms)
+				TypeCache.ScanAssembly (120ms)
+			BuildScriptInfoCaches (30ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (789ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (663ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (56ms)
+			SetLoadedEditorAssemblies (9ms)
+			BeforeProcessingInitializeOnLoad (102ms)
+			ProcessInitializeOnLoadAttributes (317ms)
+			ProcessInitializeOnLoadMethodAttributes (176ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (3ms)
+AutoLocale: current locale expects 'C' but got 'ko_KR.UTF-8'Launched and connected shader compiler UnityShaderCompiler after 0.02 seconds
+Refreshing native plugins compatible for Editor in 2.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 8 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2839 unused Assets / (1.2 MB). Loaded Objects now: 3321.
+Memory consumption went from 79.0 MB to 77.7 MB.
+Total: 18.478721 ms (FindLiveObjects: 0.491256 ms CreateObjectMapping: 0.414540 ms MarkObjects: 14.416335 ms  DeleteObjects: 3.154520 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 88705.160641 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/10066s01.asset
+  artifactKey: Guid(b64cb8453d482b541be7c76d0d4a9f87) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/10066s01.asset using Guid(b64cb8453d482b541be7c76d0d4a9f87) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '873a3b01d5ee6afc6ae8e1fd71a6aba1') in 0.098397649 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/1-8ring1.asset
+  artifactKey: Guid(89a721fbd4d7d344da4482049a15deab) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/1-8ring1.asset using Guid(89a721fbd4d7d344da4482049a15deab) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '2fb11965bb2370a4346de40acf97d41b') in 0.003070054 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/1-48rin9.asset
+  artifactKey: Guid(c4596252c9228094ca531f20703a3ed1) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/1-48rin9.asset using Guid(c4596252c9228094ca531f20703a3ed1) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a49d553baa5781e651d71a02619709fb') in 0.002301364 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000081 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/1-4ring4.asset
+  artifactKey: Guid(31988ee7dce45bd42a1991124b36f52e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/1-4ring4.asset using Guid(31988ee7dce45bd42a1991124b36f52e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7ae5ef1ee0186bce47c2060c39f94f15') in 0.002452736 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000085 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/1-8sphe.asset
+  artifactKey: Guid(9f7b0d8067c4be341a32ec4f35e77443) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/1-8sphe.asset using Guid(9f7b0d8067c4be341a32ec4f35e77443) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8309bbdb2a899a446aa6e9e17de03131') in 0.002806127 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000134 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/1-16ndis.asset
+  artifactKey: Guid(3fbeca2c42a81104c9895b696e4e9c5e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/1-16ndis.asset using Guid(3fbeca2c42a81104c9895b696e4e9c5e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '9f273f4fc5e70dab0471babf72472812') in 0.002220586 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000091 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/1-8rin19.asset
+  artifactKey: Guid(8dcd2734caa001e45a35e1cee697b63d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/1-8rin19.asset using Guid(8dcd2734caa001e45a35e1cee697b63d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '3e1976f22aeef1180f59ba85e7f2700b') in 0.002149354 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000202 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/1-4con7.asset
+  artifactKey: Guid(3c88c465d83987a4ba4b96420a0b6ad9) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/1-4con7.asset using Guid(3c88c465d83987a4ba4b96420a0b6ad9) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a26ff82f139a9edef1810fcbad90e435') in 0.002965028 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000087 seconds.
+  path: Assets/LDraw-Importer/Default Materials/default_transparent.mat
+  artifactKey: Guid(8f4c379874289c94db39cce2cc67e68d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Default Materials/default_transparent.mat using Guid(8f4c379874289c94db39cce2cc67e68d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'af16a1923cb112499ffefb427aa5ffc7') in 0.114715244 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.586867 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/13-16cyli.asset
+  artifactKey: Guid(240d78ab5e0c0fb4c8de7ca005ee6e63) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/13-16cyli.asset using Guid(240d78ab5e0c0fb4c8de7ca005ee6e63) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '21b3471edb2315ac04eac654bd9b67a9') in 0.00370115 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2593s02.asset
+  artifactKey: Guid(c9b1618dbe371cc4082b2c3b0c2d797a) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2593s02.asset using Guid(c9b1618dbe371cc4082b2c3b0c2d797a) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '373d735251a3cf13dc2bcb1400c3f87f') in 0.003317842 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000072 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/24246s01.asset
+  artifactKey: Guid(5bbd51460e946b4419bf6a0082071446) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/24246s01.asset using Guid(5bbd51460e946b4419bf6a0082071446) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '285ab440e3b92a3f6439342c5e1beea0') in 0.003539326 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2435.asset
+  artifactKey: Guid(1fb044a4c631f2a458b51946c03345fa) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2435.asset using Guid(1fb044a4c631f2a458b51946c03345fa) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e0ab78e93cb790235031d4c9ac9b3e8a') in 0.01422359 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000104 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2412b.asset
+  artifactKey: Guid(55413d3f0ba28ad47a12e620346afbd2) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2412b.asset using Guid(55413d3f0ba28ad47a12e620346afbd2) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1786ad55523687e6b573c180da4c5d8d') in 0.002202642 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2-4con3.asset
+  artifactKey: Guid(466abe3849b5d874992321de51593295) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2-4con3.asset using Guid(466abe3849b5d874992321de51593295) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '4c697cc3859a1f591765a0ae0a0fd4c8') in 0.002016452 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000071 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/14719s01.asset
+  artifactKey: Guid(cb97e0be6603d1340ab5c21775d04688) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/14719s01.asset using Guid(cb97e0be6603d1340ab5c21775d04688) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c52a6d5dc76edf91974ded237b046804') in 0.001980803 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2397.asset
+  artifactKey: Guid(8a48f347d1b295b48911d4aa8c130d01) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2397.asset using Guid(8a48f347d1b295b48911d4aa8c130d01) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '24dd8312855a672f5f9d8ea8b31b58a6') in 0.001758023 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000123 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2-4ring1.asset
+  artifactKey: Guid(b401d97bcd0f9c94f9f288bc196253fa) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2-4ring1.asset using Guid(b401d97bcd0f9c94f9f288bc196253fa) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '36154d416ba4c0a25561b55b2172e22d') in 0.004618159 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.239077 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2817.asset
+  artifactKey: Guid(d13ab5146be5a6e4f93d28f18007c85c) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2817.asset using Guid(d13ab5146be5a6e4f93d28f18007c85c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '28a332911658f7694cb379ef020a4c00') in 0.006689471 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3022.asset
+  artifactKey: Guid(bf8b4b5cbcf5c964d8d6890c384cafe4) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3022.asset using Guid(bf8b4b5cbcf5c964d8d6890c384cafe4) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '0cb118ec8f1a751b1dc34ff2df00506a') in 0.004656114 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000077 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3009.asset
+  artifactKey: Guid(3f43a4c781c48f849bda26221d5f1616) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3009.asset using Guid(3f43a4c781c48f849bda26221d5f1616) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b60027b7b94cf3aecc4f91af8ed68a91') in 0.004258383 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000077 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/30042.asset
+  artifactKey: Guid(2ee9f9d3b7b137842b5a13250353a664) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/30042.asset using Guid(2ee9f9d3b7b137842b5a13250353a664) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'fb7423869f386ec111a8b39cf0a55b38') in 0.003300285 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3020.asset
+  artifactKey: Guid(01de29655e30e684e8fd616cdbe9bbb7) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3020.asset using Guid(01de29655e30e684e8fd616cdbe9bbb7) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '322f0a399b8f18bcff7760dd6920caf3') in 0.00309876 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000147 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2876.asset
+  artifactKey: Guid(fd668b646d0409d418e2519461743667) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2876.asset using Guid(fd668b646d0409d418e2519461743667) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'd4eb64359dfa7c4eae2be82f00ab317c') in 0.003489018 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3-4cyli.asset
+  artifactKey: Guid(fc6a087aaab2e0944856b79adc5bcc75) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3-4cyli.asset using Guid(fc6a087aaab2e0944856b79adc5bcc75) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '3e4a180d57677f8e38a92b01e4ba555e') in 0.002400981 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3005.asset
+  artifactKey: Guid(b135633b5a4b7614d9b81298be36c243) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3005.asset using Guid(b135633b5a4b7614d9b81298be36c243) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '9bced899cebff21d146c52d4a93bfe3a') in 0.002179824 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000072 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3-8rin12.asset
+  artifactKey: Guid(7a0bacd2b88d1104fb4a85d347e73983) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3-8rin12.asset using Guid(7a0bacd2b88d1104fb4a85d347e73983) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c90760ac9a7c909ed24c8f2a5c9106e2') in 0.002264333 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000070 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3001.asset
+  artifactKey: Guid(207a39aaa9e100c40b4e50ac3b547053) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3001.asset using Guid(207a39aaa9e100c40b4e50ac3b547053) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ee26a87d1204cd0614d067b29b8339ea') in 0.002147753 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000112 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3-4disc.asset
+  artifactKey: Guid(53dc356269eed2941ab3a842692ab181) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3-4disc.asset using Guid(53dc356269eed2941ab3a842692ab181) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '54ec26d9af583895d10480448281b97b') in 0.001942367 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000100 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3-16rin5.asset
+  artifactKey: Guid(7399e4fff5d13b547b34561bb3752437) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3-16rin5.asset using Guid(7399e4fff5d13b547b34561bb3752437) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'cff787d3d69fccb4034e4f0fb56eb995') in 0.001909455 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000108 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3002.asset
+  artifactKey: Guid(48386ba901635244a9aca0f067c52e23) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3002.asset using Guid(48386ba901635244a9aca0f067c52e23) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'be59a6cf9ea95773bc7dfea3fc89d126') in 0.001730875 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000091 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2867s05.asset
+  artifactKey: Guid(95b2b6c6eff32354e8f9ba325bbd43de) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2867s05.asset using Guid(95b2b6c6eff32354e8f9ba325bbd43de) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '201f2b727c8ef074d82a2c00f08bf4a2') in 0.002045762 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000097 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3029.asset
+  artifactKey: Guid(2cf9ca889ed5e814f9ede257b77299f6) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3029.asset using Guid(2cf9ca889ed5e814f9ede257b77299f6) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '4607f985efd8e622704573dbb6b5101f') in 0.001644019 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000091 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3010s01.asset
+  artifactKey: Guid(205d4fc40f96bfc4cb17ecc9a263d467) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3010s01.asset using Guid(205d4fc40f96bfc4cb17ecc9a263d467) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c5f7bec585cc7396b9459c49e64e4396') in 0.001588684 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000120 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3-4ring3.asset
+  artifactKey: Guid(96347c10273eea54bb1e1745e846cbae) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3-4ring3.asset using Guid(96347c10273eea54bb1e1745e846cbae) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '650cc4cc0bfa07a6ad8eab3d06afa4a2') in 0.001756774 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000113 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3007s01.asset
+  artifactKey: Guid(c7e4e08a5a88c694693bdeaf4702b0e0) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3007s01.asset using Guid(c7e4e08a5a88c694693bdeaf4702b0e0) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '882e1cad6dcdb424e634a8f110b3bccf') in 0.001697334 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.203805 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/30350as01.asset
+  artifactKey: Guid(c1854b29e993f3647b6a51c941e4a73d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/30350as01.asset using Guid(c1854b29e993f3647b6a51c941e4a73d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a96a09352bdebc689b1e45ea01fcfdf7') in 0.005331001 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/30361ps1s01.asset
+  artifactKey: Guid(78b8d1b68a7138c44b3b3984eb365a8b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/30361ps1s01.asset using Guid(78b8d1b68a7138c44b3b3984eb365a8b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'bba826786e06bba37c7089c005d7d06a') in 0.006022765 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000107 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/30483s02.asset
+  artifactKey: Guid(623d107a4b5a6104f8f95daf92e60cd3) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/30483s02.asset using Guid(623d107a4b5a6104f8f95daf92e60cd3) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '82726d964fd9d5ff07a8af558baa3524') in 0.003406021 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000091 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/30372p79s02.asset
+  artifactKey: Guid(9dbba2f5b4cccac46a4871699b6c18ec) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/30372p79s02.asset using Guid(9dbba2f5b4cccac46a4871699b6c18ec) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e5b096cfe4eed5cf39a1359dcb99cad5') in 0.006085471 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/30370s01.asset
+  artifactKey: Guid(b30aff27cad49744ca18a5c062d973bc) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/30370s01.asset using Guid(b30aff27cad49744ca18a5c062d973bc) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1f98b6d5c5ea61eb68274f3f571d23b7') in 0.003612246 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000090 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/30367ps1s13.asset
+  artifactKey: Guid(8cfc744001e0df249a94a1aac03bff03) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/30367ps1s13.asset using Guid(8cfc744001e0df249a94a1aac03bff03) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a4913d45da61cb0695822857e5958ad8') in 0.002495844 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000202 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/30367ps1s06.asset
+  artifactKey: Guid(84951e986af9e6b4c90ea057f1be3d72) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/30367ps1s06.asset using Guid(84951e986af9e6b4c90ea057f1be3d72) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e39b0c644288e0cac685d16b4479ffc0') in 0.006494351 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000098 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/30361aps1.asset
+  artifactKey: Guid(5e29e174d57149048ba1c5d0d33d7b29) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/30361aps1.asset using Guid(5e29e174d57149048ba1c5d0d33d7b29) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ba4a57eb2996719e6c885945aa16ba74') in 0.003432246 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000100 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/30367ps1s18.asset
+  artifactKey: Guid(406669291810b15419fec8cf5cdc4ef7) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/30367ps1s18.asset using Guid(406669291810b15419fec8cf5cdc4ef7) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '827c258a824d7c39ff79c6564e3a8543') in 0.002860232 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000160 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/30372s01.asset
+  artifactKey: Guid(99f0cf2eb106d3344b2fa3490b5e2b4f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/30372s01.asset using Guid(99f0cf2eb106d3344b2fa3490b5e2b4f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c358c8192d3470a7c9d886ec9ec85d65') in 0.002275794 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000101 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3040s01.asset
+  artifactKey: Guid(6c5461f7102657d478b63287e31defaf) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3040s01.asset using Guid(6c5461f7102657d478b63287e31defaf) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8a83e7f3d4955a1d8dbc4cc68b7a7941') in 0.002037428 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000071 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/30367ps1s19.asset
+  artifactKey: Guid(44532e2f43b01604f904b25e97ccf0a1) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/30367ps1s19.asset using Guid(44532e2f43b01604f904b25e97ccf0a1) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '547a83c43c023d1efce3c92e5eddcf02') in 0.001998737 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000086 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/30367ps1s12.asset
+  artifactKey: Guid(a41959656211a3649bd9d97e2b11abb8) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/30367ps1s12.asset using Guid(a41959656211a3649bd9d97e2b11abb8) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '2b0d8687459c2ec5d5d712363295e6a3') in 0.002272683 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.331248 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/30586.asset
+  artifactKey: Guid(a25d387bb5321a546b9a47dde44484de) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/30586.asset using Guid(a25d387bb5321a546b9a47dde44484de) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c2976a8319178b9c85bf71885f89d2bb') in 0.019978755 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000070 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/32530.asset
+  artifactKey: Guid(17ef7f52775502d46ac35fbdd74826c8) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/32530.asset using Guid(17ef7f52775502d46ac35fbdd74826c8) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8c3b03030b5825992fea945f1c63907d') in 0.003230204 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000156 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3068bs01.asset
+  artifactKey: Guid(4ac90457d390d3c43b7ac325ed5c94b5) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3068bs01.asset using Guid(4ac90457d390d3c43b7ac325ed5c94b5) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '58f0aa155668b944245c699c123c78e6') in 0.012782814 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3623.asset
+  artifactKey: Guid(6077975cd5df2c1479e0228e830116ec) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3623.asset using Guid(6077975cd5df2c1479e0228e830116ec) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '59dc474d31806d7880c477be91524b82') in 0.015986364 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000254 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3623s01.asset
+  artifactKey: Guid(f6711659fea102d45b618fd18875f756) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3623s01.asset using Guid(f6711659fea102d45b618fd18875f756) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e4c5f56d26a3ff98e96022b5de1f8b1a') in 0.016259415 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3626bps4.asset
+  artifactKey: Guid(3020ce22da5740040b2627119d9ffbd8) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3626bps4.asset using Guid(3020ce22da5740040b2627119d9ffbd8) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '05897f313a7780f7056b24dea1ab977d') in 0.002475392 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/32324.asset
+  artifactKey: Guid(e454e3afcd493274492a3c1f97171e1f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/32324.asset using Guid(e454e3afcd493274492a3c1f97171e1f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c88eb281897b86b72916aba946372699') in 0.012591181 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3626bps9s01.asset
+  artifactKey: Guid(ef6b06391284efa41b394054f6c1a9fc) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3626bps9s01.asset using Guid(ef6b06391284efa41b394054f6c1a9fc) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'd9c8093e85b5174c9dc78a9beed1473f') in 0.016151902 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3069bs01.asset
+  artifactKey: Guid(8af7d83d90bd2fd4dbd274a3e45342ee) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3069bs01.asset using Guid(8af7d83d90bd2fd4dbd274a3e45342ee) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1498d0d1bb71ca0afc1451152b184c25') in 0.001955557 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/33291.asset
+  artifactKey: Guid(7448630852047024a83c163aed5171be) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/33291.asset using Guid(7448630852047024a83c163aed5171be) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '0f5b3ecda8f0e0f8f9923427b9e1be4f') in 0.014823327 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/32059.asset
+  artifactKey: Guid(dbe15d2199e166f4dbf29c3fb4c02f3e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/32059.asset using Guid(dbe15d2199e166f4dbf29c3fb4c02f3e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '33270609cae5e083aec40a68b368cd8b') in 0.017163024 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3626bp01.asset
+  artifactKey: Guid(5828ef17db8a3974c81e4ab577c07ac0) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3626bp01.asset using Guid(5828ef17db8a3974c81e4ab577c07ac0) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '35a056ed3968896f79c10b6e78e86931') in 0.015147175 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3624.asset
+  artifactKey: Guid(99255e9fd2b317941af508ebbec3d183) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3624.asset using Guid(99255e9fd2b317941af508ebbec3d183) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8c857954b034a98f6d15cefc8b57f94a') in 0.002923674 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3191s01.asset
+  artifactKey: Guid(1164c759dd1a16e49baa495c9286e6ce) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3191s01.asset using Guid(1164c759dd1a16e49baa495c9286e6ce) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '4f87ee37ead392069b484769c61eb5a8') in 0.001982831 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/32034.asset
+  artifactKey: Guid(9c599bcaad7828e41bcf8d2245edbff4) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/32034.asset using Guid(9c599bcaad7828e41bcf8d2245edbff4) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '0e9344585e109cb41d3f4f98f771c1ad') in 0.011514971 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.110881 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3665a.asset
+  artifactKey: Guid(b06ca1e804d270944a0878f70f6d75b9) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3665a.asset using Guid(b06ca1e804d270944a0878f70f6d75b9) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ea1f425f8910a374320e5ce7730a2248') in 0.055776299 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000084 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3747a.asset
+  artifactKey: Guid(8dbf40d11098c334891b4bf6df787eab) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3747a.asset using Guid(8dbf40d11098c334891b4bf6df787eab) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c48f7012d02281699ac76d810bd27d1b') in 0.013908327 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000079 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3960p01b.asset
+  artifactKey: Guid(3fd161e9cadd12c4a9c48c62242fbc46) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3960p01b.asset using Guid(3fd161e9cadd12c4a9c48c62242fbc46) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e83dd8e53bbe6add3cc8087c3be6e041') in 0.00333498 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000107 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3958.asset
+  artifactKey: Guid(dfbf75836f6049d43aee910ed94b13a9) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3958.asset using Guid(dfbf75836f6049d43aee910ed94b13a9) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e7a3a7e50f3024feb6b87d0297e6926a') in 0.003074531 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000087 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/4-4con5.asset
+  artifactKey: Guid(01bd6c3edb0f2c449a4f276ab6a60eeb) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/4-4con5.asset using Guid(01bd6c3edb0f2c449a4f276ab6a60eeb) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1d3298ab3a5571a8c184dea72c9e0397') in 0.011267086 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/4-4con10.asset
+  artifactKey: Guid(01dac665cde0c0b4e89ce49a55575f1c) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/4-4con10.asset using Guid(01dac665cde0c0b4e89ce49a55575f1c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c304cdc8ad57e562ba1c8386a5e2aa8e') in 0.014198792 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3838.asset
+  artifactKey: Guid(45fefac972e2f1346969b3c3e61293a2) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3838.asset using Guid(45fefac972e2f1346969b3c3e61293a2) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b36f11e942a3dff627525e9f003025ce') in 0.003985783 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000111 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3730.asset
+  artifactKey: Guid(4d73089015c4ac1469ba8c1431abcb0d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3730.asset using Guid(4d73089015c4ac1469ba8c1431abcb0d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '59ec9be2fa8d062bdb89b9522dab106b') in 0.004038349 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3816s02.asset
+  artifactKey: Guid(0231fb0fd8f62d34b999a38b9ddd9a3c) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3816s02.asset using Guid(0231fb0fd8f62d34b999a38b9ddd9a3c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '9a14a9682fa9bce1948ace0896b66913') in 0.003361568 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/4-4con20.asset
+  artifactKey: Guid(49c223401fc0a594384d012dc6df1961) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/4-4con20.asset using Guid(49c223401fc0a594384d012dc6df1961) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1c07d3969075c7735735c654a6cdf6b8') in 0.005379242 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000072 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3794a.asset
+  artifactKey: Guid(b3b03360a98eee54db24d3120768108b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3794a.asset using Guid(b3b03360a98eee54db24d3120768108b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e0801f933b353d444701ceb2072b027f') in 0.002520472 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000119 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3942b.asset
+  artifactKey: Guid(27aba887d52d70948843fce3a731e263) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3942b.asset using Guid(27aba887d52d70948843fce3a731e263) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '66af574b9fcf14c402bb857ea8f8f934') in 0.002537174 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3894.asset
+  artifactKey: Guid(0cfd0418f0051f34a964e248358cac45) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3894.asset using Guid(0cfd0418f0051f34a964e248358cac45) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e3d600036a123fa524317088c69dfaec') in 0.010965527 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000087 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3666.asset
+  artifactKey: Guid(44e990974ef00fa4fae52be018e5927f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3666.asset using Guid(44e990974ef00fa4fae52be018e5927f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b2e0d77681800d6f69c80397b0a05e70') in 0.002387312 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000099 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/3956.asset
+  artifactKey: Guid(929d708d5c0ca894ba5df87341ad203e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/3956.asset using Guid(929d708d5c0ca894ba5df87341ad203e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'bd513bf222a9c0d117c826a54b7a8903') in 0.00231116 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.967300 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/4-4rin12.asset
+  artifactKey: Guid(fba34370b34a11c4bb180263cd2f7f59) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/4-4rin12.asset using Guid(fba34370b34a11c4bb180263cd2f7f59) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '0a3c2716967d89dab4be6ec68cf945cf') in 0.010044886 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/41585-1 - 51739s01.asset
+  artifactKey: Guid(ac61d018f5cedbd41880cec6893d1b9c) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/41585-1 - 51739s01.asset using Guid(ac61d018f5cedbd41880cec6893d1b9c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '29446ccbfd37b65060e49e1bf253b69a') in 0.01466044 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000119 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/4-4rin40.asset
+  artifactKey: Guid(03bf70e0559550f409d49b0282453210) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/4-4rin40.asset using Guid(03bf70e0559550f409d49b0282453210) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c01eb79d5f0f2035c577a9de42b81e08') in 0.002119524 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/4070.asset
+  artifactKey: Guid(9ab9fa62b6d229549a7fc534144e0e77) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/4070.asset using Guid(9ab9fa62b6d229549a7fc534144e0e77) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '4125632ecb0f09744d5f394975465715') in 0.002210274 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/4-4rin22.asset
+  artifactKey: Guid(3896f1a6533497f4886baa3fe73c0f9b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/4-4rin22.asset using Guid(3896f1a6533497f4886baa3fe73c0f9b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8c313b5939df9a10146ffa48d5791847') in 0.011883938 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/4-4ring3.asset
+  artifactKey: Guid(ae9cbca7fad46e0499ab244c57deeda2) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/4-4ring3.asset using Guid(ae9cbca7fad46e0499ab244c57deeda2) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '3e8253d8177ddc3abde31dad7b5ab302') in 0.015235276 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000150 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/41586-1 - 87079pz0s02.asset
+  artifactKey: Guid(810d5634c6c64b24693544a369c0402b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/41586-1 - 87079pz0s02.asset using Guid(810d5634c6c64b24693544a369c0402b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '2b7d7644f53ad2880a12a8d41554fe74') in 0.002669748 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000096 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/41586-1 - 98138pz0.asset
+  artifactKey: Guid(7f930e7d2d77f4b44a4f5c50103dcd0e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/41586-1 - 98138pz0.asset using Guid(7f930e7d2d77f4b44a4f5c50103dcd0e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e1ce365bcedcc0b7846982f7b871ae3f') in 0.012702379 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/4084.asset
+  artifactKey: Guid(93610390721b61447889e9ca4477ff5e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/4084.asset using Guid(93610390721b61447889e9ca4477ff5e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'd306a98f7090485f11b564fe1bdf270b') in 0.015489973 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/4-4rin20.asset
+  artifactKey: Guid(ce3766615ee99394e934311d274b0bba) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/4-4rin20.asset using Guid(ce3766615ee99394e934311d274b0bba) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ff2f609037b380ece8f353eb6f6903eb') in 0.002083709 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000096 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/4022.asset
+  artifactKey: Guid(5c5f3f32be4b1f046bb1476572ee1f30) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/4022.asset using Guid(5c5f3f32be4b1f046bb1476572ee1f30) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '57d72cd2c67d70895c64daa0fa6d8ccd') in 0.014962225 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000150 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/41588-1 - 3004pz0.asset
+  artifactKey: Guid(faf0c90617b09c144957ea2227256fca) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/41588-1 - 3004pz0.asset using Guid(faf0c90617b09c144957ea2227256fca) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'aebcebcf8c71770907107c2a2c97a5df') in 0.015549379 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/41592 - 98138pz0.asset
+  artifactKey: Guid(2a715ef3f7042fd40ba2f73e07e827ad) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/41592 - 98138pz0.asset using Guid(2a715ef3f7042fd40ba2f73e07e827ad) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '0ebd4220b908a522d772030e2a69bd63') in 0.00367048 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/4-4rin24.asset
+  artifactKey: Guid(e0177c12eaeac8c4aa757fea2100575c) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/4-4rin24.asset using Guid(e0177c12eaeac8c4aa757fea2100575c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c681b641721d1d92188cc3f0a45c6fcf') in 0.0029819 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/41589 - 87079pz1.asset
+  artifactKey: Guid(0ab2579ae94f777478b2440ee16e20b2) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/41589 - 87079pz1.asset using Guid(0ab2579ae94f777478b2440ee16e20b2) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7947976088feabd3813a6acc41ac7da6') in 0.01120732 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.694959 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/4183.asset
+  artifactKey: Guid(b50e2244092f952459a9031d990379fe) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/4183.asset using Guid(b50e2244092f952459a9031d990379fe) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '345e5b3cdf2ca50b21b92af30ace9a11') in 0.004664869 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/44375s01.asset
+  artifactKey: Guid(0a9ded5d15e96b743ac5dd81b9af8181) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/44375s01.asset using Guid(0a9ded5d15e96b743ac5dd81b9af8181) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '5f00c2857ecca9eaf2013ad543bc00fe') in 0.004390927 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000103 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/5-16ndis.asset
+  artifactKey: Guid(0ed11adff81e03f448394a29f5d1fe14) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/5-16ndis.asset using Guid(0ed11adff81e03f448394a29f5d1fe14) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1739a03027b13f277969333b1425af3a') in 0.003789923 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000093 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/43888.asset
+  artifactKey: Guid(50c58b39aac0a044087baba97c6a9102) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/43888.asset using Guid(50c58b39aac0a044087baba97c6a9102) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '93297f4214d6d536cbe0b3762aef3b19') in 0.004350442 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/4341.asset
+  artifactKey: Guid(497154bb9d342cc4a8e21ca13ae6358c) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/4341.asset using Guid(497154bb9d342cc4a8e21ca13ae6358c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'd0e2b128a4ae1f469b14e1cda36fc6c3') in 0.005388948 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000104 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/4865p01c.asset
+  artifactKey: Guid(070b8596e449f6e479695d84bc9752bc) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/4865p01c.asset using Guid(070b8596e449f6e479695d84bc9752bc) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '4a293e987c09ccf1625cadf3cbd41019') in 0.004622176 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/4592.asset
+  artifactKey: Guid(6b11bd4b8ed3e6a4fa2574cd76b0d96f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/4592.asset using Guid(6b11bd4b8ed3e6a4fa2574cd76b0d96f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '309b2f4b052c1219f7f95984b940c336') in 0.004278148 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/4530.asset
+  artifactKey: Guid(5e4929f417148d345b454da15f3bc18e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/4530.asset using Guid(5e4929f417148d345b454da15f3bc18e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8beda6a0b0a7acff0ab9eeea1a8b0992') in 0.00784182 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/47753.asset
+  artifactKey: Guid(1f6cad09c83d87342a114d127d5e4c5a) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/47753.asset using Guid(1f6cad09c83d87342a114d127d5e4c5a) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '6bfeccac96f0802976973d461ca0da36') in 0.003149157 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/4504.asset
+  artifactKey: Guid(813b833dd2f9c704384bd23f26c2a1e3) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/4504.asset using Guid(813b833dd2f9c704384bd23f26c2a1e3) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '6e700783fd3d9243cae8e28a0fcf3413') in 0.002865202 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/4857.asset
+  artifactKey: Guid(5c77a8873fc3e7a4ebce7ad1c61e328b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/4857.asset using Guid(5c77a8873fc3e7a4ebce7ad1c61e328b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '23c97f55a71c169baecd91ec68c134ee') in 0.002988564 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/4720s01.asset
+  artifactKey: Guid(0848af6a79d17964190039d048535482) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/4720s01.asset using Guid(0848af6a79d17964190039d048535482) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e6a360e6f61370ea833620afa73552e5') in 0.002273696 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.682971 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/50990s02.asset
+  artifactKey: Guid(2dccfffed0513ff4da6a05356df6dec6) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/50990s02.asset using Guid(2dccfffed0513ff4da6a05356df6dec6) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '611446f505564bcdcad9af950683e9b2') in 0.005144414 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/6069ps1.asset
+  artifactKey: Guid(04314c30765bfef44891d65a5ccb1c95) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/6069ps1.asset using Guid(04314c30765bfef44891d65a5ccb1c95) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '0b4c16611ea652accddd568fd950643c') in 0.005637442 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/61252.asset
+  artifactKey: Guid(5075a375fb9412f4e89bff1b1010a261) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/61252.asset using Guid(5075a375fb9412f4e89bff1b1010a261) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e849ab4849b539daf89ba38e17b130ed') in 0.003170689 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000105 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/60470a.asset
+  artifactKey: Guid(676b8a46a4aeaf845a20203c689767e1) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/60470a.asset using Guid(676b8a46a4aeaf845a20203c689767e1) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '0d570b44c2aa9d0c89e40be044a5367b') in 0.003256566 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000122 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/55299.asset
+  artifactKey: Guid(e19283f11dafbdb44bc25245afd0bbb2) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/55299.asset using Guid(e19283f11dafbdb44bc25245afd0bbb2) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b0a332d4eda66dd14e6e5b74d9be62e6') in 0.002933373 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000076 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/635.asset
+  artifactKey: Guid(67b9fe800f6fcc744bd5697bf5a55e8e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/635.asset using Guid(67b9fe800f6fcc744bd5697bf5a55e8e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e0a33c4e6df066513165ad5bb8aebdd5') in 0.002460977 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/60212.asset
+  artifactKey: Guid(cc9605675225ffd469120c2305d5b46f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/60212.asset using Guid(cc9605675225ffd469120c2305d5b46f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '96306d85acea640848b39a5a25a07a37') in 0.005952337 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/64647s01.asset
+  artifactKey: Guid(eddd71ea5fc6bc94e992a36ffe03b155) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/64647s01.asset using Guid(eddd71ea5fc6bc94e992a36ffe03b155) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '72b8d7e94be1dba303302755b27dd6b1') in 0.005624955 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/6016.asset
+  artifactKey: Guid(65fce04d11fab604392ea1fcf4897b60) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/6016.asset using Guid(65fce04d11fab604392ea1fcf4897b60) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '5c6124d0df65227a94e7c8e47f87ee88') in 0.001978238 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000161 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/633s02.asset
+  artifactKey: Guid(80d7747d6d9b2914792b00b6ad4ede71) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/633s02.asset using Guid(80d7747d6d9b2914792b00b6ad4ede71) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '59b1dae7f393fcd748b9d6d1207bba50') in 0.002636191 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000117 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/7-16disc.asset
+  artifactKey: Guid(b9e968a9e6bb90e4f85c7c42082fcf8c) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/7-16disc.asset using Guid(b9e968a9e6bb90e4f85c7c42082fcf8c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b37f27a42127460fd182d2a2704ecd31') in 0.006997596 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/55295.asset
+  artifactKey: Guid(a6403e5abf7bcc749b6ae3e284549a75) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/55295.asset using Guid(a6403e5abf7bcc749b6ae3e284549a75) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'cd16e14bcd7724dbb184fa9187f1b14a') in 0.004007103 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.582915 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/87079.asset
+  artifactKey: Guid(c96bd2fbc75c9e34faf8f48206acfcce) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/87079.asset using Guid(c96bd2fbc75c9e34faf8f48206acfcce) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '3e7c415131c9dde1c8ceeba2cfc90e52') in 0.00767741 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/99207.asset
+  artifactKey: Guid(8a32d5a6718d7f646a6455745b23d53f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/99207.asset using Guid(8a32d5a6718d7f646a6455745b23d53f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '151705c5ffa785a43ecb0f3d5c87e367') in 0.00648356 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/973ps8.asset
+  artifactKey: Guid(062d570eafdf9704b9f0afd2b9b1240c) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/973ps8.asset using Guid(062d570eafdf9704b9f0afd2b9b1240c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'de1976a9c26ea207a82383ddf4cd59c4') in 0.027335145 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/axle.asset
+  artifactKey: Guid(817dbcf7cfbe3c540b9c44a6f004cba3) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/axle.asset using Guid(817dbcf7cfbe3c540b9c44a6f004cba3) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '673b8ca1bebcfa76d8f674b0d81e2655') in 0.006437993 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000082 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/box3u7a.asset
+  artifactKey: Guid(44c3bb691683fc34aba897613e25c0d1) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/box3u7a.asset using Guid(44c3bb691683fc34aba897613e25c0d1) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '9db4ad9b722911deb99439a431aad2a5') in 0.002540983 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000100 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/98138p0d.asset
+  artifactKey: Guid(3dca4adfd575260499c48be60418d437) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/98138p0d.asset using Guid(3dca4adfd575260499c48be60418d437) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '215f517e58652f6b92d05f62dea65dd2') in 0.002853553 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000103 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/973p01.asset
+  artifactKey: Guid(5fe3a2def5260054b80c8ecb1b85bfed) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/973p01.asset using Guid(5fe3a2def5260054b80c8ecb1b85bfed) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '4b6f3780690a9b861a70cd05942c9363') in 0.002122875 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.487603 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/box5-12.asset
+  artifactKey: Guid(f6c41fabb24017c41ae4353b3efa2036) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/box5-12.asset using Guid(f6c41fabb24017c41ae4353b3efa2036) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '6170821841a39efc968fcdfb3daeb8b1') in 0.004694616 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001791 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/box5.asset
+  artifactKey: Guid(2848924df6a1e0c4bac32dd3d31d73d1) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/box5.asset using Guid(2848924df6a1e0c4bac32dd3d31d73d1) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '3c04bbbfa19923dffcb63689031bd641') in 0.004652558 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000090 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/clh4.asset
+  artifactKey: Guid(4892b24fef8017042a8693390edb9170) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/clh4.asset using Guid(4892b24fef8017042a8693390edb9170) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '0f7ebb92da266d2790f5f7c61ed9461c') in 0.004181526 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000099 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/t04q4000.asset
+  artifactKey: Guid(cf1b526024ea76e44aefba973a873847) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/t04q4000.asset using Guid(cf1b526024ea76e44aefba973a873847) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '4f736975ef7b14529dfd2e9f5fae6d50') in 0.00568485 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000107 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/t16o1429.asset
+  artifactKey: Guid(09f4229c1fe2aca40a44069e3e03a24e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/t16o1429.asset using Guid(09f4229c1fe2aca40a44069e3e03a24e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '534c9ead8b95f35467f1c8eada5d0353') in 0.00348394 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000087 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/rect2a.asset
+  artifactKey: Guid(2d1635599561c264dab8288d36b451c5) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/rect2a.asset using Guid(2d1635599561c264dab8288d36b451c5) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1eeb8806d2b5f9f688d5892793521fe8') in 0.00267877 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000128 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/rect2p.asset
+  artifactKey: Guid(f7ba220cf5e164e42a93ad04fb16a39e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/rect2p.asset using Guid(f7ba220cf5e164e42a93ad04fb16a39e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a81b8131c1ab61f1fe97766b0145b7e2') in 0.002612034 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/t04o1765.asset
+  artifactKey: Guid(11bb64486a97cc2429a7835c200a2723) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/t04o1765.asset using Guid(11bb64486a97cc2429a7835c200a2723) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ee0e7405e9c56d8d6f508aeea382ed9c') in 0.002961593 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/clip6.asset
+  artifactKey: Guid(1d58f327d2d4f8941a3ec2933191cb0e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/clip6.asset using Guid(1d58f327d2d4f8941a3ec2933191cb0e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b5085bf05761af68375c9941ff1e4380') in 0.002081901 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000100 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/cylj4x8.asset
+  artifactKey: Guid(633252c9eec09a1459a09dc469d70e1c) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/cylj4x8.asset using Guid(633252c9eec09a1459a09dc469d70e1c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '428f4a11f9c7eabc241a0e90e6cadd29') in 0.002151333 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/connect3.asset
+  artifactKey: Guid(5620829d30715604dbf4fc1be2a3afcf) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/connect3.asset using Guid(5620829d30715604dbf4fc1be2a3afcf) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8b2c9f91dbaf94978f9349008ff63ddc') in 0.002097088 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/t04o3333.asset
+  artifactKey: Guid(4c360bf7d1ef7b64fb99f54fe1d7fdcb) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/t04o3333.asset using Guid(4c360bf7d1ef7b64fb99f54fe1d7fdcb) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a0366cd4e9250f8590d73e327b40fd43') in 0.002072544 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000088 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/clip9.asset
+  artifactKey: Guid(ebc69c26123c64b478796068630dae6a) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/clip9.asset using Guid(ebc69c26123c64b478796068630dae6a) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a95068f57c73adb14676424bf2ae26de') in 0.001653027 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000073 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/clh9.asset
+  artifactKey: Guid(0faeb041cc785684283115a048d50524) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/clh9.asset using Guid(0faeb041cc785684283115a048d50524) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e7185a66f528f7dd5bc1fb1a5ca3a697') in 0.001737065 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000130 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/tri3a1.asset
+  artifactKey: Guid(af959984bbcb5734f96649a166c03939) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/tri3a1.asset using Guid(af959984bbcb5734f96649a166c03939) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '68cb23ca224b429c36b85262d9300f9e') in 0.001589895 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.505847 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/wpin2a.asset
+  artifactKey: Guid(9ac1fe63d8731c0448f703e9d4d9e191) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/wpin2a.asset using Guid(9ac1fe63d8731c0448f703e9d4d9e191) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '9a1fd1753cb38275fc470d59dad8ae55') in 0.00495039 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/LDraw-Importer/Materials/Glitter_Trans_Clear.mat
+  artifactKey: Guid(5b1c13b73d0234b4f8a909fb2d7ee208) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Glitter_Trans_Clear.mat using Guid(5b1c13b73d0234b4f8a909fb2d7ee208) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '903fde18488a2d04d0525c752d9a0646') in 0.013798596 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/LDraw-Importer/Materials/Edge_Colour.mat
+  artifactKey: Guid(a7363c011fc8c3e458c3c4861ca7c584) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Edge_Colour.mat using Guid(a7363c011fc8c3e458c3c4861ca7c584) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '15084cc111c4fe24d122b59d88a957df') in 0.036689897 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000077 seconds.
+  path: Assets/LDraw-Importer/Materials/Medium_Orange.mat
+  artifactKey: Guid(176b244631a8e674f80aa18cb206003d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Medium_Orange.mat using Guid(176b244631a8e674f80aa18cb206003d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '71a28fab701f558c9ebdf5fc10b54edd') in 0.014615491 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/LDraw-Importer/Materials/Light_Violet.mat
+  artifactKey: Guid(8d3a62f1d4225b849a2a632eccc978d5) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Light_Violet.mat using Guid(8d3a62f1d4225b849a2a632eccc978d5) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c2445f84c2fba100b689622227c3877e') in 0.011589965 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/LDraw-Importer/Materials/Dark_Tan.mat
+  artifactKey: Guid(fb65aad697917ee45bc4b00f3860a6f7) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Dark_Tan.mat using Guid(fb65aad697917ee45bc4b00f3860a6f7) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '14a59849cc0f5e234c6c6cd74d93b6a6') in 0.007489851 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/LDraw-Importer/Materials/Metallic_Black.mat
+  artifactKey: Guid(d1e781ffb142f294faa33ce1d2746179) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Metallic_Black.mat using Guid(d1e781ffb142f294faa33ce1d2746179) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '84a655a5798496dba37dd79bcf11540a') in 0.00801729 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/LDraw-Importer/Materials/Magnet.mat
+  artifactKey: Guid(7e2d9ba3c3c37b343af412650731a8c5) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Magnet.mat using Guid(7e2d9ba3c3c37b343af412650731a8c5) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '2d18848e58af263dd9e62a3fdad06208') in 0.007414651 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/LDraw-Importer/Materials/Bright_Pink.mat
+  artifactKey: Guid(993fd7cf91073844d98dc828df2bf7ca) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Bright_Pink.mat using Guid(993fd7cf91073844d98dc828df2bf7ca) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c808ae4cdd88a9b97c341869fa8df596') in 0.007625013 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000071 seconds.
+  path: Assets/LDraw-Importer/Materials/Chrome_Black.mat
+  artifactKey: Guid(9c1da54065e23d8458de31a099f812ad) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Chrome_Black.mat using Guid(9c1da54065e23d8458de31a099f812ad) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '2e7fa4fa38a720677e0bfdf39b916d45') in 0.008912904 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/LDraw-Importer/Materials/Medium_Dark_Pink.mat
+  artifactKey: Guid(5d8fb0318dd9f864d939189f62438811) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Medium_Dark_Pink.mat using Guid(5d8fb0318dd9f864d939189f62438811) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'feb1a665f942ab93a328dc5114becafb') in 0.007852882 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000079 seconds.
+  path: Assets/LDraw-Importer/Materials/Metallic_Bright_Red.mat
+  artifactKey: Guid(b31e0e495b26de04292e82764c75f080) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Metallic_Bright_Red.mat using Guid(b31e0e495b26de04292e82764c75f080) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'd3f63074978bfe491b2991e3c790b635') in 0.00934081 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/LDraw-Importer/Materials/Main_Colour.mat
+  artifactKey: Guid(1d15fc5faa98025419e3612eb3354f8c) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Main_Colour.mat using Guid(1d15fc5faa98025419e3612eb3354f8c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '298cba6f3e845958d4c5ddaf73d66b60') in 0.007031546 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/LDraw-Importer/Materials/Light_Yellow.mat
+  artifactKey: Guid(9d52b2f117d50984a875a3348b74a640) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Light_Yellow.mat using Guid(9d52b2f117d50984a875a3348b74a640) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c70fb2cee21a63b6d9368756e40801f0') in 0.007122052 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/LDraw-Importer/Materials/Bright_Light_Blue.mat
+  artifactKey: Guid(6186912d029d4014bba80e6471262252) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Bright_Light_Blue.mat using Guid(6186912d029d4014bba80e6471262252) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8018651f8c1d4fdb571d1adb4b2002c4') in 0.007256174 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/LDraw-Importer/Materials/Lilac.mat
+  artifactKey: Guid(3ae7893cbd2da8a4dafb015941dd0bb0) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Lilac.mat using Guid(3ae7893cbd2da8a4dafb015941dd0bb0) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '92745ea6d7944afd7d26839ed9627162') in 0.006832565 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/LDraw-Importer/Materials/Medium_Azure.mat
+  artifactKey: Guid(d2c42089ff5ebb640aa58844dbb64a05) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Medium_Azure.mat using Guid(d2c42089ff5ebb640aa58844dbb64a05) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b0ebb078398190203f6e1d6bb9b50955') in 0.00753826 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/LDraw-Importer/Materials/Metallic_Green.mat
+  artifactKey: Guid(b583ee05c75fe4043b4fa4a2c5391632) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Metallic_Green.mat using Guid(b583ee05c75fe4043b4fa4a2c5391632) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a977413a23b1aa99627c49dce30d1360') in 0.0071822 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/LDraw-Importer/Materials/Chrome_Pink.mat
+  artifactKey: Guid(58b25a817d8403d4eaa341c65fba372d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Chrome_Pink.mat using Guid(58b25a817d8403d4eaa341c65fba372d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e2b5b6692cbda01eda79ace34aa89277') in 0.00929393 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.314213 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2-4chrd.asset
+  artifactKey: Guid(e681c8f28ff1c4c4180c90f47ffca94e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2-4chrd.asset using Guid(e681c8f28ff1c4c4180c90f47ffca94e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '375126af999b97b5ddb6af66c73d47de') in 0.004507183 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2495.asset
+  artifactKey: Guid(07424c9675b2a894d81742932a41f81b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2495.asset using Guid(07424c9675b2a894d81742932a41f81b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'cd97890da6f62fc3e44409d53155daf5') in 0.004646184 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000106 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2-4rin15.asset
+  artifactKey: Guid(c35517ab89c5054468291e09e5dc77f5) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2-4rin15.asset using Guid(c35517ab89c5054468291e09e5dc77f5) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '9c9eb8fd918aad2d1f4205e23d641d88') in 0.004321604 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000107 seconds.
+  path: Assets/LDraw-Importer/Materials/Trans_Pink.mat
+  artifactKey: Guid(9f6eb574653f785409dbc2779414a395) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Trans_Pink.mat using Guid(9f6eb574653f785409dbc2779414a395) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8890c6b17bdf6d7b13500a8d9a7016bb') in 0.012989612 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000242 seconds.
+  path: Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Demo/Scripts/MathUtils.cs
+  artifactKey: Guid(5a705fd136053124583b289ce7af3a61) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Demo/Scripts/MathUtils.cs using Guid(5a705fd136053124583b289ce7af3a61) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ca1d7f065cd4195ad0253964f1a73983') in 0.014070875 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000132 seconds.
+  path: Assets/LDraw-Importer/Materials/Trans_Black.mat
+  artifactKey: Guid(cf1bd198b9b9ebf4ab73a816d06173e9) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Trans_Black.mat using Guid(cf1bd198b9b9ebf4ab73a816d06173e9) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '430ba5e7c9a6e205a338f60f6d286975') in 0.008045091 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/LDraw-Importer/Editor/Scripts/LDrawConfig.cs
+  artifactKey: Guid(c6d445e9bb880bd4f8a1a9fa07c7b1ce) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Editor/Scripts/LDrawConfig.cs using Guid(c6d445e9bb880bd4f8a1a9fa07c7b1ce) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'd37d7dc14dc86ca456fb0381ce098acd') in 0.002704066 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000154 seconds.
+  path: Assets/LDraw-Importer/Materials/Trans_Bright_Light_Orange.mat
+  artifactKey: Guid(99d243ee718341748b1a46f48400db6b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Trans_Bright_Light_Orange.mat using Guid(99d243ee718341748b1a46f48400db6b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ad4582f070f9756f14688478459a259b') in 0.006290081 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000087 seconds.
+  path: Assets/LDraw-Importer/Materials/Trans_Neon_Green.mat
+  artifactKey: Guid(830691d9f7fe95e4eb42abe60abbc8eb) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Trans_Neon_Green.mat using Guid(830691d9f7fe95e4eb42abe60abbc8eb) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a82ed4accbd58c41c261005306620704') in 0.01572375 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/LDraw-Importer/Materials/Sand_Blue.mat
+  artifactKey: Guid(462f8ccb6f941ee42b12ca429f971b7f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Sand_Blue.mat using Guid(462f8ccb6f941ee42b12ca429f971b7f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b921121ff70fbebe8a2076e606029556') in 0.011281963 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/LDraw-Importer/Materials/Salmon.mat
+  artifactKey: Guid(86212ef8f62fb62459126a69de768998) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Salmon.mat using Guid(86212ef8f62fb62459126a69de768998) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '75c37b9f4f0bbd0b370981b58e510b9e') in 0.00819906 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs
+  artifactKey: Guid(090e33a3a180b5a42bfa8c2ccfdd5e51) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs using Guid(090e33a3a180b5a42bfa8c2ccfdd5e51) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a2c3f0f8b310c74cdd21edb4f4a9fc5c') in 0.002311747 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/LDraw-Importer/Materials/Rubber_Trans_Clear.mat
+  artifactKey: Guid(8fa2073d6cf4ecb43819cb2dd0c75e48) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Rubber_Trans_Clear.mat using Guid(8fa2073d6cf4ecb43819cb2dd0c75e48) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '41d89cbbe84f48f2db3041bf3b17a188') in 0.008457018 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/LDraw-Importer/Scripts/Utility/MatrixExtention.cs
+  artifactKey: Guid(0e9aa4a640782f74d97c3129274a98e2) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Scripts/Utility/MatrixExtention.cs using Guid(0e9aa4a640782f74d97c3129274a98e2) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '667bbf8fc77aeb89bfe90128c42c2d95') in 0.002893195 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000129 seconds.
+  path: Assets/LDraw-Importer/Materials/Rubber_Black.mat
+  artifactKey: Guid(1499e026cb33cc74fac67fe0a218968b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Rubber_Black.mat using Guid(1499e026cb33cc74fac67fe0a218968b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e8e817716bf360dcf40a30343ca1ebe8') in 0.007769548 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/LDraw-Importer/Materials/Trans_Clear.mat
+  artifactKey: Guid(e53fa874193326646a315a5413886df7) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Trans_Clear.mat using Guid(e53fa874193326646a315a5413886df7) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'cbd818997552df379b3b9cd3b7439912') in 0.006917771 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000148 seconds.
+  path: Assets/LDraw-Importer/Materials/Trans_Light_Blue_Violet.mat
+  artifactKey: Guid(48009dfc0d97a1149a6d71cabd2292d9) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Trans_Light_Blue_Violet.mat using Guid(48009dfc0d97a1149a6d71cabd2292d9) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7c1222be0ed4c2aeef99e6c6aa3c8c72') in 0.006550645 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/LDraw-Importer/Materials/Rubber_Red.mat
+  artifactKey: Guid(6704d279626d36d4eb7d7513ab5348d8) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Rubber_Red.mat using Guid(6704d279626d36d4eb7d7513ab5348d8) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '73e5af165bfc0cdfebf938d366b3d5d1') in 0.008723881 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000073 seconds.
+  path: Assets/LDraw-Importer/Materials/Rubber_Blue.mat
+  artifactKey: Guid(7b497013586d8d346aca11acaeb5778c) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Rubber_Blue.mat using Guid(7b497013586d8d346aca11acaeb5778c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '21d5c49fca909123c453cd737bf1239a') in 0.006699041 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/LDraw-Importer/Materials/Rubber_Yellow.mat
+  artifactKey: Guid(809204a4525d1fa438315486d821f724) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Rubber_Yellow.mat using Guid(809204a4525d1fa438315486d821f724) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b7d2194e3ec2d16b9b99f0d1b65906c8') in 0.006559232 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2524.asset
+  artifactKey: Guid(99c6bb6c2e04d914997c755ff24d43ff) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2524.asset using Guid(99c6bb6c2e04d914997c755ff24d43ff) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '20e771dbe11c837a1070b804e62aac02') in 0.002131064 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000093 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2436b.asset
+  artifactKey: Guid(4ad63e3ed51a83f47a56049fb6717d56) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2436b.asset using Guid(4ad63e3ed51a83f47a56049fb6717d56) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '94d212aa22061963ba2da010fbee39e4') in 0.00192811 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000097 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2450.asset
+  artifactKey: Guid(be23e9c3c4027334ba7ef9f2c1313c9c) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2450.asset using Guid(be23e9c3c4027334ba7ef9f2c1313c9c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ae1119d1c1287788b0f6cd489d8635c3') in 0.001623712 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs
+  artifactKey: Guid(e68f221940323b14da745c5ea4955dfd) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs using Guid(e68f221940323b14da745c5ea4955dfd) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '4c00c26667979c802800f4a0fb2acee5') in 0.005146963 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/21019 - ls41.asset
+  artifactKey: Guid(7faa9ed4ffeb7404c9e33973b0d750b0) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/21019 - ls41.asset using Guid(7faa9ed4ffeb7404c9e33973b0d750b0) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '934f65c7ba6b361a37a5a25a570b5420') in 0.004957962 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawQuad.cs
+  artifactKey: Guid(78508329ea3fd19459cf15f594acbcea) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawQuad.cs using Guid(78508329ea3fd19459cf15f594acbcea) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '2213919b219fc1085080fc26cb4e8c16') in 0.004935126 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/LDraw-Importer/Materials/Rubber_Orange.mat
+  artifactKey: Guid(6b3cea7cc29aece419901a0c20010c76) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Rubber_Orange.mat using Guid(6b3cea7cc29aece419901a0c20010c76) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '87d51c153596fe0c1be4b81196a19a0c') in 0.011851266 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/LDraw-Importer/Materials/Trans_Fire_Yellow.mat
+  artifactKey: Guid(1fed23b891c6cb54a8d9ee6174d7ef8d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Trans_Fire_Yellow.mat using Guid(1fed23b891c6cb54a8d9ee6174d7ef8d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '86489919dbc53ecc95b13e06b24db634') in 0.009290457 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2039s01.asset
+  artifactKey: Guid(db35960179a382e47911941b9cbe8fca) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2039s01.asset using Guid(db35960179a382e47911941b9cbe8fca) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'd098023031addd250b18e5fd50598425') in 0.002895332 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000136 seconds.
+  path: Assets/LDraw-Importer/Materials/Orange.mat
+  artifactKey: Guid(a1604998bdc433742acb374239aaacdf) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Orange.mat using Guid(a1604998bdc433742acb374239aaacdf) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '34d4828d49a1e6692e7a1f67712ef33d') in 0.008800501 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/LDraw-Importer/Editor/Scripts/UI/LDrawConfigCustomEditor.cs
+  artifactKey: Guid(e973ff2f869f18a4ab52d0980dab5c19) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Editor/Scripts/UI/LDrawConfigCustomEditor.cs using Guid(e973ff2f869f18a4ab52d0980dab5c19) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '51772faaa6f101ad6aded6948d747475') in 0.002585101 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000137 seconds.
+  path: Assets/LDraw-Importer/Materials/Trans_Medium_Blue.mat
+  artifactKey: Guid(6e66202181ec4d54aa320834fb24f4a8) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Trans_Medium_Blue.mat using Guid(6e66202181ec4d54aa320834fb24f4a8) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '28c6d563ec691bcaed527e1c10b53c0b') in 0.006125237 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000176 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2335.asset
+  artifactKey: Guid(14a84f7f4a453ab4fa9334c32cab39d9) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2335.asset using Guid(14a84f7f4a453ab4fa9334c32cab39d9) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '275c9ecb31bcf64630648c704935c34b') in 0.001870248 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000151 seconds.
+  path: Assets/LDraw-Importer/Materials/Very_Light_Grey.mat
+  artifactKey: Guid(9c8087a166932c34b9fdf90efda48ba6) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Very_Light_Grey.mat using Guid(9c8087a166932c34b9fdf90efda48ba6) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7373259e771d53376c8c29aefcbd00c2') in 0.006202406 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000142 seconds.
+  path: Assets/LDraw-Importer/Materials/Sky_Blue.mat
+  artifactKey: Guid(6e02826cf6b5dc04390a55ab6a997ace) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Sky_Blue.mat using Guid(6e02826cf6b5dc04390a55ab6a997ace) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '515da7b65defe8d404c2597e41485983') in 0.008076203 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/LDraw-Importer/Materials/White.mat
+  artifactKey: Guid(b700c0d6a3c2ea74a93fac79733e55d1) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/White.mat using Guid(b700c0d6a3c2ea74a93fac79733e55d1) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '5bc1649cde97ced3bb46f216b6c4ceff') in 0.009797624 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2362s01.asset
+  artifactKey: Guid(2d44b1c6a97b7ef4e94f34dfd769ba42) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2362s01.asset using Guid(2d44b1c6a97b7ef4e94f34dfd769ba42) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '45ebc8c4d9b97ca97991fbee5b20d2ae') in 0.004634078 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000142 seconds.
+  path: Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/Log.cs
+  artifactKey: Guid(dce71e5bf7c6d694eb0bcca08c366698) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/Log.cs using Guid(dce71e5bf7c6d694eb0bcca08c366698) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '97984779ac25ab1a67542c03da5f99c7') in 0.002264119 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/LDraw-Importer/Materials/Trans_Purple.mat
+  artifactKey: Guid(1e642c88d127a934a82a333c9f0d4401) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Trans_Purple.mat using Guid(1e642c88d127a934a82a333c9f0d4401) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b271d3b57737012da52c745ee89d06b1') in 0.010450261 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000113 seconds.
+  path: Assets/LDraw-Importer/Materials/Pearl_Dark_Grey.mat
+  artifactKey: Guid(d5b40c45d8a2fa1478d9cc42edcda161) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Pearl_Dark_Grey.mat using Guid(d5b40c45d8a2fa1478d9cc42edcda161) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'aace67ffe46f4024bb69bcf8c14ab80f') in 0.007276798 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/LDraw-Importer/Materials/Rubber_Flat_Silver.mat
+  artifactKey: Guid(f71d6c66b7d27184da7139a8c57aee5a) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Rubber_Flat_Silver.mat using Guid(f71d6c66b7d27184da7139a8c57aee5a) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7e099b93e7b24d8c0d8c679004ee055c') in 0.006370043 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/22385s01.asset
+  artifactKey: Guid(deda119903c36de40af2ba41aa42a5bb) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/22385s01.asset using Guid(deda119903c36de40af2ba41aa42a5bb) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '613c5bcbe1615ed2db38cc2bab5ceda5') in 0.002230188 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000129 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2431.asset
+  artifactKey: Guid(593e2c1b4db88294e92f49cc721e0ad4) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2431.asset using Guid(593e2c1b4db88294e92f49cc721e0ad4) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '712d52190154fcd32d8e7d2b9842a29f') in 0.001835166 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000137 seconds.
+  path: Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs
+  artifactKey: Guid(225c1f2c3947da8459118c7cefbab215) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs using Guid(225c1f2c3947da8459118c7cefbab215) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '37d8b2a1101b5aca4e006dae2c318991') in 0.002626042 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000158 seconds.
+  path: Assets/LDraw-Importer/Materials/Pearl_Gold.mat
+  artifactKey: Guid(b2faf27003e64bb449667cab855528d8) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Pearl_Gold.mat using Guid(b2faf27003e64bb449667cab855528d8) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ccd53cba52e8bc680676717c425f679c') in 0.006308149 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000138 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2342.asset
+  artifactKey: Guid(0fc9648940b2d38499b553f6f3dd1e99) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2342.asset using Guid(0fc9648940b2d38499b553f6f3dd1e99) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'f57ee02a3a4ce6da27037b17a9aed57f') in 0.002075607 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000128 seconds.
+  path: Assets/LDraw-Importer/Materials/Trans_Light_Blue.mat
+  artifactKey: Guid(01f063afc0ce7464a95f9b44b7c36748) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Trans_Light_Blue.mat using Guid(01f063afc0ce7464a95f9b44b7c36748) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '351664cd63f5d31178687730e114a253') in 0.006312656 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/Enums.cs
+  artifactKey: Guid(73e0d05da73e0ed478dfb2090d8ce6ec) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/Enums.cs using Guid(73e0d05da73e0ed478dfb2090d8ce6ec) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '70ee529da3ec6763be463dc87c1a84ad') in 0.002057843 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000157 seconds.
+  path: Assets/LDraw-Importer/Scripts/Utility/TransformExtention.cs
+  artifactKey: Guid(f57df045a01562f45968287a3a7fca5d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Scripts/Utility/TransformExtention.cs using Guid(f57df045a01562f45968287a3a7fca5d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e22a8e623b1dc8e8a68bcb0530e8d053') in 0.002921455 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000133 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2465s01.asset
+  artifactKey: Guid(daa50aa967c82814aada310e01aca076) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2465s01.asset using Guid(daa50aa967c82814aada310e01aca076) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '10f521b53cf29b750de4bcefee49d8b9') in 0.002774705 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000091 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2039s02.asset
+  artifactKey: Guid(0f9b5e886aeaf5e4f864f8d1a5de1977) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2039s02.asset using Guid(0f9b5e886aeaf5e4f864f8d1a5de1977) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'd14383828aef8c86dbfe176d2cb7d1b4') in 0.0029521 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2445.asset
+  artifactKey: Guid(b53230e53b6433340afeba0f2322fd57) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2445.asset using Guid(b53230e53b6433340afeba0f2322fd57) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '5da3a137678cf2cbcf6e34650d8bbcbc') in 0.002291891 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2-4ring3.asset
+  artifactKey: Guid(89afa7fa910b29b46b38747846a35c35) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2-4ring3.asset using Guid(89afa7fa910b29b46b38747846a35c35) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8a0557a8c00f99dd40c9eaf01e0fa53d') in 0.002240187 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2495s01.asset
+  artifactKey: Guid(b0a49ce2fc4f37c48b357e4a8f14c040) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2495s01.asset using Guid(b0a49ce2fc4f37c48b357e4a8f14c040) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8f3cfeac685db7cf9e43b46672e60acd') in 0.003822645 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000126 seconds.
+  path: Assets/LDraw-Importer/GeneratedMeshes/2-4rin11.asset
+  artifactKey: Guid(2b47e5f449c7671429aaf2f14125d127) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/GeneratedMeshes/2-4rin11.asset using Guid(2b47e5f449c7671429aaf2f14125d127) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8f6d7daaef4177e78646bede1b4e5e17') in 0.001789367 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/LDraw-Importer/Materials/Pink.mat
+  artifactKey: Guid(6fa6aaa42b64b7649bbbec1efafcbddf) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/LDraw-Importer/Materials/Pink.mat using Guid(6fa6aaa42b64b7649bbbec1efafcbddf) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'fd4b13538a8597681093bfdf27c7cb19') in 0.009123531 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.187957 seconds.
+  path: Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/TriangleSampler.cs
+  artifactKey: Guid(8c279d255e4d8f547a8076e23582e3cb) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/TriangleSampler.cs using Guid(8c279d255e4d8f547a8076e23582e3cb) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '83b735e73fe3cd79776dfc597f0ee781') in 0.005394785 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000113 seconds.
+  path: Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/Voronoi/DefaultVoronoiFactory.cs
+  artifactKey: Guid(b5ac9d51dcd8036438ac2f6dc0d5f5c5) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/Voronoi/DefaultVoronoiFactory.cs using Guid(b5ac9d51dcd8036438ac2f6dc0d5f5c5) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7fc19dec9f5b324892734174b2d5b04a') in 0.005456569 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000122 seconds.
+  path: Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Demo/Scripts/MeshDrawer/MeshDrawer.cs
+  artifactKey: Guid(dcf4b6f2e476b864d988d50b3f7e0169) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Demo/Scripts/MeshDrawer/MeshDrawer.cs using Guid(dcf4b6f2e476b864d988d50b3f7e0169) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8340edca23b0334d521aa07e6c3e4e4d') in 0.005211868 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000128 seconds.
+  path: Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/IO/TriangleReader.cs
+  artifactKey: Guid(8611f9dd61b2124488d9e7c60a44b84b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/IO/TriangleReader.cs using Guid(8611f9dd61b2124488d9e7c60a44b84b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '86d82eb769ce97ce1afc7058c14f73bb') in 0.003752688 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/Meshing/QualityMesher.cs
+  artifactKey: Guid(a714ce4cf31570e48bfd3b56664bfbeb) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/Meshing/QualityMesher.cs using Guid(a714ce4cf31570e48bfd3b56664bfbeb) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e91fcdf760ff14c0e53b783ab71a545f') in 0.003738675 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000083 seconds.
+  path: Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/Geometry/RegionPointer.cs
+  artifactKey: Guid(f8e28af8476432b4ca4534e34695eb9c) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/Geometry/RegionPointer.cs using Guid(f8e28af8476432b4ca4534e34695eb9c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'd5ad991d18e13f38ddc4b11b1c9cbd2c') in 0.00345766 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000142 seconds.
+  path: Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/Meshing/QualityOptions.cs
+  artifactKey: Guid(82453d55a0fa55247a6f3d15ec871d05) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/Meshing/QualityOptions.cs using Guid(82453d55a0fa55247a6f3d15ec871d05) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '2e2dcffce72ae83c11a6cdf737c63fbd') in 0.002697414 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/Meshing/Data/BadTriQueue.cs
+  artifactKey: Guid(f43417350e04ff1458c4e2ea20f439b7) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/Meshing/Data/BadTriQueue.cs using Guid(f43417350e04ff1458c4e2ea20f439b7) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e4e7dca212e4f0be8d5ec40ba121e84c') in 0.002683206 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000248 seconds.
+  path: Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/Meshing/Data/BadTriangle.cs
+  artifactKey: Guid(f6bce406f0cc0a74c97849854523c67d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/Meshing/Data/BadTriangle.cs using Guid(f6bce406f0cc0a74c97849854523c67d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '6a4982cafa0b64f870840674bf4658b2') in 0.004929726 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000118 seconds.
+  path: Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/Voronoi/Legacy/VoronoiRegion.cs
+  artifactKey: Guid(7033436d5c2a7754eb298e35409b9f30) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/Voronoi/Legacy/VoronoiRegion.cs using Guid(7033436d5c2a7754eb298e35409b9f30) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '76d22c86bdb552337980738b728b7e84') in 0.002929825 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/Topology/Osub.cs
+  artifactKey: Guid(cf07c66fdb92828489a1ae5fdf988768) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/Topology/Osub.cs using Guid(cf07c66fdb92828489a1ae5fdf988768) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '9a96298fa26a0659b5b4e99237c21a5c') in 0.007305405 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000085 seconds.
+  path: Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/IO/IMeshFormat.cs
+  artifactKey: Guid(572128b7c2f2888418d4652d822adc1b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/IO/IMeshFormat.cs using Guid(572128b7c2f2888418d4652d822adc1b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'bc28dfb1f0dfc6db5fdf9e695ae884f3') in 0.004260287 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000088 seconds.
+  path: Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/Voronoi/Legacy/SimpleVoronoi.cs
+  artifactKey: Guid(09fbe007670d48c4ba41815f357a19aa) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/Voronoi/Legacy/SimpleVoronoi.cs using Guid(09fbe007670d48c4ba41815f357a19aa) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ac4cdfef99e5e9fae181ac7db908051e') in 0.002226327 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000084 seconds.
+  path: Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/IO/FileProcessor.cs
+  artifactKey: Guid(3ea4211b9151b6c4eb40b4ca68e2f3cf) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/IO/FileProcessor.cs using Guid(3ea4211b9151b6c4eb40b4ca68e2f3cf) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '38fb5d58fc661d7f579898bfe76b3744') in 0.003197696 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000118 seconds.
+  path: Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/Smoothing/SimpleSmoother.cs
+  artifactKey: Guid(c4affca1742e49e4e8011970575cbf44) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/Smoothing/SimpleSmoother.cs using Guid(c4affca1742e49e4e8011970575cbf44) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '952558db5d73b525bc052d95218f91f2') in 0.003305284 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000110 seconds.
+  path: Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/Voronoi/BoundedVoronoi.cs
+  artifactKey: Guid(3c6908e0231e82a408c90a20728cff6b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Triangle.Net-for-Unity/Assets/TriangleNet/Scripts/Source/Voronoi/BoundedVoronoi.cs using Guid(3c6908e0231e82a408c90a20728cff6b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '5f17404c92f2e29d68167e46819c0905') in 0.002794935 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 1.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2797 unused Assets / (402.1 KB). Loaded Objects now: 3318.
+Memory consumption went from 76.4 MB to 76.0 MB.
+Total: 12.553324 ms (FindLiveObjects: 0.509230 ms CreateObjectMapping: 0.353522 ms MarkObjects: 10.771071 ms  DeleteObjects: 0.918343 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.765 seconds
+Refreshing native plugins compatible for Editor in 1.34 ms, found 0 plugins.
+Native extension for LinuxStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.49 ms, found 0 plugins.
+Package Manager log level set to [2]
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+./Editor/Platform/Linux/EditorUtility.cpp:DisplayDialogComplexPlatformSpecific
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.836 seconds
+Domain Reload Profiling: 1602ms
+	BeginReloadAssembly (209ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (88ms)
+	RebuildCommonClasses (57ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (26ms)
+	LoadAllAssembliesAndSetupDomain (463ms)
+		LoadAssemblies (386ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (153ms)
+			TypeCache.Refresh (76ms)
+				TypeCache.ScanAssembly (64ms)
+			BuildScriptInfoCaches (71ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (837ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (677ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (61ms)
+			SetLoadedEditorAssemblies (9ms)
+			BeforeProcessingInitializeOnLoad (105ms)
+			ProcessInitializeOnLoadAttributes (309ms)
+			ProcessInitializeOnLoadMethodAttributes (190ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 1.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2840 unused Assets / (0.5 MB). Loaded Objects now: 3330.
+Memory consumption went from 77.2 MB to 76.7 MB.
+Total: 13.903283 ms (FindLiveObjects: 0.524247 ms CreateObjectMapping: 0.482696 ms MarkObjects: 11.116593 ms  DeleteObjects: 1.778028 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.695 seconds
+Refreshing native plugins compatible for Editor in 1.38 ms, found 0 plugins.
+Native extension for LinuxStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.51 ms, found 0 plugins.
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.848 seconds
+Domain Reload Profiling: 1544ms
+	BeginReloadAssembly (206ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (73ms)
+	RebuildCommonClasses (49ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (27ms)
+	LoadAllAssembliesAndSetupDomain (404ms)
+		LoadAssemblies (332ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (157ms)
+			TypeCache.Refresh (56ms)
+				TypeCache.ScanAssembly (42ms)
+			BuildScriptInfoCaches (96ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (849ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (709ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (65ms)
+			SetLoadedEditorAssemblies (11ms)
+			BeforeProcessingInitializeOnLoad (93ms)
+			ProcessInitializeOnLoadAttributes (323ms)
+			ProcessInitializeOnLoadMethodAttributes (212ms)
+			AfterProcessingInitializeOnLoad (5ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 1.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2844 unused Assets / (0.6 MB). Loaded Objects now: 3335.
+Memory consumption went from 77.3 MB to 76.7 MB.
+Total: 14.108711 ms (FindLiveObjects: 0.495856 ms CreateObjectMapping: 0.418204 ms MarkObjects: 11.353354 ms  DeleteObjects: 1.839842 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+
+SDL leaked 2 allocations

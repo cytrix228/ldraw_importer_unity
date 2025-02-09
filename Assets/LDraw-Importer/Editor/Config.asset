@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d445e9bb880bd4f8a1a9fa07c7b1ce, type: 3}
   m_Name: Config
   m_EditorClassIdentifier: 
-  _BasePartsPath: LDrawFiles/blueprints/base-parts/
+  _BasePartsPath: /home/cytrix/ldraw/
   _ModelsPath: LDrawFiles/blueprints/models/
-  _ColorConfigPath: LDrawFiles/ldcfgalt.ldr
+  _ColorConfigPath: /home/cytrix/ldraw/LDConfig.ldr
   _MaterialsPath: Assets/LDraw-Importer/Materials/
   _MeshesPath: Assets/LDraw-Importer/GeneratedMeshes
   _Scale: 0.01

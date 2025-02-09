@@ -74,6 +74,9 @@ namespace LDraw
             try
             {
                 name = name.ToLower();
+
+				// replace '\' with '/'
+				name = name.Replace( '\\', '/' );
            
                 var serialized = _Parts.ContainsKey(name) ? File.ReadAllText(_Parts[name]) : _Models[name]; 
                 return serialized;
@@ -93,20 +96,41 @@ namespace LDraw
             PrepareModels();
             ParseColors();
             _Parts = new Dictionary<string, string>();
-            var files = Directory.GetFiles(_BasePartsPath, "*.*", SearchOption.AllDirectories);
 
-            foreach (var file in files)
+            var files_p = Directory.GetFiles(_BasePartsPath + "p", "*.*", SearchOption.AllDirectories);
+            var files_parts = Directory.GetFiles(_BasePartsPath + "parts", "*.*", SearchOption.AllDirectories);
+
+            foreach (var file in files_p)
             {
                 if (!file.Contains(".meta"))
                 {
-                    string fileName = file.Replace(_BasePartsPath, "").Split('.')[0];
+                    string fileName = file.Replace(_BasePartsPath + "p/", "").Split('.')[0];
                    
-                    if (fileName.Contains("\\"))
-                       fileName = fileName.Split('\\')[1];
+                    //if (fileName.Contains("\\"))
+                    //   fileName = fileName.Split('\\')[1];
+					fileName = fileName.ToLower();
                     if (!_Parts.ContainsKey(fileName))
                         _Parts.Add(fileName, file);
                 }
             }
+            foreach (var file in files_parts)
+            {
+                if (!file.Contains(".meta"))
+                {
+                    string fileName = file.Replace(_BasePartsPath + "parts/", "").Split('.')[0];
+                   
+                    //if (fileName.Contains("\\"))
+                    //   fileName = fileName.Split('\\')[1];
+					fileName = fileName.ToLower();
+                    if (!_Parts.ContainsKey(fileName))
+                        _Parts.Add(fileName, file);
+                }
+            }
+
+			Debug.Log("Parts loaded: " + _Parts.Count);
+			//for( int i = 0; i < _Parts.Count; i++ ) {
+			//	Debug.Log( "Part " + i + " : " + _Parts.ElementAt(i).Key );
+			//}
         }
 
         private void ParseColors()
@@ -201,11 +225,21 @@ namespace LDraw
         public void SaveMesh(Mesh mesh)
         {
             var path = _MeshesPath;
-            if (!Directory.Exists(path))
-            {
-                Directory.CreateDirectory(path);
-            }
+			//Debug.Log( "Mesh path : " + path );
             path = Path.Combine(path, mesh.name + ".asset");
+			path = path.Replace( '\\', '/' );
+			//Debug.Log( "Mesh path : " + path );
+
+			// get the full path directory excluding the file name
+			var path_dir = Path.GetDirectoryName( path );
+
+
+            if (!Directory.Exists(path_dir))
+            {
+				//Debug.Log( "Creating directory: " + path_dir );
+                Directory.CreateDirectory(path_dir);
+            }
+
             AssetDatabase.CreateAsset(mesh, path);
             AssetDatabase.SaveAssets();
         }
