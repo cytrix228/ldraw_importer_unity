@@ -41,5 +41,5 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
-Assets/Ldraw-Importer/GeneratedMeshes
-Logs
+/Assets/Ldraw-Importer/GeneratedMeshes
+/Logs/*.*
