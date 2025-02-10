@@ -8,6 +8,7 @@ namespace LDraw
     
     public enum CommandType
     {
+		PartDesc = 0,
         SubFile = 1,
         Triangle = 3,
         Quad = 4
@@ -30,6 +31,18 @@ namespace LDraw
              
                 switch (commandType)
                 {
+					case CommandType.PartDesc:
+						if( args[1] == "!LDRAW_ORG" ) {
+							if( args[2] == "Part")
+								command = new LDrawPart();
+							else if( args[2] == "Subpart")
+								command = new LDrawSubpart();
+							else if( args[2] == "Primitive" || args[2] == "8_Primitive" || args[2] == "48_Primitive" )
+								command = new LDrawPrimitive();
+							else if( args[2] == "Shortcut")
+								command = new LDrawShortcut();
+						}
+						break;
                     case CommandType.SubFile:
                         command = new LDrawSubFile();
                         break;

@@ -8,6 +8,115 @@ using UnityEngine;
 
 namespace LDraw
 {
+
+	public static class MergeChildrenMeshes
+	{
+		/// <summary>
+		/// Merges all child meshes of the given parent GameObject into one mesh and assigns it to the parent's MeshFilter.
+		/// Optionally disables the child GameObjects after merging.
+		/// </summary>
+		/// <param name="parent">The parent GameObject whose child meshes will be merged.</param>
+		/// <param name="destroyChildMeshesAfterMerging">If true, disables the child GameObjects after merging.</param>
+		/// <returns>The merged mesh.</returns>
+		public static Mesh Merge(GameObject parent, bool destroyChildMeshesAfterMerging = true)
+		{
+			// Ensure the parent has a MeshFilter.
+			MeshFilter parentMeshFilter = parent.GetComponent<MeshFilter>();
+			if (parentMeshFilter == null)
+			{
+				parentMeshFilter = parent.AddComponent<MeshFilter>();
+			}
+			
+			// Ensure the parent has a MeshRenderer.
+			MeshRenderer parentMeshRenderer = parent.GetComponent<MeshRenderer>();
+			if (parentMeshRenderer == null)
+			{
+				parentMeshRenderer = parent.AddComponent<MeshRenderer>();
+			}
+			
+			// Gather all MeshFilters in the children (including nested children).
+			MeshFilter[] childMeshFilters = parent.GetComponentsInChildren<MeshFilter>();
+			List<CombineInstance> combineInstances = new List<CombineInstance>();
+
+			foreach (MeshFilter mf in childMeshFilters)
+			{
+				// Skip the parent's own MeshFilter.
+				if (mf.gameObject == parent)
+					continue;
+				
+				if (mf.sharedMesh == null)
+					continue;
+				
+				CombineInstance ci = new CombineInstance();
+				ci.mesh = mf.sharedMesh;
+				// Convert the child's local-to-world matrix into the parent's local space.
+				ci.transform = parent.transform.worldToLocalMatrix * mf.transform.localToWorldMatrix;
+				combineInstances.Add(ci);
+			}
+			
+			// Create a new mesh and combine all the child meshes.
+			Mesh combinedMesh = new Mesh { name = "CombinedMesh" };
+			combinedMesh.CombineMeshes(combineInstances.ToArray(), mergeSubMeshes: true, useMatrices: true);
+			
+			// (Optional) Remove duplicate vertices for optimization.
+			// combinedMesh = RemoveDuplicateVertices(combinedMesh);
+			
+			// Assign the combined mesh to the parent's MeshFilter.
+			parentMeshFilter.mesh = combinedMesh;
+			
+			// Optionally disable (or destroy) the child GameObjects to prevent duplicate rendering.
+			if (destroyChildMeshesAfterMerging)
+			{
+				foreach (MeshFilter mf in childMeshFilters)
+				{
+					if (mf.gameObject != parent)
+					{
+						mf.gameObject.SetActive(false);
+						// Alternatively, if you want to destroy them, use:
+						// Object.Destroy(mf.gameObject);
+					}
+				}
+			}
+			
+			return combinedMesh;
+		}
+		
+		/// <summary>
+		/// (Optional) Removes duplicate vertices from a mesh.
+		/// Use this method if you suspect there are overlapping vertices after the merge.
+		/// </summary>
+		/// <param name="mesh">The mesh to optimize.</param>
+		/// <returns>The optimized mesh with duplicate vertices removed.</returns>
+		public static Mesh RemoveDuplicateVertices(Mesh mesh)
+		{
+			Vector3[] oldVertices = mesh.vertices;
+			int[] oldTriangles = mesh.triangles;
+			
+			Dictionary<Vector3, int> vertexMap = new Dictionary<Vector3, int>();
+			List<Vector3> newVertices = new List<Vector3>();
+			List<int> newTriangles = new List<int>();
+			
+			for (int i = 0; i < oldTriangles.Length; i++)
+			{
+				Vector3 vertex = oldVertices[oldTriangles[i]];
+				if (!vertexMap.ContainsKey(vertex))
+				{
+					vertexMap[vertex] = newVertices.Count;
+					newVertices.Add(vertex);
+				}
+				newTriangles.Add(vertexMap[vertex]);
+			}
+			
+			Mesh newMesh = new Mesh();
+			newMesh.vertices = newVertices.ToArray();
+			newMesh.triangles = newTriangles.ToArray();
+			newMesh.RecalculateNormals();
+			newMesh.RecalculateBounds();
+			return newMesh;
+		}
+	}
+
+
     public class LDrawModel
     {
         /// FileFormatVersion 1.0.2;
@@ -103,7 +212,7 @@ namespace LDraw
                 visualGO.transform.SetParent(go.transform);
                 var mf = visualGO.AddComponent<MeshFilter>();
         
-                mf.sharedMesh = PrepareMesh(verts, triangles);
+                mf.sharedMesh = PrepareMesh(verts, triangles); // save mesh to disk
                 var mr = visualGO.AddComponent<MeshRenderer>();
                 if (mat != null)
                 {
