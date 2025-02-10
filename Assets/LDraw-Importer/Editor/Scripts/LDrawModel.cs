@@ -59,7 +59,7 @@ namespace LDraw
 			combinedMesh.CombineMeshes(combineInstances.ToArray(), mergeSubMeshes: true, useMatrices: true);
 			
 			// (Optional) Remove duplicate vertices for optimization.
-			// combinedMesh = RemoveDuplicateVertices(combinedMesh);
+			combinedMesh = RemoveDuplicateVertices(combinedMesh);
 			
 			// Assign the combined mesh to the parent's MeshFilter.
 			parentMeshFilter.mesh = combinedMesh;
@@ -183,6 +183,8 @@ namespace LDraw
         
             var triangles = new List<int>();
             var verts = new List<Vector3>();
+
+			LDrawPart partCommand = null;
         
             for (int i = 0; i < _Commands.Count; i++)
             {
@@ -195,7 +197,16 @@ namespace LDraw
                 {
                     sfCommand.GetModelGameObject(go.transform);
                 }
+
             }
+
+            for (int i = 0; i < _Commands.Count; i++)
+            {
+				partCommand = _Commands[i] as LDrawPart;
+				if(partCommand != null) {
+					break;
+				}
+			}	
         
             if (mat != null)
             {
@@ -224,6 +235,14 @@ namespace LDraw
             go.transform.ApplyLocalTRS(trs);
         
             go.transform.SetParent(parent);
+
+			if(partCommand != null) {
+				// output name of go
+				Debug.Log("GameObject name : " + go.name );
+				Mesh mergedMesh = MergeChildrenMeshes.Merge(go, destroyChildMeshesAfterMerging: true);
+        		Debug.Log("Merged mesh has " + mergedMesh.vertexCount + " vertices.");				
+			}
+
             return go;
         }
         private Mesh PrepareMesh(List<Vector3> verts, List<int> triangles)

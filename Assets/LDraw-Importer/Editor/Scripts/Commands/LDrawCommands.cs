@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UnityEngine;
 namespace LDraw
 {
@@ -25,6 +26,18 @@ namespace LDraw
             LDrawCommand command = null;
             int type;
             var args = line.Split(' ');
+
+			// if( line.StartsWith("0") ) {
+			//  	Debug.Log("line : " + line );
+
+
+			// 	int type2;
+			// 	bool ret = Int32.TryParse(args[0], out type2);
+			// 	Debug.Log( "args[0] : " + args[0] + " type2 : " + type2 + "  " + ret );
+				
+
+			// }
+
             if (Int32.TryParse(args[0], out type))
             {
                 var commandType = (CommandType)type;
@@ -32,9 +45,21 @@ namespace LDraw
                 switch (commandType)
                 {
 					case CommandType.PartDesc:
-						if( args[1] == "!LDRAW_ORG" ) {
-							if( args[2] == "Part")
+						//  Debug.Log("PartDesc : " + line );
+						//  if( args.Length >= 3 ) {
+						// 	for( int i = 0; i < args.Length; i++ ) {
+						// 		string debugmsg = "args[" + i + "] : " + args[i];
+						// 		debugmsg += " " + (args[i] == "!LDRAW_ORG");
+						// 		Debug.Log( debugmsg);
+						// 	}
+						//  }
+						// debug args
+                        if( args.Length >= 3 &&  args[1] == "!LDRAW_ORG" ) {
+							//Debug.Log( ">>   !LDRAW_ORG" );
+							if( args[2] == "Part") {
+								//Debug.Log("New LDrawPart" );
 								command = new LDrawPart();
+							}
 							else if( args[2] == "Subpart")
 								command = new LDrawSubpart();
 							else if( args[2] == "Primitive" || args[2] == "8_Primitive" || args[2] == "48_Primitive" )
@@ -44,6 +69,7 @@ namespace LDraw
 						}
 						break;
                     case CommandType.SubFile:
+//						Debug.Log("SubFile : " + line );
                         command = new LDrawSubFile();
                         break;
                     case CommandType.Triangle:
@@ -65,6 +91,11 @@ namespace LDraw
                 command.Deserialize(line);
             }
 
+			LDrawPart partComd = command as LDrawPart;
+
+			if( partComd != null ) { 
+				Debug.Log("command : " + command );
+			}
             return command;
         }
         
