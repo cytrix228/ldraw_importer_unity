@@ -18,69 +18,78 @@ namespace LDraw
 		/// <param name="parent">The parent GameObject whose child meshes will be merged.</param>
 		/// <param name="destroyChildMeshesAfterMerging">If true, disables the child GameObjects after merging.</param>
 		/// <returns>The merged mesh.</returns>
-		public static Mesh Merge(GameObject parent, bool destroyChildMeshesAfterMerging = true)
+		public static Mesh Merge(GameObject parent, bool removeChildMeshesAfterMerging = true)
 		{
 			// Ensure the parent has a MeshFilter.
 			MeshFilter parentMeshFilter = parent.GetComponent<MeshFilter>();
 			if (parentMeshFilter == null)
-			{
 				parentMeshFilter = parent.AddComponent<MeshFilter>();
-			}
-			
+
 			// Ensure the parent has a MeshRenderer.
 			MeshRenderer parentMeshRenderer = parent.GetComponent<MeshRenderer>();
 			if (parentMeshRenderer == null)
-			{
 				parentMeshRenderer = parent.AddComponent<MeshRenderer>();
-			}
-			
-			// Gather all MeshFilters in the children (including nested children).
+
+			// Gather all child MeshFilters (including nested children).
 			MeshFilter[] childMeshFilters = parent.GetComponentsInChildren<MeshFilter>();
 			List<CombineInstance> combineInstances = new List<CombineInstance>();
 
+			Material commonMaterial = null;
 			foreach (MeshFilter mf in childMeshFilters)
 			{
 				// Skip the parent's own MeshFilter.
 				if (mf.gameObject == parent)
 					continue;
-				
+
 				if (mf.sharedMesh == null)
 					continue;
-				
-				CombineInstance ci = new CombineInstance();
-				ci.mesh = mf.sharedMesh;
-				// Convert the child's local-to-world matrix into the parent's local space.
-				ci.transform = parent.transform.worldToLocalMatrix * mf.transform.localToWorldMatrix;
+
+				// Retrieve a material from the first child that has one.
+				if (commonMaterial == null)
+				{
+					MeshRenderer childRenderer = mf.GetComponent<MeshRenderer>();
+					if (childRenderer != null)
+						commonMaterial = childRenderer.sharedMaterial;
+				}
+
+				CombineInstance ci = new CombineInstance
+				{
+					mesh = mf.sharedMesh,
+					// Convert the child's local-to-world matrix into the parent's local space.
+					transform = parent.transform.worldToLocalMatrix * mf.transform.localToWorldMatrix
+				};
 				combineInstances.Add(ci);
 			}
-			
-			// Create a new mesh and combine all the child meshes.
+
+			// Create a new mesh and combine all child meshes.
 			Mesh combinedMesh = new Mesh { name = "CombinedMesh" };
+			// Using mergeSubMeshes = true combines all geometry into a single submesh.
 			combinedMesh.CombineMeshes(combineInstances.ToArray(), mergeSubMeshes: true, useMatrices: true);
-			
-			// (Optional) Remove duplicate vertices for optimization.
-			combinedMesh = RemoveDuplicateVertices(combinedMesh);
-			
+
 			// Assign the combined mesh to the parent's MeshFilter.
 			parentMeshFilter.mesh = combinedMesh;
-			
-			// Optionally disable (or destroy) the child GameObjects to prevent duplicate rendering.
-			if (destroyChildMeshesAfterMerging)
+
+			// Assign the material to the parent's MeshRenderer if available.
+			Debug.Log("commonMaterial : " + commonMaterial);
+			if (commonMaterial != null)
+				parentMeshRenderer.sharedMaterial = commonMaterial;
+
+			// Remove (destroy) the child GameObjects after merging.
+			if (removeChildMeshesAfterMerging)
 			{
 				foreach (MeshFilter mf in childMeshFilters)
 				{
 					if (mf.gameObject != parent)
 					{
-						mf.gameObject.SetActive(false);
-						// Alternatively, if you want to destroy them, use:
-						// Object.Destroy(mf.gameObject);
+						// In Play mode, use Destroy. In Editor scripts, you may consider DestroyImmediate.
+						UnityEngine.Object.DestroyImmediate(mf.gameObject);
+						
 					}
 				}
 			}
-			
+
 			return combinedMesh;
-		}
-		
+		}		
 		/// <summary>
 		/// (Optional) Removes duplicate vertices from a mesh.
 		/// Use this method if you suspect there are overlapping vertices after the merge.
@@ -239,7 +248,7 @@ namespace LDraw
 			if(partCommand != null) {
 				// output name of go
 				Debug.Log("GameObject name : " + go.name );
-				Mesh mergedMesh = MergeChildrenMeshes.Merge(go, destroyChildMeshesAfterMerging: true);
+				Mesh mergedMesh = MergeChildrenMeshes.Merge(go);
         		Debug.Log("Merged mesh has " + mergedMesh.vertexCount + " vertices.");				
 			}
 
