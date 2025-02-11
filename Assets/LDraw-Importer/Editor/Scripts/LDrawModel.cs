@@ -134,7 +134,13 @@ namespace LDraw
 
         public static LDrawModel Create(string name, string path)
         {
-            if (_models.ContainsKey(name)) return _models[name];
+			Debug.Log("Create LDrawModel : " + name );
+
+
+            if (_models.ContainsKey(name)) {
+				Debug.Log("      >> Model already exists : " + name );
+				return _models[name];
+			}
             var model = new LDrawModel();
             model.Init(name, path);
           
@@ -160,6 +166,8 @@ namespace LDraw
 
         private void Init(string name, string serialized)
         {
+			Debug.Log("Init LDrawModel : " + name );
+			
             _Name = name;
             _Commands = new List<LDrawCommand>();
             using (StringReader reader = new StringReader(serialized))
@@ -248,8 +256,8 @@ namespace LDraw
 			if(partCommand != null) {
 				// output name of go
 				Debug.Log("GameObject name : " + go.name );
-				Mesh mergedMesh = MergeChildrenMeshes.Merge(go);
-        		Debug.Log("Merged mesh has " + mergedMesh.vertexCount + " vertices.");				
+				//Mesh mergedMesh = MergeChildrenMeshes.Merge(go);
+        		//Debug.Log("Merged mesh has " + mergedMesh.vertexCount + " vertices.");				
 			}
 
             return go;

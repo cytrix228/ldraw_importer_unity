@@ -11,8 +11,10 @@ namespace LDraw
     {
 		PartDesc = 0,
         SubFile = 1,
+		Line = 2,
         Triangle = 3,
-        Quad = 4
+        Quad = 4,
+		Nothing = -1
     }
 
     public abstract class LDrawCommand
@@ -21,6 +23,8 @@ namespace LDraw
         protected string _Color;
         
         protected LDrawModel _Parent;
+
+		protected CommandType _Type = CommandType.Nothing;
         public static LDrawCommand DeserializeCommand(string line, LDrawModel parent)
         {
             LDrawCommand command = null;
@@ -72,6 +76,9 @@ namespace LDraw
 //						Debug.Log("SubFile : " + line );
                         command = new LDrawSubFile();
                         break;
+					case CommandType.Line:
+						command = new LDrawLine();
+						break;
                     case CommandType.Triangle:
                         command = new LDrawTriangle();
                         break;
@@ -79,6 +86,9 @@ namespace LDraw
                         command = new LDrawQuad();
                         break;
                 }
+				if( command != null ) {
+					command._Type = commandType;
+				}
             }
            
             if (command != null)
