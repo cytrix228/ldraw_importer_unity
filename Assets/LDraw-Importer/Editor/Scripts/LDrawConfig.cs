@@ -269,21 +269,35 @@ namespace LDraw
         {
             get
             {
+            	Console.WriteLine("Find all : ");
+            	foreach( ScriptableObject _to in Resources.FindObjectsOfTypeAll(typeof(ScriptableObject)) as ScriptableObject[]) {
+            		Console.WriteLine(_to.name);
+            	}
                 if (_Instance == null)
                 {
-                    _Instance = AssetDatabase.LoadAssetAtPath<LDrawConfig>(ConfigPath);
+                	Console.WriteLine("Load resource : " + ConfigPath);
+                    //_Instance = Resources.Load<LDrawConfig>(ResourcePath);
+					_Instance = AssetDatabase.LoadAssetAtPath<LDrawConfig>(ConfigPath);
                 }
 
                 return _Instance;
             }
         }
 
+		public static LDrawConfig GetInstance()
+		{
+			Console.WriteLine("LDrawConfig::GetInstance() : " + LDrawConfig.Instance);
+			return Instance;
+		}
+
         private void OnEnable()
         {
+        	Console.WriteLine("LDrawConfig::OnEnable()" + LDrawConfig.Instance);
             InitParts();
         }
 
-        private const string ConfigPath = "Assets/LDraw-Importer/Editor/Config.asset";
+        private const string ConfigPath = "Assets/Resources/Config.asset";
+        private const string ResourcePath = "Config";
         public const int DefaultMaterialCode = 16;
     }
 }

@@ -45,6 +45,17 @@ namespace LDraw
             GenerateModelButton();
         }
 
+        private void GenerateModel()
+        {
+            _CurrentPart = _CurrentType == GeneratingType.ByName ? _CurrentPart 
+                : LDrawConfig.Instance.GetModelByFileName(_ModelNames[_CurrentIndex]); 
+            // good test 949ac01
+            var model = LDrawModel.Create(_CurrentPart, LDrawConfig.Instance.GetSerializedPart(_CurrentPart));
+            var go = model.CreateMeshGameObject(LDrawConfig.Instance.ScaleMatrix);
+            go.transform.LocalReflect(Vector3.up);
+     	
+        }
+
         private void GenerateModelButton()
         {
             if (GUILayout.Button("Generate"))
