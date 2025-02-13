@@ -14,6 +14,7 @@ namespace LDraw
 
 		public void GetModelGameObject(Transform parent)
 		{
+			Debug.Log("CreateMeshGameObject : " + _Name );
 			_Model.CreateMeshGameObject(_Matrix, GetMaterial(), parent);
 		}
 

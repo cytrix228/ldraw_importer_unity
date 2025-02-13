@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using NUnit.Framework;
 using UnityEngine;
 namespace LDraw
 {
@@ -14,6 +15,7 @@ namespace LDraw
 		Line = 2,
         Triangle = 3,
         Quad = 4,
+		OptionalLine = 5,
 		Nothing = -1
     }
 
@@ -76,6 +78,9 @@ namespace LDraw
 //						Debug.Log("SubFile : " + line );
                         command = new LDrawSubFile();
                         break;
+					case CommandType.OptionalLine:
+						command = new LDrawOptionalLine();
+						break;
 					case CommandType.Line:
 						command = new LDrawLine();
 						break;
@@ -110,6 +115,16 @@ namespace LDraw
         }
         
         protected Vector3[] _Verts;
+
+		public Vector3 GetVert( int idx ) {
+			if( idx < 0 || idx >= _Verts.Length ) {
+				// raise exception
+				throw new IndexOutOfRangeException("Index out of range");
+			}
+			return _Verts[idx];
+		}
+
+
         public abstract void PrepareMeshData(List<int> triangles, List<Vector3> verts);
         public abstract void Deserialize(string serialized);
 

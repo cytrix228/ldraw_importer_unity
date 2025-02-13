@@ -3,8 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Numerics;
 using System.Text.RegularExpressions;
 using UnityEngine;
+using Matrix4x4 = UnityEngine.Matrix4x4;
+using Vector3 = UnityEngine.Vector3;
 
 namespace LDraw
 {
@@ -134,7 +137,7 @@ namespace LDraw
 
         public static LDrawModel Create(string name, string path)
         {
-			Debug.Log("Create LDrawModel : " + name );
+			Debug.Log("Create LDrawModel : " + name + " path : " + path );
 
 
             if (_models.ContainsKey(name)) {
@@ -166,7 +169,7 @@ namespace LDraw
 
         private void Init(string name, string serialized)
         {
-			Debug.Log("Init LDrawModel : " + name );
+			Debug.Log("Init LDrawModel : " + name + " serialized : " + serialized );
 			
             _Name = name;
             _Commands = new List<LDrawCommand>();
@@ -193,22 +196,71 @@ namespace LDraw
             }
         }
 
+
+
         public GameObject CreateMeshGameObject(Matrix4x4 trs, Material mat = null, Transform parent = null)
         {
             if (_Commands.Count == 0) return null;
             GameObject go = new GameObject(_Name);
         
+			Debug.Log("   in CreateMeshGameObject : " + _Name );
+
             var triangles = new List<int>();
             var verts = new List<Vector3>();
 
+			var polylines = new List<Vector3[]>();
+			var lines = new List<Vector3>();
+		
+			
+
 			LDrawPart partCommand = null;
         
+
+			Debug.Log( "   _Commands.Count : " + _Commands.Count );
+			bool isLineStarted = false;
             for (int i = 0; i < _Commands.Count; i++)
             {
                 var sfCommand = _Commands[i] as LDrawSubFile;
-                if (sfCommand == null)
-                {
-                    _Commands[i].PrepareMeshData(triangles, verts);
+                if (sfCommand == null )
+				{
+					var lineCommand = _Commands[i] as LDrawLine;
+					if(lineCommand != null ) {
+						if( !isLineStarted) {
+							isLineStarted = true;
+							lines.Clear();
+							lines.Add(lineCommand.GetVert(0));
+							lines.Add(lineCommand.GetVert(1));
+						}
+						else {
+							Vector3 vStart = lineCommand.GetVert(0);
+							Vector3 vLast = lines[lines.Count - 1];
+							if( vStart == vLast ) {
+								lines.Add( lineCommand.GetVert(1) );
+							}
+							else {
+								polylines.Add(lines.ToArray());
+								lines.Clear();
+								lines.Add(lineCommand.GetVert(0));
+								lines.Add(lineCommand.GetVert(1));
+							}
+						}
+					}
+					else {
+						if( isLineStarted ) {
+							polylines.Add(lines.ToArray());
+							lines.Clear();
+							isLineStarted = false;
+						}
+						var trinalgeCommand = _Commands[i] as LDrawTriangle;
+						if(trinalgeCommand != null ) {
+                    		trinalgeCommand.PrepareMeshData(triangles, verts);
+						}
+
+						var quadCommand = _Commands[i] as LDrawQuad;
+						if(quadCommand != null ) {
+							quadCommand.PrepareMeshData(triangles, verts);
+						}
+					}
                 }
                 else
                 {
@@ -291,6 +343,7 @@ namespace LDraw
             triangles.AddRange(tris);
             //end backface
             
+			Debug.Log("Name : " + _Name + "  / verts.Count : " + verts.Count + "  / triangles.Count : " + triangles.Count );
             mesh.SetVertices(verts);
             mesh.SetTriangles(triangles, 0);
             

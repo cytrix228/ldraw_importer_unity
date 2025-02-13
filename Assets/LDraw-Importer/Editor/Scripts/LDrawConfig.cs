@@ -78,8 +78,16 @@ namespace LDraw
 				// replace '\' with '/'
 				name = name.Replace( '\\', '/' );
            
-                var serialized = _Parts.ContainsKey(name) ? File.ReadAllText(_Parts[name]) : _Models[name]; 
-                return serialized;
+                //var serialized = _Parts.ContainsKey(name) ? File.ReadAllText(_Parts[name]) : _Models[name]; 
+				if( _Parts.ContainsKey(name) ) {
+					Debug.Log( "Reading part : " + _Parts[name] );
+					return File.ReadAllText(_Parts[name]);
+				}
+				else if( _Models.ContainsKey(name) ) {
+					Debug.Log( "Reading model : " + _Models[name] );
+					return _Models[name];
+				}
+				return null;
             }
             catch
             {

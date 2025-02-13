@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a2ea06dd607308b1842d15d8770a8c9, type: 3}
+  m_Script: {fileID: 11500000, guid: c6d445e9bb880bd4f8a1a9fa07c7b1ce, type: 3}
   m_Name: Config
   m_EditorClassIdentifier: 
   _BasePartsPath: /home/cytrix/ldraw/
@@ -18,7 +18,7 @@ MonoBehaviour:
   _MaterialsPath: Assets/LDraw-Importer/Materials/
   _MeshesPath: Assets/LDraw-Importer/GeneratedMeshes
   _Scale: 0.01
-  _DefaultOpaqueMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000,
-    type: 0}
-  _DefaultTransparentMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000,
-    type: 0}
+  _DefaultOpaqueMaterial: {fileID: 2100000, guid: d5ddcbb5d94685f4b9ba040a31cc17ce,
+    type: 2}
+  _DefaultTransparentMaterial: {fileID: 2100000, guid: 8f4c379874289c94db39cce2cc67e68d,
+    type: 2}

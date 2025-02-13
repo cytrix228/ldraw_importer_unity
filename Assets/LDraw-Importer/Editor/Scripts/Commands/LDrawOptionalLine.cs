@@ -5,13 +5,13 @@ using UnityEngine;
 
 namespace LDraw
 {
-	public class LDrawLine : LDrawCommand
+	public class LDrawOptionalLine : LDrawCommand
 	{
 		public override void PrepareMeshData( List<int> lines, List<Vector3> verts)
 		{
 			var vertLen = verts.Count;
 
-			//Debug.Log( "LDrawLine  at vert count : " + vertLen );
+			//Debug.Log( "LDrawOptionalLine  at vert count : " + vertLen );
 
 			// for (int i = 0; i < 2; i++)
 			// {
@@ -54,7 +54,7 @@ namespace LDraw
 
 		public override void Deserialize(string serialized)
 		{
-			//Debug.Log("LDrawLines.Deserialize : " + serialized);
+			//Debug.Log("LDrawOptionalLines.Deserialize : " + serialized);
 
 			var args = serialized.Split(' ');
 			float[] param = new float[6];
