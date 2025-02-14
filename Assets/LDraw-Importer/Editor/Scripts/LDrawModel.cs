@@ -129,6 +129,134 @@ namespace LDraw
 	}
 
 
+	public static class PolylineMeshUtil
+	{
+		/// <summary>
+		/// Creates a Mesh that combines multiple polylines as submeshes.
+		/// Each polyline (defined as a List of Vector3 points) is added as a separate submesh.
+		/// A material is generated for each submesh.
+		/// </summary>
+		/// <param name="polylines">List of polylines, where each polyline is a List of Vector3 points.</param>
+		/// <param name="materials">Output array of materials, one per submesh.</param>
+		/// <returns>The combined Mesh with multiple submeshes.</returns>
+		public static Mesh CreateMultiplePolylinesMesh(List<List<Vector3>> polylines)
+		{
+			// Combine all vertices from each polyline into one list.
+			List<Vector3> allVertices = new List<Vector3>();
+			// List to store the index array for each polyline (each becomes a submesh).
+			List<int[]> submeshIndices = new List<int[]>();
+
+			foreach (List<Vector3> polyline in polylines)
+			{
+				int startIndex = allVertices.Count;
+				allVertices.AddRange(polyline);
+
+				// Build an index array for this polyline.
+				int[] indices = new int[polyline.Count];
+				for (int i = 0; i < polyline.Count; i++)
+				{
+					indices[i] = startIndex + i;
+				}
+				submeshIndices.Add(indices);
+			}
+
+			// Create the mesh and assign vertices.
+			Mesh mesh = new Mesh { name = "CombinedPolylinesMesh" };
+			mesh.SetVertices(allVertices);
+
+			// Set the number of submeshes equal to the number of polylines.
+			mesh.subMeshCount = submeshIndices.Count;
+			for (int i = 0; i < submeshIndices.Count; i++)
+			{
+				// Use LineStrip topology so each submesh draws a continuous polyline.
+				mesh.SetIndices(submeshIndices[i], MeshTopology.LineStrip, i);
+			}
+
+
+			return mesh;
+		}
+
+		/// <summary>
+		/// Adds polyline data as additional submeshes to an existing mesh.
+		/// The existing mesh's vertices and submeshes are preserved, and new submeshes
+		/// are appended for each polyline (rendered as a LineStrip).
+		/// </summary>
+		/// <param name="existingMesh">The original mesh.</param>
+		/// <param name="existingMaterials">
+		/// The materials corresponding to the existing mesh's submeshes.
+		/// Can be null, in which case a default material is used.
+		/// </param>
+		/// <param name="polylines">
+		/// A list of polylines, where each polyline is a List of Vector3 points.
+		/// </param>
+		/// <param name="combinedMaterials">
+		/// Output parameter returning the combined materials array (original materials followed by polyline materials).
+		/// </param>
+		/// <returns>The new combined Mesh containing both the original geometry and the polyline submeshes.</returns>
+		public static Mesh AddPolylinesToExistingMesh(Mesh existingMesh, List<List<Vector3>> polylines)
+		{
+			// --- Step 1: Retrieve existing mesh data ---
+			List<Vector3> vertices = new List<Vector3>(existingMesh.vertices);
+			int existingVertexCount = vertices.Count;
+			int existingSubmeshCount = existingMesh.subMeshCount;
+			List<int[]> existingIndices = new List<int[]>();
+			for (int i = 0; i < existingSubmeshCount; i++)
+			{
+				existingIndices.Add(existingMesh.GetIndices(i));
+			}
+
+			// --- Step 2: Append polyline vertices and build their index arrays ---
+			List<int[]> polylineIndices = new List<int[]>();
+			//Debug.Log("add polylines : " + polylines.Count );
+			int startIndex = existingVertexCount;
+			foreach (List<Vector3> polyline in polylines)
+			{
+				vertices.AddRange(polyline);
+				int[] indices = new int[polyline.Count];
+				//Debug.Log("add polyline count : " + polyline.Count );
+				for (int i = 0; i < polyline.Count; i++)
+				{
+					indices[i] = startIndex + i;
+				}
+				startIndex += polyline.Count;
+				polylineIndices.Add(indices);
+			}
+
+			// --- Step 3: Create the new combined mesh ---
+			Mesh combinedMesh = new Mesh();
+			combinedMesh.name = "CombinedMesh_WithPolylines";
+			combinedMesh.SetVertices(vertices);
+
+			// Total submesh count is the sum of existing submeshes and new polyline submeshes.
+			int totalSubmeshCount = existingSubmeshCount + polylineIndices.Count;
+			combinedMesh.subMeshCount = totalSubmeshCount;
+
+			// Assign existing submeshes (assumed to use Triangles).
+			for (int i = 0; i < existingSubmeshCount; i++)
+			{
+				combinedMesh.SetIndices(existingIndices[i], MeshTopology.Triangles, i);
+			}
+
+			if(existingSubmeshCount > 0 ) {
+				combinedMesh.RecalculateNormals();
+			// Assign polyline submeshes using LineStrip topology.
+			for (int i = 0; i < polylineIndices.Count; i++)
+			{
+				combinedMesh.SetIndices(polylineIndices[i], MeshTopology.LineStrip, existingSubmeshCount + i);
+			}
+
+			// Recalculate mesh bounds and normals.
+//			combinedMesh.RecalculateNormals();
+//			combinedMesh.RecalculateBounds();
+
+
+			combinedMesh.RecalculateBounds();			}
+			return combinedMesh;
+		}
+
+	}
+
+
     public class LDrawModel
     {
         /// FileFormatVersion 1.0.2;
@@ -169,7 +297,7 @@ namespace LDraw
 
         private void Init(string name, string serialized)
         {
-			Debug.Log("Init LDrawModel : " + name + " serialized : " + serialized );
+			//Debug.Log("Init LDrawModel : " + name + " serialized : " + serialized );
 			
             _Name = name;
             _Commands = new List<LDrawCommand>();
@@ -203,103 +331,134 @@ namespace LDraw
             if (_Commands.Count == 0) return null;
             GameObject go = new GameObject(_Name);
         
-			Debug.Log("   in CreateMeshGameObject : " + _Name );
+			//Debug.Log("   in CreateMeshGameObject : " + _Name );
 
             var triangles = new List<int>();
             var verts = new List<Vector3>();
 
-			var polylines = new List<Vector3[]>();
-			var lines = new List<Vector3>();
+			var polylines = new List<List<Vector3>>();
+			List<Vector3> lines = null;
 		
 			
 
 			LDrawPart partCommand = null;
         
 
-			Debug.Log( "   _Commands.Count : " + _Commands.Count );
+			//Debug.Log( "   _Commands.Count : " + _Commands.Count );
 			bool isLineStarted = false;
             for (int i = 0; i < _Commands.Count; i++)
             {
-                var sfCommand = _Commands[i] as LDrawSubFile;
-                if (sfCommand == null )
-				{
-					var lineCommand = _Commands[i] as LDrawLine;
-					if(lineCommand != null ) {
-						if( !isLineStarted) {
-							isLineStarted = true;
-							lines.Clear();
-							lines.Add(lineCommand.GetVert(0));
-							lines.Add(lineCommand.GetVert(1));
-						}
-						else {
-							Vector3 vStart = lineCommand.GetVert(0);
-							Vector3 vLast = lines[lines.Count - 1];
-							if( vStart == vLast ) {
-								lines.Add( lineCommand.GetVert(1) );
+                //var sfCommand = _Commands[i] as LDrawSubFile;
+				switch( _Commands[i].GetCommandType() ) {
+					case CommandType.Line:
+					case CommandType.OptionalLine:
+						var lineCommand = _Commands[i] as LDrawLine;
+						if(lineCommand != null ) {
+							if( !isLineStarted) {
+								//Debug.Log("Line Started : " + lineCommand.GetVert(0) + "  / " + lineCommand.GetVert(1) );
+
+								isLineStarted = true;
+								lines = new List<Vector3>
+								{
+									lineCommand.GetVert(0),
+									lineCommand.GetVert(1)
+								};
 							}
 							else {
-								polylines.Add(lines.ToArray());
-								lines.Clear();
-								lines.Add(lineCommand.GetVert(0));
-								lines.Add(lineCommand.GetVert(1));
+								Vector3 vStart = lineCommand.GetVert(0);
+								Vector3 vLast = lines[lines.Count - 1];
+								if( vStart == vLast ) {
+									//Debug.Log("Line Continued : " + lineCommand.GetVert(0) + "  / " + lineCommand.GetVert(1) );
+									lines.Add( lineCommand.GetVert(1) );
+								}
+								else {
+									//Debug.Log("Line Ended 1 : " + lineCommand.GetVert(0) + "  / " + lineCommand.GetVert(1) );
+									polylines.Add(lines);
+
+									lines = new List<Vector3>
+									{
+										lineCommand.GetVert(0),
+										lineCommand.GetVert(1)
+									};
+									
+									//Debug.Log( "   last line vert 0 : " + polylines[ polylines.Count - 1 ][0] );
+									//Debug.Log( "   last line vert 1 : " + polylines[ polylines.Count - 1 ][1] );
+								}
+							}
+
+							if( i == _Commands.Count - 1 ) {
+								//Debug.Log("Line Ended 3 : " + lines[0] + "  / " + lines[1] );
+								polylines.Add(lines);
 							}
 						}
-					}
-					else {
+						break;
+					
+					default:
+					case CommandType.Triangle:
+					case CommandType.Quad:
 						if( isLineStarted ) {
-							polylines.Add(lines.ToArray());
-							lines.Clear();
+							//Debug.Log("Line Ended 2 : " + lines[0] + "  / " + lines[1] );
+							polylines.Add(lines);
 							isLineStarted = false;
 						}
 						var trinalgeCommand = _Commands[i] as LDrawTriangle;
 						if(trinalgeCommand != null ) {
-                    		trinalgeCommand.PrepareMeshData(triangles, verts);
+							trinalgeCommand.PrepareMeshData(triangles, verts);
 						}
 
 						var quadCommand = _Commands[i] as LDrawQuad;
 						if(quadCommand != null ) {
 							quadCommand.PrepareMeshData(triangles, verts);
 						}
-					}
-                }
-                else
-                {
-                    sfCommand.GetModelGameObject(go.transform);
-                }
+						
+					
+						break;
+					case CommandType.SubFile:
+						var sfCommand = _Commands[i] as LDrawSubFile;
+						sfCommand.GetModelGameObject(go.transform);
+						break;
 
-            }
+					case CommandType.PartDesc:
+						partCommand = _Commands[i] as LDrawPart;
+						if(partCommand != null) {
+							break;
+						}
+						break;
 
-            for (int i = 0; i < _Commands.Count; i++)
-            {
-				partCommand = _Commands[i] as LDrawPart;
-				if(partCommand != null) {
-					break;
 				}
-			}	
-        
-            if (mat != null)
-            {
-                var childMrs = go.transform.GetComponentsInChildren<MeshRenderer>();
-                foreach (var meshRenderer in childMrs)
-                {
-                    meshRenderer.material = mat;
-                }
-            }
-        
-            if (verts.Count > 0)
-            {
-                var visualGO = new GameObject("mesh");
-                visualGO.transform.SetParent(go.transform);
-                var mf = visualGO.AddComponent<MeshFilter>();
-        
-                mf.sharedMesh = PrepareMesh(verts, triangles); // save mesh to disk
-                var mr = visualGO.AddComponent<MeshRenderer>();
-                if (mat != null)
-                {
-                    mr.sharedMaterial = mat;
-                  
-                }
-            }
+
+			}
+
+
+			if (mat != null)
+			{
+				var childMrs = go.transform.GetComponentsInChildren<MeshRenderer>();
+				foreach (var meshRenderer in childMrs)
+				{
+					meshRenderer.material = mat;
+				}
+			}
+
+			GameObject visualGO = null;
+			MeshFilter meshFilter = null;
+			if (verts.Count > 0 || polylines.Count > 0)
+			{
+				visualGO = new GameObject("mesh");
+				visualGO.transform.SetParent(go.transform);
+				meshFilter = visualGO.AddComponent<MeshFilter>();
+		
+				//Debug.Log("PrepareMesh : " + verts.Count + "  / " + triangles.Count + "  / " + polylines.Count );
+				meshFilter.sharedMesh = PrepareMesh(verts, triangles, polylines); // save mesh to disk
+				var mr = visualGO.AddComponent<MeshRenderer>();
+				if (mat != null)
+				{
+					mr.sharedMaterial = mat;
+				
+				}
+
+			}
+			
+			
             
             go.transform.ApplyLocalTRS(trs);
         
@@ -307,48 +466,69 @@ namespace LDraw
 
 			if(partCommand != null) {
 				// output name of go
-				Debug.Log("GameObject name : " + go.name );
+				//Debug.Log("GameObject name : " + go.name );
 				//Mesh mergedMesh = MergeChildrenMeshes.Merge(go);
         		//Debug.Log("Merged mesh has " + mergedMesh.vertexCount + " vertices.");				
 			}
 
             return go;
         }
-        private Mesh PrepareMesh(List<Vector3> verts, List<int> triangles)
+        private Mesh PrepareMesh(List<Vector3> verts, List<int> triangles, List<List<Vector3>> polylines )
         {  
             
             Mesh mesh = LDrawConfig.Instance.GetMesh(_Name);
-            if (mesh != null) return mesh;
+            if (mesh != null)
+				return mesh;
             
           
             mesh = new Mesh();
       
             mesh.name = _Name;
             var frontVertsCount = verts.Count;
-            //backface
-            verts.AddRange(verts);
-            int[] tris = new int[triangles.Count];
-            triangles.CopyTo(tris);
-            for (int i = 0; i < tris.Length; i += 3)
-            {
-                int temp = tris[i];
-                tris[i] = tris[i + 1];
-                tris[i + 1] = temp;
-            }
 
-            for (int i = 0; i < tris.Length; i++)
-            {
-                tris[i] = tris[i] + frontVertsCount;
-            }
-            triangles.AddRange(tris);
-            //end backface
-            
-			Debug.Log("Name : " + _Name + "  / verts.Count : " + verts.Count + "  / triangles.Count : " + triangles.Count );
-            mesh.SetVertices(verts);
-            mesh.SetTriangles(triangles, 0);
-            
-            mesh.RecalculateNormals();
-            mesh.RecalculateBounds();
+			if( verts.Count > 0 ) {
+				//backface
+				verts.AddRange(verts);
+				int[] tris = new int[triangles.Count];
+				triangles.CopyTo(tris);
+				for (int i = 0; i < tris.Length; i += 3)
+				{
+					int temp = tris[i];
+					tris[i] = tris[i + 1];
+					tris[i + 1] = temp;
+				}
+
+				for (int i = 0; i < tris.Length; i++)
+				{
+					tris[i] = tris[i] + frontVertsCount;
+				}
+				triangles.AddRange(tris);
+				//end backface
+				
+				Debug.Log("Name : " + _Name + "  / verts.Count : " + verts.Count + "  / triangles.Count : " + triangles.Count );
+				mesh.SetVertices(verts);
+				mesh.SetTriangles(triangles, 0);
+				
+				mesh.RecalculateNormals();
+				mesh.RecalculateBounds();
+			}
+
+
+			if( polylines.Count > 0  ) {
+
+				// if there is a mesh, add the polylines as additional submeshes
+				if( verts.Count > 0 ) {
+
+					mesh = PolylineMeshUtil.AddPolylinesToExistingMesh(mesh, polylines );
+				}
+				else {
+					// if there is no mesh, create a new mesh with the polylines
+					mesh = PolylineMeshUtil.CreateMultiplePolylinesMesh(polylines);
+				}
+
+			}
+
+            mesh.name = _Name;
             LDrawConfig.Instance.SaveMesh(mesh);
             return mesh;
         }

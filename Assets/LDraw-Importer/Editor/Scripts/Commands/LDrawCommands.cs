@@ -27,6 +27,18 @@ namespace LDraw
         protected LDrawModel _Parent;
 
 		protected CommandType _Type = CommandType.Nothing;
+
+		public CommandType GetCommandType() {
+			return _Type;
+		}
+
+		public LDrawModel GetParent()
+		{
+			return _Parent;
+		}
+
+
+
         public static LDrawCommand DeserializeCommand(string line, LDrawModel parent)
         {
             LDrawCommand command = null;
@@ -51,15 +63,7 @@ namespace LDraw
                 switch (commandType)
                 {
 					case CommandType.PartDesc:
-						//  Debug.Log("PartDesc : " + line );
-						//  if( args.Length >= 3 ) {
-						// 	for( int i = 0; i < args.Length; i++ ) {
-						// 		string debugmsg = "args[" + i + "] : " + args[i];
-						// 		debugmsg += " " + (args[i] == "!LDRAW_ORG");
-						// 		Debug.Log( debugmsg);
-						// 	}
-						//  }
-						// debug args
+
                         if( args.Length >= 3 &&  args[1] == "!LDRAW_ORG" ) {
 							//Debug.Log( ">>   !LDRAW_ORG" );
 							if( args[2] == "Part") {

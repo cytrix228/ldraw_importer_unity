@@ -80,11 +80,11 @@ namespace LDraw
            
                 //var serialized = _Parts.ContainsKey(name) ? File.ReadAllText(_Parts[name]) : _Models[name]; 
 				if( _Parts.ContainsKey(name) ) {
-					Debug.Log( "Reading part : " + _Parts[name] );
+					//Debug.Log( "Reading part : " + _Parts[name] );
 					return File.ReadAllText(_Parts[name]);
 				}
 				else if( _Models.ContainsKey(name) ) {
-					Debug.Log( "Reading model : " + _Models[name] );
+					//Debug.Log( "Reading model : " + _Models[name] );
 					return _Models[name];
 				}
 				return null;
@@ -135,7 +135,7 @@ namespace LDraw
                 }
             }
 
-			Debug.Log("Parts loaded: " + _Parts.Count);
+//			Debug.Log("Parts loaded: " + _Parts.Count);
 			//for( int i = 0; i < _Parts.Count; i++ ) {
 			//	Debug.Log( "Part " + i + " : " + _Parts.ElementAt(i).Key );
 			//}
@@ -228,15 +228,20 @@ namespace LDraw
         public Mesh GetMesh(string name)
         {
             var path = Path.Combine(_MeshesPath, name + ".asset");
+			path = path.Replace( '\\', '/' );
+//			Debug.Log( " > Get Mesh path : " + path + " File exists ? " + File.Exists(path) );
             return File.Exists(path) ? AssetDatabase.LoadAssetAtPath<Mesh>(path) : null;
         }
+
+		
         public void SaveMesh(Mesh mesh)
         {
             var path = _MeshesPath;
 			//Debug.Log( "Mesh path : " + path );
             path = Path.Combine(path, mesh.name + ".asset");
 			path = path.Replace( '\\', '/' );
-			//Debug.Log( "Mesh path : " + path );
+//			Debug.Log( " > Save Mesh path : " + path );
+
 
 			// get the full path directory excluding the file name
 			var path_dir = Path.GetDirectoryName( path );
