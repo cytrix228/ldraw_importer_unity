@@ -11,7 +11,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="uI9Siax2C_irR6vNp6Xk-1" value="1787 - Crater Cruiser.ldr" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-1000" y="230" width="180" height="30" as="geometry" />
+          <mxGeometry x="-1220" y="50" width="180" height="30" as="geometry" />
         </mxCell>
         <mxCell id="uI9Siax2C_irR6vNp6Xk-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="uI9Siax2C_irR6vNp6Xk-2" target="uI9Siax2C_irR6vNp6Xk-17">
           <mxGeometry relative="1" as="geometry" />
@@ -19,70 +19,73 @@
         <mxCell id="uI9Siax2C_irR6vNp6Xk-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="uI9Siax2C_irR6vNp6Xk-2" target="uI9Siax2C_irR6vNp6Xk-7">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="-760" y="665" />
+              <mxPoint x="-1030" y="415" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="uI9Siax2C_irR6vNp6Xk-2" value="1787 - Vehicle + Cockpit.ldr" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-840" y="310" width="160" height="30" as="geometry" />
+          <mxGeometry x="-1060" y="130" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3taAIRDx7q-Hdb7c89R-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="uI9Siax2C_irR6vNp6Xk-3" target="Z3taAIRDx7q-Hdb7c89R-3">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="uI9Siax2C_irR6vNp6Xk-3" value="1787 - Minifig 2.ldr" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-840" y="825" width="155" height="25" as="geometry" />
+          <mxGeometry x="-1060" y="645" width="155" height="25" as="geometry" />
         </mxCell>
         <mxCell id="uI9Siax2C_irR6vNp6Xk-7" value="1787 - Cockpit.ldr" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-500" y="650" width="140" height="30" as="geometry" />
+          <mxGeometry x="-990" y="400" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="uI9Siax2C_irR6vNp6Xk-8" value="1787 - Cockpit - Control Panel.ldr" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-390" y="690" width="123" height="50" as="geometry" />
+          <mxGeometry x="-880" y="440" width="123" height="50" as="geometry" />
         </mxCell>
         <mxCell id="uI9Siax2C_irR6vNp6Xk-9" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="uI9Siax2C_irR6vNp6Xk-7" target="uI9Siax2C_irR6vNp6Xk-8">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="-300" y="650" as="sourcePoint" />
-            <mxPoint x="-250" y="600" as="targetPoint" />
+            <mxPoint x="-790" y="400" as="sourcePoint" />
+            <mxPoint x="-740" y="350" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="-430" y="720" />
+              <mxPoint x="-920" y="470" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="uI9Siax2C_irR6vNp6Xk-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="uI9Siax2C_irR6vNp6Xk-10" target="uI9Siax2C_irR6vNp6Xk-11">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="-473" y="860" />
+              <mxPoint x="-567" y="440" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="uI9Siax2C_irR6vNp6Xk-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="uI9Siax2C_irR6vNp6Xk-10" target="uI9Siax2C_irR6vNp6Xk-13">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="-473" y="1020" />
+              <mxPoint x="-567" y="600" />
             </Array>
           </mxGeometry>
         </mxCell>
         <UserObject label="1787 - Vehicle.ldr" link="1787 - Vehicle.ldr" id="uI9Siax2C_irR6vNp6Xk-10">
           <mxCell style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-            <mxGeometry x="-533" y="780" width="120" height="30" as="geometry" />
+            <mxGeometry x="-627" y="360" width="120" height="30" as="geometry" />
           </mxCell>
         </UserObject>
         <mxCell id="uI9Siax2C_irR6vNp6Xk-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="uI9Siax2C_irR6vNp6Xk-11" target="uI9Siax2C_irR6vNp6Xk-15">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="-352" y="940" />
+              <mxPoint x="-446" y="520" />
             </Array>
           </mxGeometry>
         </mxCell>
         <UserObject label="1787 - Vehicle - Engine.ldr" link="1787 - Vehicle - Engine.ldr" id="uI9Siax2C_irR6vNp6Xk-11">
           <mxCell style="text;whiteSpace=wrap;strokeColor=default;" vertex="1" parent="1">
-            <mxGeometry x="-437" y="850" width="170" height="30" as="geometry" />
+            <mxGeometry x="-531" y="430" width="170" height="30" as="geometry" />
           </mxCell>
         </UserObject>
         <UserObject label="1787 - Vehicle - Antenna.ldr" link="1787 - Vehicle - Antenna.ldr" id="uI9Siax2C_irR6vNp6Xk-13">
           <mxCell style="text;whiteSpace=wrap;strokeColor=default;" vertex="1" parent="1">
-            <mxGeometry x="-447" y="1010" width="180" height="40" as="geometry" />
+            <mxGeometry x="-541" y="590" width="180" height="40" as="geometry" />
           </mxCell>
         </UserObject>
         <UserObject label="1787 - Vehicle - Engine - Rocket.ldr" link="1787 - Vehicle - Engine - Rocket.ldr" id="uI9Siax2C_irR6vNp6Xk-15">
           <mxCell style="text;whiteSpace=wrap;strokeColor=default;" vertex="1" parent="1">
-            <mxGeometry x="-320" y="920" width="220" height="40" as="geometry" />
+            <mxGeometry x="-414" y="500" width="220" height="40" as="geometry" />
           </mxCell>
         </UserObject>
         <mxCell id="uI9Siax2C_irR6vNp6Xk-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="uI9Siax2C_irR6vNp6Xk-17" target="uI9Siax2C_irR6vNp6Xk-10">
@@ -93,12 +96,25 @@
         </mxCell>
         <UserObject label="1787 - Vehicle + Minifig.ldr" link="1787 - Vehicle + Minifig.ldr" id="uI9Siax2C_irR6vNp6Xk-17">
           <mxCell style="text;whiteSpace=wrap;strokeColor=default;" vertex="1" parent="1">
-            <mxGeometry x="-680" y="710" width="170" height="40" as="geometry" />
+            <mxGeometry x="-774" y="290" width="170" height="40" as="geometry" />
           </mxCell>
         </UserObject>
-        <mxCell id="uI9Siax2C_irR6vNp6Xk-20" value="1787 - Minifig 1.ldr" style="text;whiteSpace=wrap;strokeColor=default;" vertex="1" parent="1">
-          <mxGeometry x="-520" y="1110" width="130" height="40" as="geometry" />
+        <mxCell id="Z3taAIRDx7q-Hdb7c89R-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="uI9Siax2C_irR6vNp6Xk-20" target="Z3taAIRDx7q-Hdb7c89R-1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="uI9Siax2C_irR6vNp6Xk-20" value="1787 - Minifig 1.ldr" style="text;whiteSpace=wrap;strokeColor=default;" vertex="1" parent="1">
+          <mxGeometry x="-614" y="690" width="130" height="40" as="geometry" />
+        </mxCell>
+        <UserObject label="1787 - Minifig 1 - Helmet.ldr" link="1787 - Minifig 1 - Helmet.ldr" id="Z3taAIRDx7q-Hdb7c89R-1">
+          <mxCell style="text;whiteSpace=wrap;strokeColor=default;" vertex="1" parent="1">
+            <mxGeometry x="-234" y="710" width="180" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="1787 - Minifig 2 - Helmet.ldr" link="1787 - Minifig 2 - Helmet.ldr" id="Z3taAIRDx7q-Hdb7c89R-3">
+          <mxCell style="text;whiteSpace=wrap;strokeColor=default;" vertex="1" parent="1">
+            <mxGeometry x="-1040" y="760" width="180" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
       </root>
     </mxGraphModel>
   </diagram>
