@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿using System;
+using UnityEditor;
 using UnityEngine;
 
 namespace LDraw
@@ -15,7 +16,7 @@ namespace LDraw
 
         private string[] _ModelNames;
         private string _CurrentPart;
-        private int _CurrentIndex;
+        private int _CurrentIndex = 0;
         private GeneratingType _CurrentType;
 
         private void OnEnable()
@@ -45,12 +46,28 @@ namespace LDraw
             GenerateModelButton();
         }
 
-        private void GenerateModel()
+        public static void GenerateSomeModel()
         {
-            _CurrentPart = _CurrentType == GeneratingType.ByName ? _CurrentPart 
-                : LDrawConfig.Instance.GetModelByFileName(_ModelNames[_CurrentIndex]); 
+			var window = GetWindow<LDrawEditorWindow>("LDrawImporter");
+			Console.WriteLine("GenerateSomeModel window : " + window);
+			Console.WriteLine("LDrawConfig.Instance : " + LDrawConfig.Instance);
+			Console.WriteLine(" Model Path : " + LDrawConfig.Instance.ModelsPath);
+
+			LDrawConfig.Instance.InitParts();
+            window._ModelNames = LDrawConfig.Instance.ModelFileNames;
+			foreach( var name in window._ModelNames)
+			{
+				Console.WriteLine("GenerateSomeModel name : " + name);
+			}
+
+            window._CurrentPart = LDrawConfig.Instance.GetModelByFileName(
+				window._ModelNames[1]);
+			
+			Console.WriteLine("GenerateSomeModel window._CurrentPart : " + window._CurrentPart);
+
             // good test 949ac01
-            var model = LDrawModel.Create(_CurrentPart, LDrawConfig.Instance.GetSerializedPart(_CurrentPart));
+            var model = LDrawModel.Create(window._CurrentPart,
+										 LDrawConfig.Instance.GetSerializedPart(window._CurrentPart));
             var go = model.CreateMeshGameObject(LDrawConfig.Instance.ScaleMatrix);
             go.transform.LocalReflect(Vector3.up);
      	

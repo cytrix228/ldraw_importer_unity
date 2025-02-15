@@ -14,6 +14,10 @@ namespace LDraw
         [SerializeField] private string _BasePartsPath;
        
         [SerializeField] private string _ModelsPath;
+		public string ModelsPath {
+			get { return _ModelsPath; }
+		}
+
         [SerializeField] private string _ColorConfigPath;
         [SerializeField] private string _MaterialsPath;
         [SerializeField] private string _MeshesPath;
@@ -185,6 +189,14 @@ namespace LDraw
         {
             _ModelFileNames = new Dictionary<string, string>();
             var files = Directory.GetFiles(_ModelsPath, "*.*", SearchOption.AllDirectories);
+
+			
+			// Console.WriteLine("  >> PrepareModels : \n" + files.Length + " files found.");
+			// foreach( string file in files ) {
+			// 	Console.WriteLine("File : " + file);
+			// }
+			
+
             _Models = new Dictionary<string, string>();
             foreach (var file in files)
             {
@@ -207,12 +219,16 @@ namespace LDraw
                             {
                                 _ModelFileNames.Add(Path.GetFileNameWithoutExtension(file), filename);
                                 isFirst = false;
+
+								Console.WriteLine("Adding first model : " + Path.GetFileNameWithoutExtension(file) + " : " + filename);
                             }
                             
                             if(_Models.ContainsKey(filename))
                                 filename = String.Empty;
-                            else
+                            else {
+								Console.WriteLine("    Adding sub-model : " + filename);
                                 _Models.Add(filename, String.Empty);
+							}
                         }
 
                         if (!string.IsNullOrEmpty(filename))
@@ -282,10 +298,10 @@ namespace LDraw
         {
             get
             {
-            	Console.WriteLine("Find all : ");
-            	foreach( ScriptableObject _to in Resources.FindObjectsOfTypeAll(typeof(ScriptableObject)) as ScriptableObject[]) {
-            		Console.WriteLine(_to.name);
-            	}
+            	//Console.WriteLine("Find all : ");
+            	//foreach( ScriptableObject _to in Resources.FindObjectsOfTypeAll(typeof(ScriptableObject)) as ScriptableObject[]) {
+            //		Console.WriteLine(_to.name);
+            	//}
                 if (_Instance == null)
                 {
                 	Console.WriteLine("Load resource : " + ConfigPath);

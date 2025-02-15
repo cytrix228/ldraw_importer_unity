@@ -113,7 +113,7 @@ namespace LDraw
 			LDrawPart partComd = command as LDrawPart;
 
 			if( partComd != null ) { 
-				Debug.Log("command : " + command );
+				//Debug.Log("command : " + command );
 			}
             return command;
         }

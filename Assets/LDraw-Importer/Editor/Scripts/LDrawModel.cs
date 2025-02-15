@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
 using System.Numerics;
@@ -8,6 +9,7 @@ using System.Text.RegularExpressions;
 using UnityEngine;
 using Matrix4x4 = UnityEngine.Matrix4x4;
 using Vector3 = UnityEngine.Vector3;
+using Vector4 = UnityEngine.Vector4;
 
 namespace LDraw
 {
@@ -263,17 +265,17 @@ namespace LDraw
 
         #region factory
 
-        public static LDrawModel Create(string name, string path)
+        public static LDrawModel Create(string name, string serialized)
         {
-			Debug.Log("Create LDrawModel : " + name + " path : " + path );
+			//Debug.Log("Create LDrawModel : " + name );
 
 
             if (_models.ContainsKey(name)) {
-				Debug.Log("      >> Model already exists : " + name );
+				//Debug.Log("      >> Model already exists : " + name );
 				return _models[name];
 			}
             var model = new LDrawModel();
-            model.Init(name, path);
+            model.Init(name, serialized);
           
             return model;
         }
@@ -352,7 +354,7 @@ namespace LDraw
 				switch( _Commands[i].GetCommandType() ) {
 					case CommandType.Line:
 					case CommandType.OptionalLine:
-						var lineCommand = _Commands[i] as LDrawLine;
+						var lineCommand = _Commands[i];
 						if(lineCommand != null ) {
 							if( !isLineStarted) {
 								//Debug.Log("Line Started : " + lineCommand.GetVert(0) + "  / " + lineCommand.GetVert(1) );
@@ -458,15 +460,92 @@ namespace LDraw
 
 			}
 			
+            //go.transform.ApplyLocalTRS(trs);
+
+			{
+				// Assume 'm' is your 4x4 transform matrix
+				Matrix4x4 m = trs;
+
+				// Extract translation (last column)
+				Vector3 position = m.GetColumn(3);
+
+				Vector3 col0 = m.GetColumn(0);
+				Vector3 col1 = m.GetColumn(1);
+				Vector3 col2 = m.GetColumn(2);
+
+				// Extract scale: the lengths of the first three columns
+				Vector3 scale = new Vector3(
+					col0.magnitude,
+					col1.magnitude,
+					col2.magnitude
+				);
+
+				// Remove scale from rotation columns to get pure directions
+				col0 /= scale.x;
+				col1 /= scale.y;
+				col2 /= scale.z;
+
+				Matrix4x4 new_m = new Matrix4x4();
+				new_m.SetColumn(0, new Vector4(col0.x, col0.y, col0.z, 0f));
+				new_m.SetColumn(1, new Vector4(col1.x, col1.y, col1.z, 0f));
+				new_m.SetColumn(2, new Vector4(col2.x, col2.y, col2.z, 0f));
+				new_m.SetColumn(3, new Vector4(position.x, position.y, position.z, 1f));
+
+				// Create the rotation quaternion.
+				// Note: Unity's Quaternion.LookRotation expects the forward and upward directions.
+				//UnityEngine.Quaternion rotation = UnityEngine.Quaternion.LookRotation(forward, up);
+				UnityEngine.Quaternion rotation = new_m.rotation;
+				if( _Name == "rect2p" && parent.name == "4084" ) {
+					// get the rotation from the transform
+					// into degrees
+					float x = rotation.eulerAngles.x;
+					float y = rotation.eulerAngles.y;
+					float z = rotation.eulerAngles.z;
+
+
+					//Debug.Log( "trs : " + trs );
+					Console.WriteLine( "trs : \n" + trs );
+					//Debug.Log($"Rotation in degrees - X: {x}, Y: {y}, Z: {z}");
+					Console.WriteLine($"  >> Rotation in degrees - X: {x}, Y: {y}, Z: {z}");
+
+				}
+				// Now apply to your GameObject's transform
+				go.transform.localPosition = position;
+				go.transform.localRotation = rotation;
+				go.transform.localScale    = scale;
+
+			}
+
 			
-            
-            go.transform.ApplyLocalTRS(trs);
+			// UnityEngine.Vector4 column3 = trs.GetColumn(3);
+			// if( column3[0] == 14.2849 && column3[1] == 20.4009 && column3[2] == -7 ) {
+			// 	Debug.Log("trs : " + trs );
+			// }
+
+			// get the parent name
+			// if( _Name == "rect2p" && parent.name == "4084" ) {
+			// 	// get the rotation from the transform
+			// 	UnityEngine.Quaternion rotation = go.transform.rotation;
+
+			// 	// into degrees
+			// 	float x = rotation.eulerAngles.x;
+			// 	float y = rotation.eulerAngles.y;
+			// 	float z = rotation.eulerAngles.z;
+
+
+			// 	Debug.Log( "trs : " + trs );
+			// 	Debug.Log($"Rotation in degrees - X: {x}, Y: {y}, Z: {z}");
+
+			// }
+
+
         
             go.transform.SetParent(parent);
 
 			if(partCommand != null) {
 				// output name of go
 				//Debug.Log("GameObject name : " + go.name );
+				Console.WriteLine("GameObject name : " + go.name + "  Merge " );
 				//Mesh mergedMesh = MergeChildrenMeshes.Merge(go);
         		//Debug.Log("Merged mesh has " + mergedMesh.vertexCount + " vertices.");				
 			}
@@ -488,6 +567,7 @@ namespace LDraw
 
 			if( verts.Count > 0 ) {
 				//backface
+#if BACKFACE
 				verts.AddRange(verts);
 				int[] tris = new int[triangles.Count];
 				triangles.CopyTo(tris);
@@ -503,8 +583,9 @@ namespace LDraw
 					tris[i] = tris[i] + frontVertsCount;
 				}
 				triangles.AddRange(tris);
+#endif
 				//end backface
-				
+
 				Debug.Log("Name : " + _Name + "  / verts.Count : " + verts.Count + "  / triangles.Count : " + triangles.Count );
 				mesh.SetVertices(verts);
 				mesh.SetTriangles(triangles, 0);
