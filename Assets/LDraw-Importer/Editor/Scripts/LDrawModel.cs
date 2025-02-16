@@ -441,8 +441,9 @@ namespace LDraw
 				}
 			}
 
-			GameObject visualGO = null;
 			MeshFilter meshFilter = null;
+#if ADD_VISUALGO
+			GameObject visualGO = null;
 			if (verts.Count > 0 || polylines.Count > 0)
 			{
 				visualGO = new GameObject("mesh");
@@ -459,9 +460,28 @@ namespace LDraw
 				}
 
 			}
+#else
+			if (verts.Count > 0 || polylines.Count > 0)
+			{
+				go.AddComponent<MeshFilter>();
+		
+				meshFilter = go.GetComponent<MeshFilter>();
+				
+				//Debug.Log("PrepareMesh : " + verts.Count + "  / " + triangles.Count + "  / " + polylines.Count );
+				meshFilter.sharedMesh = PrepareMesh(verts, triangles, polylines); // save mesh to disk
+				var mr = go.AddComponent<MeshRenderer>();
+				if (mat != null)
+				{
+					mr.sharedMaterial = mat;
+				
+				}
+
+			}
+#endif
 			
             //go.transform.ApplyLocalTRS(trs);
 
+#if BY_MATRIX_ROTATION
 			{
 				// Assume 'm' is your 4x4 transform matrix
 				Matrix4x4 m = trs;
@@ -489,7 +509,8 @@ namespace LDraw
 				new_m.SetColumn(0, new Vector4(col0.x, col0.y, col0.z, 0f));
 				new_m.SetColumn(1, new Vector4(col1.x, col1.y, col1.z, 0f));
 				new_m.SetColumn(2, new Vector4(col2.x, col2.y, col2.z, 0f));
-				new_m.SetColumn(3, new Vector4(position.x, position.y, position.z, 1f));
+				new_m.SetColumn(3, new Vector4(0, 0, 0, 1f));
+
 
 				// Create the rotation quaternion.
 				// Note: Unity's Quaternion.LookRotation expects the forward and upward directions.
@@ -503,9 +524,9 @@ namespace LDraw
 					float z = rotation.eulerAngles.z;
 
 
-					//Debug.Log( "trs : " + trs );
+					Debug.Log( "trs : " + trs );
 					Console.WriteLine( "trs : \n" + trs );
-					//Debug.Log($"Rotation in degrees - X: {x}, Y: {y}, Z: {z}");
+					Debug.Log($"Rotation in degrees - X: {x}, Y: {y}, Z: {z}");
 					Console.WriteLine($"  >> Rotation in degrees - X: {x}, Y: {y}, Z: {z}");
 
 				}
@@ -515,6 +536,135 @@ namespace LDraw
 				go.transform.localScale    = scale;
 
 			}
+#else
+			{
+				UnityEngine.Quaternion rotation = UnityEngine.Quaternion.identity;
+				// Assume 'm' is your 4x4 transform matrix
+				Matrix4x4 m = trs;
+
+				// Get the position
+				Vector3 position = m.GetColumn(3);
+
+				// Get the scale
+				Vector3 scale = new Vector3(m.GetColumn(0).magnitude, m.GetColumn(1).magnitude, m.GetColumn(2).magnitude);
+
+				// m is the LDraw model line type 1 transformation matrix
+				// calculate the pure rotation matrix given the line type 1 value, from a to i.
+				// a is m.m00, i is m.m22
+
+				float a = m.m00;
+				float b = m.m01;
+				float c = m.m02;
+				float d = m.m10;
+				float e = m.m11;
+				float f = m.m12;
+				float g = m.m20;
+				float h = m.m21;
+				float i = m.m22;
+
+				// calcuate the determinant to check if it is a proper rotation matrix
+				float det = a * e * i + b * f * g + c * d * h - c * e * g - b * d * i - a * f * h;
+
+
+				
+				if (Mathf.Abs(det - 1.0f) < Mathf.Epsilon)
+				{
+					// Extract the Z–axis and normalize it:
+					Vector3 zAxis = new Vector3(c, f, i).normalized;
+
+					// Extract the X–axis candidate and remove any component along zAxis:
+					Vector3 xAxisCandidate = new Vector3(a, d, g);
+					Vector3 xAxis = xAxisCandidate - Vector3.Dot(xAxisCandidate, zAxis) * zAxis;
+					xAxis.Normalize();
+
+					//Determine the Y–axis using the cross product (to ensure a right–handed system):
+					Vector3 yAxis = Vector3.Cross(zAxis, xAxis);
+
+					// Create the rotation matrix
+					float m00 = xAxis.x;
+					float m01 = yAxis.x;
+					float m02 = zAxis.x;
+					float m10 = xAxis.y;
+					float m11 = yAxis.y;
+					float m12 = zAxis.y;
+					float m20 = xAxis.z;
+					float m21 = yAxis.z;
+					float m22 = zAxis.z;
+
+
+
+					// calculate the quaternion
+
+					float qw, qx, qy, qz, S;
+
+					// get the trace
+					float trace = m00 + m11 + m22;
+					
+
+					if (trace > 0) {
+						// matrix to quaternion
+						qw = Mathf.Sqrt(1f + m00 + m11 + m22) / 2;
+
+						S = 4 * qw;
+						qx = (m21 - m12) / S;
+						qy = (m02 - m20) / S;
+						qz = (m10 - m01) / S;
+					} else if ((m00 > m11) && (m00 > m22)) {
+						// m00 is the largest
+						S = Mathf.Sqrt(1 + m00 - m11 - m22) * 2;
+						qw = (m21 - m12) / S;
+						qx = 0.25f * S;
+						qy = (m01 + m10) / S;
+						qz = (m02 + m20) / S;
+
+					} else if (m11 > m22) {
+						// m11 is the largest
+						S = Mathf.Sqrt(1 + m11 - m00 - m22) * 2;
+						qw = (m02 - m20) / S;
+						qx = (m01 + m10) / S;
+						qy = 0.25f * S;
+						qz = (m12 + m21) / S;
+					} else {
+						// m22 is the largest
+						S = Mathf.Sqrt(1 + m22 - m00 - m11) * 2;
+						qw = (m10 - m01) / S;
+						qx = (m02 + m20) / S;
+						qy = (m12 + m21) / S;
+						qz = 0.25f * S;
+					}
+
+
+					// calculate roll, pitch, yaw
+					float roll = Mathf.Atan2(2 * (qw * qx + qy * qz), 1 - 2 * (qx * qx + qy * qy));
+					float pitch = Mathf.Asin(2 * (qw * qy - qz * qx));
+					float yaw = Mathf.Atan2(2 * (qw * qz + qx * qy), 1 - 2 * (qy * qy + qz * qz));
+
+					if( parent.name == "4624" ) {
+						Debug.Log( "trs : \n" + trs );
+						Debug.Log( "from a to i : \n" + a + " " + b + " " + c + "\n" + d + " " + e + " " + f + "\n" + g + " " + h + " " + i );
+						Debug.Log( "m00 : " + m00 + "  / m01 : " + m01 + "  / m02 : " + m02 + 
+							" m10 : " + m10 + "  / m11 : " + m11 + "  / m12 : " + m12 + 
+							" m20 : " + m20 + "  / m21 : " + m21 + "  / m22 : " + m22 );
+
+						// show roll, pitch, yaw in degrees
+						Debug.Log($"Roll: {roll * Mathf.Rad2Deg}, Pitch: {pitch * Mathf.Rad2Deg}, Yaw: {yaw * Mathf.Rad2Deg}");
+						Debug.Log($"Quaternion - X: {qx}, Y: {qy}, Z: {qz}, W: {qw}");
+					}
+
+					// set the quaternion
+					rotation = new UnityEngine.Quaternion(qx, qy, qz, qw);
+				}
+				else
+				{
+					rotation = m.rotation;
+				}
+
+				go.transform.localPosition = position;
+				go.transform.localRotation = rotation;
+				go.transform.localScale    = scale;
+			}
+#endif
+
 
 			
 			// UnityEngine.Vector4 column3 = trs.GetColumn(3);
