@@ -127,6 +127,8 @@ namespace LDraw
                 if (!file.Contains(".meta"))
                 {
                     string partsPath = _BasePartsPath + "p/";
+                    if (SystemInfo.operatingSystemFamily == OperatingSystemFamily.Windows)
+                        partsPath = partsPath.Replace('/', '\\');
                     string fileName = file.Replace(partsPath, "").Split('.')[0];
                    
                     //if (fileName.Contains("\\"))
@@ -141,6 +143,8 @@ namespace LDraw
                 if (!file.Contains(".meta"))
                 {
                     string partsPath = _BasePartsPath + "parts/";
+                    if (SystemInfo.operatingSystemFamily == OperatingSystemFamily.Windows)
+                        partsPath = partsPath.Replace('/', '\\');
                     string fileName = file.Replace(partsPath, "").Split('.')[0];
                    
                     //if (fileName.Contains("\\"))
