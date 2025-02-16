@@ -79,25 +79,35 @@ namespace LDraw
             {
                 name = name.ToLower();
 
-				// replace '\' with '/'
-				name = name.Replace( '\\', '/' );
-           
+                // replace '\' with '/'
+                name = name.Replace('\\', '/');
+
                 //var serialized = _Parts.ContainsKey(name) ? File.ReadAllText(_Parts[name]) : _Models[name]; 
-				if( _Parts.ContainsKey(name) ) {
-					//Debug.Log( "Reading part : " + _Parts[name] );
-					return File.ReadAllText(_Parts[name]);
-				}
-				else if( _Models.ContainsKey(name) ) {
-					//Debug.Log( "Reading model : " + _Models[name] );
-					return _Models[name];
-				}
-				return null;
+                if (_Parts.ContainsKey(name))
+                {
+                    //Debug.Log( "Reading part : " + _Parts[name] );
+                    return File.ReadAllText(_Parts[name]);
+                }
+                else if (_Models.ContainsKey(name))
+                {
+                    //Debug.Log( "Reading model : " + _Models[name] );
+                    return _Models[name];
+                }
+                // throw exception of "Name is not found"
+                else
+                {
+                    Debug.Log("http://www.ldraw.org/library/tracker/");
+                    EditorUtility.DisplayDialog("Error!", "Missing part or wrong part [" + name
+                                                        + "]   ! Find it in url from debug console", "Ok", "");
+                    throw new Exception("Name is not found");
+
+                }
             }
             catch
             {
                 Debug.Log("http://www.ldraw.org/library/tracker/");
-                EditorUtility.DisplayDialog("Error!", "Missing part or wrong part " + name 
-                                                        + "! Find it in url from debug console", "Ok", "");
+                EditorUtility.DisplayDialog("Error!", "Missing part or wrong part [" + name
+                                                        + "]   ! Find it in url from debug console", "Ok", "");
                 throw;
             }
         
@@ -116,7 +126,8 @@ namespace LDraw
             {
                 if (!file.Contains(".meta"))
                 {
-                    string fileName = file.Replace(_BasePartsPath + "p/", "").Split('.')[0];
+                    string partsPath = _BasePartsPath + "p/";
+                    string fileName = file.Replace(partsPath, "").Split('.')[0];
                    
                     //if (fileName.Contains("\\"))
                     //   fileName = fileName.Split('\\')[1];
@@ -129,7 +140,8 @@ namespace LDraw
             {
                 if (!file.Contains(".meta"))
                 {
-                    string fileName = file.Replace(_BasePartsPath + "parts/", "").Split('.')[0];
+                    string partsPath = _BasePartsPath + "parts/";
+                    string fileName = file.Replace(partsPath, "").Split('.')[0];
                    
                     //if (fileName.Contains("\\"))
                     //   fileName = fileName.Split('\\')[1];
@@ -139,7 +151,7 @@ namespace LDraw
                 }
             }
 
-//			Debug.Log("Parts loaded: " + _Parts.Count);
+			Debug.Log("Parts loaded: " + _Parts.Count);
 			//for( int i = 0; i < _Parts.Count; i++ ) {
 			//	Debug.Log( "Part " + i + " : " + _Parts.ElementAt(i).Key );
 			//}
