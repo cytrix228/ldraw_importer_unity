@@ -119,21 +119,23 @@ namespace LDraw
             ParseColors();
             _Parts = new Dictionary<string, string>();
 
-            var files_p = Directory.GetFiles(_BasePartsPath + "p", "*.*", SearchOption.AllDirectories);
-            var files_parts = Directory.GetFiles(_BasePartsPath + "parts", "*.*", SearchOption.AllDirectories);
+            var files_p = Directory.GetFiles(_BasePartsPath + "p/", "*.*", SearchOption.AllDirectories);
+            var files_parts = Directory.GetFiles(_BasePartsPath + "parts/", "*.*", SearchOption.AllDirectories);
 
             foreach (var file in files_p)
             {
                 if (!file.Contains(".meta"))
                 {
                     string partsPath = _BasePartsPath + "p/";
-                    if (SystemInfo.operatingSystemFamily == OperatingSystemFamily.Windows)
-                        partsPath = partsPath.Replace('/', '\\');
+                    //if (SystemInfo.operatingSystemFamily == OperatingSystemFamily.Windows) {
+                    //    partsPath = partsPath.Replace('/', '\\');
+                    //}
                     string fileName = file.Replace(partsPath, "").Split('.')[0];
-                   
+                    Debug.Log("Part : " + file + "  Base " + partsPath + "  -> fileName : " + fileName );
+
                     //if (fileName.Contains("\\"))
-                    //   fileName = fileName.Split('\\')[1];
-					fileName = fileName.ToLower();
+                    //   fileName = fileName.Split('\\')[1]; 
+                    fileName = fileName.ToLower();
                     if (!_Parts.ContainsKey(fileName))
                         _Parts.Add(fileName, file);
                 }
@@ -143,13 +145,14 @@ namespace LDraw
                 if (!file.Contains(".meta"))
                 {
                     string partsPath = _BasePartsPath + "parts/";
-                    if (SystemInfo.operatingSystemFamily == OperatingSystemFamily.Windows)
-                        partsPath = partsPath.Replace('/', '\\');
+                    //if (SystemInfo.operatingSystemFamily == OperatingSystemFamily.Windows)
+                    //    partsPath = partsPath.Replace('/', '\\');
                     string fileName = file.Replace(partsPath, "").Split('.')[0];
-                   
+                    Debug.Log("Part : " + file + "  Base " + partsPath + "  -> fileName : " + fileName);
+
                     //if (fileName.Contains("\\"))
                     //   fileName = fileName.Split('\\')[1];
-					fileName = fileName.ToLower();
+                    fileName = fileName.ToLower();
                     if (!_Parts.ContainsKey(fileName))
                         _Parts.Add(fileName, file);
                 }
