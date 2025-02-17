@@ -131,6 +131,7 @@ namespace LDraw
                     //    partsPath = partsPath.Replace('/', '\\');
                     //}
                     string fileName = file.Replace(partsPath, "").Split('.')[0];
+                    fileName = fileName.Replace('\\', '/');
                     Debug.Log("Part : " + file + "  Base " + partsPath + "  -> fileName : " + fileName );
 
                     //if (fileName.Contains("\\"))
@@ -148,6 +149,7 @@ namespace LDraw
                     //if (SystemInfo.operatingSystemFamily == OperatingSystemFamily.Windows)
                     //    partsPath = partsPath.Replace('/', '\\');
                     string fileName = file.Replace(partsPath, "").Split('.')[0];
+                    fileName = fileName.Replace('\\', '/');
                     Debug.Log("Part : " + file + "  Base " + partsPath + "  -> fileName : " + fileName);
 
                     //if (fileName.Contains("\\"))

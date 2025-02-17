@@ -44,6 +44,7 @@ namespace LDraw
 				}
 			}
 
+
 			_Model = LDrawModel.Create(_Name, LDrawConfig.Instance.GetSerializedPart(_Name));
 			
 			_Matrix = new Matrix4x4(
