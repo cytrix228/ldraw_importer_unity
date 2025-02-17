@@ -82,6 +82,8 @@ namespace LDraw
                 // replace '\' with '/'
                 name = name.Replace('\\', '/');
 
+                //Debug.Log("GetSerializedPart : " + name);
+
                 //var serialized = _Parts.ContainsKey(name) ? File.ReadAllText(_Parts[name]) : _Models[name]; 
                 if (_Parts.ContainsKey(name))
                 {
@@ -132,7 +134,7 @@ namespace LDraw
                     //}
                     string fileName = file.Replace(partsPath, "").Split('.')[0];
                     fileName = fileName.Replace('\\', '/');
-                    Debug.Log("Part : " + file + "  Base " + partsPath + "  -> fileName : " + fileName );
+                    //Debug.Log("Part : " + file + "  Base " + partsPath + "  -> fileName : " + fileName );
 
                     //if (fileName.Contains("\\"))
                     //   fileName = fileName.Split('\\')[1]; 
@@ -150,7 +152,7 @@ namespace LDraw
                     //    partsPath = partsPath.Replace('/', '\\');
                     string fileName = file.Replace(partsPath, "").Split('.')[0];
                     fileName = fileName.Replace('\\', '/');
-                    Debug.Log("Part : " + file + "  Base " + partsPath + "  -> fileName : " + fileName);
+                    //Debug.Log("Part : " + file + "  Base " + partsPath + "  -> fileName : " + fileName);
 
                     //if (fileName.Contains("\\"))
                     //   fileName = fileName.Split('\\')[1];
@@ -300,8 +302,13 @@ namespace LDraw
             {
                 name += args[i] + ' ';
             }
+            name.Trim();
+            //name = Path.GetFileNameWithoutExtension(name).ToLower();
+            //Debug.Log("GetFileName2 : " + name);
+            name = name.Replace('\\', '/');
+            Debug.Log("GetFileName : [" + name + "]");
 
-            return Path.GetFileNameWithoutExtension(name).ToLower();
+            return name.Split('.')[0];
         }
         public static string GetExtension(string[] args, int filenamePos)
         {

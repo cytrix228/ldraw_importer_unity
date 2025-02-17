@@ -25,8 +25,10 @@ namespace LDraw
 
 		public override void Deserialize(string serialized)
 		{
-			var args = serialized.Split(' ');
-			float[] param = new float[12];
+
+            var args = serialized.Split(' ');
+            Debug.Log("SubFile : " + serialized + "\n" + args[14]);
+            float[] param = new float[12];
 
 			_Name = LDrawConfig.GetFileName(args, 14);
 			_Extension = LDrawConfig.GetExtension(args, 14);
