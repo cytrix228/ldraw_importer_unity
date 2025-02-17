@@ -63,11 +63,11 @@ public class EditorFontSize : EditorWindow
         {
             var flags = BindingFlags.Static | BindingFlags.Public | BindingFlags.GetProperty;
             editorStyles = typeof(EditorStyles).GetProperties(flags);
-			Debug.Log("EditorStyles: " + editorStyles.Length);
+//			Debug.Log("EditorStyles: " + editorStyles.Length);
 			foreach (var x in editorStyles) {
-				Debug.Log("   >> name :  "  + x.Name);
-				Debug.Log("   >>    type : " + x.PropertyType);
-				Debug.Log("   >>        value : " + x.GetValue(null, null));
+//				Debug.Log("   >> name :  "  + x.Name);
+//				Debug.Log("   >>    type : " + x.PropertyType);
+//				Debug.Log("   >>        value : " + x.GetValue(null, null));
 			}
         }
         if (guiSkins == null || guiSkins.Length < 1)
