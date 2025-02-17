@@ -1,4 +1,7 @@
-﻿using System;
+﻿#define IMPROPERRMATRIX
+#define PURE_ROTATION
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing.Drawing2D;
@@ -8,8 +11,10 @@ using System.Numerics;
 using System.Text.RegularExpressions;
 using UnityEngine;
 using Matrix4x4 = UnityEngine.Matrix4x4;
+using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
 using Vector4 = UnityEngine.Vector4;
+using Quaternion = UnityEngine.Quaternion;
 
 namespace LDraw
 {
@@ -238,6 +243,7 @@ namespace LDraw
 			{
 				combinedMesh.SetIndices(existingIndices[i], MeshTopology.Triangles, i);
 			}
+
 
 			if(existingSubmeshCount > 0 ) {
 				combinedMesh.RecalculateNormals();
@@ -515,7 +521,7 @@ namespace LDraw
 				// Create the rotation quaternion.
 				// Note: Unity's Quaternion.LookRotation expects the forward and upward directions.
 				//UnityEngine.Quaternion rotation = UnityEngine.Quaternion.LookRotation(forward, up);
-				UnityEngine.Quaternion rotation = new_m.rotation;
+				Quaternion rotation = new_m.rotation;
 				if( _Name == "rect2p" && parent.name == "4084" ) {
 					// get the rotation from the transform
 					// into degrees
@@ -538,15 +544,32 @@ namespace LDraw
 			}
 #else
 			{
-				UnityEngine.Quaternion rotation = UnityEngine.Quaternion.identity;
+				Quaternion rotation = new Quaternion();
 				// Assume 'm' is your 4x4 transform matrix
 				Matrix4x4 m = trs;
 
 				// Get the position
 				Vector3 position = m.GetColumn(3);
+				m.SetColumn(3, new Vector4(0, 0, 0, 1));
 
 				// Get the scale
 				Vector3 scale = new Vector3(m.GetColumn(0).magnitude, m.GetColumn(1).magnitude, m.GetColumn(2).magnitude);
+
+				Matrix4x4 normalized_m = new Matrix4x4();
+				// get the transform matrix without scale
+				normalized_m.SetColumn(0, m.GetColumn(0) / scale.x);
+				normalized_m.SetColumn(1, m.GetColumn(1) / scale.y);
+				normalized_m.SetColumn(2, m.GetColumn(2) / scale.z);
+				normalized_m.SetColumn(3, new Vector4(0, 0, 0, 1));
+
+				// check if the matrix is orthogonal
+				Matrix4x4 transposed = normalized_m.transpose;
+				//Matrix4x4 identity = Matrix4x4.identity;
+				Matrix4x4 result = normalized_m * transposed;
+
+				// calculate the determinant to check if it is a proper rotation matrix
+				float det = normalized_m.determinant;
+
 
 				// m is the LDraw model line type 1 transformation matrix
 				// calculate the pure rotation matrix given the line type 1 value, from a to i.
@@ -560,15 +583,94 @@ namespace LDraw
 				float f = m.m12;
 				float g = m.m20;
 				float h = m.m21;
-				float i = m.m22;
-
-				// calcuate the determinant to check if it is a proper rotation matrix
-				float det = a * e * i + b * f * g + c * d * h - c * e * g - b * d * i - a * f * h;
+				float i = m.m22;				
 
 
 				
-				if (Mathf.Abs(det - 1.0f) < Mathf.Epsilon)
+				if ( result == Matrix4x4.identity && ( 1.0f + det ) < 0.0001f )
 				{
+
+					Matrix4x4 R_plus_I = new Matrix4x4();
+					for (int row = 0; row < 4; row++)
+					{
+						for (int col = 0; col < 4; col++)
+						{
+							R_plus_I[row, col] = normalized_m[row, col] + Matrix4x4.identity[row, col];
+						}
+					}
+
+
+					Vector3 row0 = R_plus_I.GetRow(0);
+					Vector3 row1 = R_plus_I.GetRow(1);
+					Vector3 row2 = R_plus_I.GetRow(2);
+
+					Vector3 cross01 = Vector3.Cross(row0, row1);
+					Vector3 cross02 = Vector3.Cross(row0, row2);
+					Vector3 cross12 = Vector3.Cross(row1, row2);
+
+					float mag01 = cross01.magnitude;
+					float mag02 = cross02.magnitude;
+					float mag12 = cross12.magnitude;
+
+					Vector3 candidate = Vector3.zero;
+					if (mag01 >= mag02 && mag01 >= mag12)
+						candidate = cross01;
+					else if (mag02 >= mag01 && mag02 >= mag12)
+						candidate = cross02;
+					else
+						candidate = cross12;
+								
+
+
+					string msgText =  "IMPROPER ROTATION MATRIX : \n" + _Name + "\n" + "trs : \n " + trs + "is id : \n" + result + " > det :  " + det + "  / " + parent.name;
+					msgText += "\n  candidate : " + candidate;
+
+					go.AddComponent<Memo>().memoText = msgText;
+
+					Debug.Log(msgText);
+
+				#if IMPROPERRMATRIX
+					rotation = normalized_m.rotation;
+					normalized_m = Matrix4x4.TRS(position, rotation, scale);
+				#else
+
+					
+					// Copy the mesh from the mesh filter
+					MeshFilter innerMeshFilter = go.GetComponent<MeshFilter>();
+					if (innerMeshFilter != null) {
+						Mesh meshTransformed = new Mesh();
+						meshTransformed.vertices = (Vector3[])innerMeshFilter.sharedMesh.vertices.Clone();
+						//meshTransformed.triangles = (int[])innerMeshFilter.sharedMesh.triangles.Clone();
+						meshTransformed.normals = (Vector3[])innerMeshFilter.sharedMesh.normals.Clone();
+						meshTransformed.uv = (Vector2[])innerMeshFilter.sharedMesh.uv.Clone();
+						meshTransformed.colors = (Color[])innerMeshFilter.sharedMesh.colors.Clone();
+						meshTransformed.tangents = (Vector4[])innerMeshFilter.sharedMesh.tangents.Clone();
+						meshTransformed.subMeshCount = innerMeshFilter.sharedMesh.subMeshCount;
+						for (int subMesh = 0; subMesh < innerMeshFilter.sharedMesh.subMeshCount; subMesh++) {
+							meshTransformed.SetIndices((int[])innerMeshFilter.sharedMesh.GetIndices(subMesh).Clone(), innerMeshFilter.sharedMesh.GetTopology(subMesh), subMesh);
+						}
+						innerMeshFilter.sharedMesh.name = innerMeshFilter.sharedMesh.name + "_transformed";
+						innerMeshFilter.sharedMesh = meshTransformed;
+
+						Matrix4x4 transformMatrix = trs;
+						Vector3[] vertices = innerMeshFilter.sharedMesh.vertices;
+						for (int v = 0; v < vertices.Length; v++)
+						{
+							vertices[v] = transformMatrix.MultiplyPoint3x4(vertices[v]);
+						}
+						innerMeshFilter.sharedMesh.vertices = vertices;
+						//innerMeshFilter.sharedMesh.RecalculateNormals();
+
+						innerMeshFilter.sharedMesh.RecalculateBounds();
+					}
+					
+					rotation = Quaternion.identity;
+					scale = Vector3.one;
+				#endif
+				}
+				else
+				{
+#if PURE_ROTATION
 					// Extract the Z–axis and normalize it:
 					Vector3 zAxis = new Vector3(c, f, i).normalized;
 
@@ -590,6 +692,17 @@ namespace LDraw
 					float m20 = xAxis.z;
 					float m21 = yAxis.z;
 					float m22 = zAxis.z;
+#else
+					float m00 = a;
+					float m01 = b;
+					float m02 = c;
+					float m10 = d;
+					float m11 = e;
+					float m12 = f;
+					float m20 = g;
+					float m21 = h;
+					float m22 = i;
+#endif
 
 
 
@@ -639,7 +752,7 @@ namespace LDraw
 					float pitch = Mathf.Asin(2 * (qw * qy - qz * qx));
 					float yaw = Mathf.Atan2(2 * (qw * qz + qx * qy), 1 - 2 * (qy * qy + qz * qz));
 
-					if( parent.name == "4624" ) {
+					if( parent != null && parent.name == "4624" ) {
 						Debug.Log( "trs : \n" + trs );
 						Debug.Log( "from a to i : \n" + a + " " + b + " " + c + "\n" + d + " " + e + " " + f + "\n" + g + " " + h + " " + i );
 						Debug.Log( "m00 : " + m00 + "  / m01 : " + m01 + "  / m02 : " + m02 + 
@@ -652,11 +765,7 @@ namespace LDraw
 					}
 
 					// set the quaternion
-					rotation = new UnityEngine.Quaternion(qx, qy, qz, qw);
-				}
-				else
-				{
-					rotation = m.rotation;
+					rotation = new Quaternion(qx, qy, qz, qw);
 				}
 
 				go.transform.localPosition = position;
