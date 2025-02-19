@@ -632,16 +632,11 @@ namespace LDraw
 							polylines.Add(lines);
 							isLineStarted = false;
 						}
-						var trinalgeCommand = _Commands[i] as LDrawTriangle;
-						if(trinalgeCommand != null ) {
-							trinalgeCommand.PrepareMeshData(triangles, verts);
+						LDrawCommand command = _Commands[i];
+						if(command != null ) {
+							command.PrepareMeshData(triangles, verts);
 						}
 
-						var quadCommand = _Commands[i] as LDrawQuad;
-						if(quadCommand != null ) {
-							quadCommand.PrepareMeshData(triangles, verts);
-						}
-						
 					
 						break;
 					case CommandType.SubFile:
