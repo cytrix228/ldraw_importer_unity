@@ -410,7 +410,7 @@ namespace LDraw
 			return matrix;
 		}
 
-		private Quaternion GetQuaternionFromMatrix(Matrix R)
+		private (double, double, double, double) GetQuaternionFromMatrix(Matrix R)
 		{
 			// calculate the quaternion
 
@@ -422,9 +422,9 @@ namespace LDraw
 
 			if (trace > 0) {
 				// matrix to quaternion
-				qw = Math.Sqrt(1.0 + R[0,0] + R[1,1] + R[2,2]) / 2;
+				S = Math.Sqrt(trace + 1) * 2;
+				qw = 0.25 * S;
 
-				S = 4 * qw;
 				qx = ( R[2,1] - R[1,2]) / S;
 				qy = ( R[0,2] - R[2,0]) / S;
 				qz = ( R[1,0] - R[0,1]) / S;
@@ -459,12 +459,65 @@ namespace LDraw
 			double yaw = Math.Atan2(2 * (qw * qz + qx * qy), 1 - 2 * (qy * qy + qz * qz));
 
 			// set the quaternion
-			return new Quaternion((float)qx, (float)qy, (float)qz, (float)qw);
+			return (qw, qx, qy, qz);
 
 		}
-		private (bool, string) CheckAxisAlignment(Vector n, out string axis, double tol = 1e-6)
+		private (double, double, double, double) GetQuaternionFromMatrix(Matrix4x4 R)
+		{
+			// calculate the quaternion
+
+			double qw, qx, qy, qz, S;
+
+			// get the trace
+			double trace = R.m00 + R.m11 + R.m22;
+			
+
+			if (trace > 0) {
+				// matrix to quaternion
+				S = Math.Sqrt(trace + 1) * 2;
+				qw = 0.25 * S;
+
+				qx = ( R.m21 - R.m12) / S;
+				qy = ( R.m02 - R.m20) / S;
+				qz = ( R.m10 - R.m01) / S;
+			} else if ((R.m00 > R.m11) && (R.m00 > R.m22)) {
+				// m00 is the largest
+				S = Math.Sqrt(1 + R.m00 - R.m11 - R.m22) * 2;
+				qw = (R.m21 - R.m12) / S;
+				qx = 0.25 * S;
+				qy = (R.m01 + R.m10) / S;
+				qz = (R.m02 + R.m20) / S;
+
+			} else if ((R.m11 > R.m22)) {
+				// R.m11 is the largest
+				S = Math.Sqrt(1 + R.m11 - R.m00 - R.m22) * 2;
+				qw = (R.m02 - R.m20) / S;
+				qx = (R.m01 + R.m10) / S;
+				qy = 0.25 * S;
+				qz = (R.m12 + R.m21) / S;
+			} else {
+				// R.m22 is the largest
+				S = Math.Sqrt(1 + R.m22 - R.m00 - R.m11) * 2;
+				qw = (R.m10 - R.m01) / S;
+				qx = (R.m20 + R.m02) / S;
+				qy = (R.m01 + R.m10) / S;
+				qz = 0.25f * S;
+			}
+
+
+			// calculate roll, pitch, yaw
+			double roll = Math.Atan2(2 * (qw * qx + qy * qz), 1 - 2 * (qx * qx + qy * qy));
+			double pitch = Math.Asin(2 * (qw * qy - qz * qx));
+			double yaw = Math.Atan2(2 * (qw * qz + qx * qy), 1 - 2 * (qy * qy + qz * qz));
+
+			// set the quaternion
+			return (qw, qx, qy, qz);
+
+		}
+		private (bool, string) CheckAxisAlignment(Vector n, double tol = 1e-6)
 		{
 			// Normalize the vector
+			string axis = "";
 			if (n.L2Norm() == 0)
 			{
 				axis = "Invalid normal vector (zero vector)";
@@ -749,20 +802,19 @@ namespace LDraw
 					if( normalVec[1] > 0 ) scale.y = -scale.y;
 					if( normalVec[2] > 0 ) scale.z = -scale.z;
 
-					// get the angle of the normal vector for the x-y plane
-					double angle = Math.Atan2(normalVec[1], normalVec[0]);
-					// get the angle of the normal vector for the x-z plane	
-					double angle2 = Math.Atan2(normalVec[2], normalVec[0]);
-
 					// if the angle or anglen2 is not 0 or perpendicular
-					if (angle != 0 || (angle - Math.PI / 2) < 1e-6 || angle2 != 0 || (angle2 - Math.PI / 2) < 1e-6)
+					(bool isAligned, string axis) = CheckAxisAlignment(normalVec);
+					if ( !isAligned )
 					{
 						// modify the meshes
 						
 						// Copy the mesh from the mesh filter
 						MeshFilter innerMeshFilter = go.GetComponent<MeshFilter>();
 						if (innerMeshFilter != null) {
-							Mesh meshTransformed = innerMeshFilter.mesh;
+							//Mesh meshTransformed = innerMeshFilter.mesh;
+							Mesh meshTransformed = Mesh.Instantiate(innerMeshFilter.sharedMesh);
+							innerMeshFilter.sharedMesh = meshTransformed;
+							meshTransformed.name = go.name + "_transformed";
 
 							Matrix4x4 transformMatrix = trs;
 							Vector3[] vertices = meshTransformed.vertices;
@@ -774,7 +826,7 @@ namespace LDraw
 								vertices[v] = transformMatrix.MultiplyPoint3x4(vertices[v]);
 							}
 							//meshTransformed.vertices = vertices;
-							meshTransformed.RecalculateNormals();
+							//meshTransformed.RecalculateNormals();
 							meshTransformed.RecalculateBounds();
 
 							rotation = Quaternion.identity;
@@ -784,8 +836,9 @@ namespace LDraw
 					
 					}
 					else {
-
-						rotation = GetQuaternionFromMatrix(properR);
+						double qw, qx, qy, qz;
+						(qw, qx, qy, qz) = GetQuaternionFromMatrix(normalized_m);
+						rotation = new Quaternion((float)qx, (float)qy, (float)qz, (float)qw);
 
 					}
 
@@ -796,7 +849,7 @@ namespace LDraw
 					msgText += "\n  rotationMat : \n" + rotationMat;
 					msgText += "\n  properR : \n" + properR;
 					msgText += "\n  normalVec : (" + normalVec[0] + ", " + normalVec[1] + ", " + normalVec[2] + ")";
-					msgText += "\n  angle : " + angle + "  / angle2 : " + angle2;
+					msgText += "\n  is aligned : " + isAligned + "  / axis : " + axis;
 					msgText += "\n  scale : " + scale;
 					msgText += "\n  rotate X : " + rotation.eulerAngles.x + "  / Y : " + rotation.eulerAngles.y + "  / Z : " + rotation.eulerAngles.z;
 					msgText += "\n  position : " + position;
@@ -810,8 +863,19 @@ namespace LDraw
 				}
 				else
 				{
-					rotation = GetQuaternionFromMatrix(rotationMat);
+					double qw, qx, qy, qz;
+					(qw, qx, qy, qz) = GetQuaternionFromMatrix(normalized_m);
+					rotation = new Quaternion((float)qx, (float)qy, (float)qz, (float)qw);
 
+					string msgText =  "PROPER ROTATION MATRIX : \n" + _Name + "  / parent : " + parent.name
+					+ "\ntrs : " + trs;
+					msgText += "\n  rotationMat : \n" + rotationMat;
+					msgText += "\n  quaternion : (" + qw + ", " + qx + ", " + qy + ", " + qz + ")";
+					msgText += "\n  rotation : \n" + rotation;
+					msgText += "\n  rotate X : " + rotation.eulerAngles.x + "  / Y : " + rotation.eulerAngles.y + "  / Z : " + rotation.eulerAngles.z;
+					
+
+					go.AddComponent<Memo>().memoText = msgText;
 				}
 
 				go.transform.localPosition = position;
