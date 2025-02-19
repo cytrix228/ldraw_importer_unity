@@ -474,12 +474,11 @@ namespace LDraw
 
 			if (trace > 0) {
 				// matrix to quaternion
-				S = Math.Sqrt(trace + 1) * 2;
-				qw = 0.25 * S;
-
-				qx = ( R.m21 - R.m12) / S;
-				qy = ( R.m02 - R.m20) / S;
-				qz = ( R.m10 - R.m01) / S;
+				S = 0.5/ Math.Sqrt(trace + 1);
+				qw = 0.25 / S;
+				qx = ( R.m21 - R.m12) * S;
+				qy = ( R.m02 - R.m20) * S;
+				qz = ( R.m10 - R.m01) * S;
 			} else if ((R.m00 > R.m11) && (R.m00 > R.m22)) {
 				// m00 is the largest
 				S = Math.Sqrt(1 + R.m00 - R.m11 - R.m22) * 2;
@@ -846,7 +845,8 @@ namespace LDraw
 
 					string msgText =  "IMPROPER ROTATION MATRIX : \n" + _Name + "  / parent : " + parent.name
 					+ "\ntrs : " + trs;
-					msgText += "\n  rotationMat : \n" + rotationMat;
+					msgText += "\n  normalized_m : \n" + normalized_m;
+                    msgText += "\n  rotationMat : \n" + rotationMat;
 					msgText += "\n  properR : \n" + properR;
 					msgText += "\n  normalVec : (" + normalVec[0] + ", " + normalVec[1] + ", " + normalVec[2] + ")";
 					msgText += "\n  is aligned : " + isAligned + "  / axis : " + axis;
@@ -870,7 +870,11 @@ namespace LDraw
 					string msgText =  "PROPER ROTATION MATRIX : \n" + _Name + "  / parent : " + parent.name
 					+ "\ntrs : " + trs;
 					msgText += "\n  rotationMat : \n" + rotationMat;
-					msgText += "\n  quaternion : (" + qw + ", " + qx + ", " + qy + ", " + qz + ")";
+					msgText += "\n  normalized_m : \n"
+						+ normalized_m.m00 + ", " + normalized_m.m01 + ", " + normalized_m.m02
+						+ "\n" + normalized_m.m10 + ", " + normalized_m.m11 + ", " + normalized_m.m12
+						+ "\n" + normalized_m.m20 + ", " + normalized_m.m21 + ", " + normalized_m.m22;
+                    msgText += "\n  quaternion : (" + qw + ", " + qx + ", " + qy + ", " + qz + ")";
 					msgText += "\n  rotation : \n" + rotation;
 					msgText += "\n  rotate X : " + rotation.eulerAngles.x + "  / Y : " + rotation.eulerAngles.y + "  / Z : " + rotation.eulerAngles.z;
 					
