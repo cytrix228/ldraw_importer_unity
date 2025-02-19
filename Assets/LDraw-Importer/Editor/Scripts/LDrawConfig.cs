@@ -306,7 +306,7 @@ namespace LDraw
             //name = Path.GetFileNameWithoutExtension(name).ToLower();
             //Debug.Log("GetFileName2 : " + name);
             name = name.Replace('\\', '/');
-            Debug.Log("GetFileName : [" + name + "]");
+//            Debug.Log("GetFileName : [" + name + "]");
 
             return name.Split('.')[0];
         }

@@ -16,6 +16,17 @@ using Vector3 = UnityEngine.Vector3;
 using Vector4 = UnityEngine.Vector4;
 using Quaternion = UnityEngine.Quaternion;
 
+
+using MathNet.Numerics.LinearAlgebra;
+using MathNet.Numerics.LinearAlgebra.Double;
+using MathNet.Numerics.LinearAlgebra.Factorization;
+
+using Vector = MathNet.Numerics.LinearAlgebra.Vector<double>;
+using Matrix = MathNet.Numerics.LinearAlgebra.Matrix<double>;
+
+
+
+
 namespace LDraw
 {
 
@@ -333,6 +344,166 @@ namespace LDraw
         }
 
 
+		public (Matrix RProper, Vector Normal) DecomposeImproperRotation(Matrix R)
+		{
+			if (!R.RowCount.Equals(3) || !R.ColumnCount.Equals(3))
+				throw new ArgumentException("R must be a 3x3 matrix.");
+
+			// Compute eigenvalues and eigenvectors
+			var evd = R.Evd();
+			var eigenValues = evd.EigenValues.Real().ToArray();
+			var eigenVectors = evd.EigenVectors;
+
+			Console.WriteLine("eigenVectors:");
+			Console.WriteLine(eigenVectors.ToString());
+
+			// Find eigenvector corresponding to eigenvalue -1
+			int index = Array.FindIndex(eigenValues, val => Math.Abs(val + 1) < 1e-6);
+			if (index == -1)
+				throw new InvalidOperationException("No eigenvalue -1 found. The matrix might not be an improper rotation matrix.");
+
+			// Extract the normal vector and normalize it
+			Vector normal = eigenVectors.Column(index).Normalize(2);
+
+			// Compute the reflection matrix H = I - 2nn^T
+			Matrix I = DenseMatrix.CreateIdentity(3);
+			Matrix H = I - (2.0 * normal.ToColumnMatrix() * normal.ToRowMatrix());
+
+			// Compute the proper rotation matrix R_rot = R * H
+			Matrix RProper = R * H;
+
+			return (RProper, normal);
+		}
+
+
+		public bool IsImproperRotationMatrix(Matrix R)
+		{
+			// Check if the matrix is 3x3
+			if (R.RowCount != 3 || R.ColumnCount != 3)
+				throw new ArgumentException("The matrix must be 3x3.");
+
+			// Calculate R * R^T
+			var identity = Matrix.Build.DenseIdentity(3);
+			Matrix shouldBeIdentity = R * R.Transpose();
+
+			// Check orthogonality: R * R^T should be approximately equal to the identity matrix
+			bool isOrthogonal = shouldBeIdentity.Equals(identity);
+
+			// Calculate the determinant of R
+			double determinant = R.Determinant();
+
+			Debug.Log( "name : " + _Name + "\n shouldBeIdentity : \n" + shouldBeIdentity
+			 + "\n identity : " + identity + "\n is orthogonal : " + isOrthogonal + " \ndeterminant + 1 : " + Math.Abs(determinant + 1));
+
+			// An improper rotation matrix is orthogonal and has a determinant of -1
+			return isOrthogonal && Math.Abs(determinant + 1) < 1e-6;
+		}
+
+		private Matrix Matrix4x4ToMatrix(Matrix4x4 m)
+		{
+			Matrix matrix = DenseMatrix.OfArray(new double[,]
+			{
+				{m.m00, m.m01, m.m02},
+				{m.m10, m.m11, m.m12},
+				{m.m20, m.m21, m.m22}
+			});
+			return matrix;
+		}
+
+		private Quaternion GetQuaternionFromMatrix(Matrix R)
+		{
+			// calculate the quaternion
+
+			double qw, qx, qy, qz, S;
+
+			// get the trace
+			double trace = R[0, 0] + R[1, 1] + R[2, 2];
+			
+
+			if (trace > 0) {
+				// matrix to quaternion
+				qw = Math.Sqrt(1.0 + R[0,0] + R[1,1] + R[2,2]) / 2;
+
+				S = 4 * qw;
+				qx = ( R[2,1] - R[1,2]) / S;
+				qy = ( R[0,2] - R[2,0]) / S;
+				qz = ( R[1,0] - R[0,1]) / S;
+			} else if ((R[0,0] > R[1,1]) && (R[0,0] > R[2,2])) {
+				// m00 is the largest
+				S = Math.Sqrt(1 + R[0, 0] - R[1, 1] - R[2, 2]) * 2;
+				qw = (R[2, 1] - R[1, 2]) / S;
+				qx = 0.25 * S;
+				qy = (R[0, 1] + R[1, 0]) / S;
+				qz = (R[0, 2] + R[2, 0]) / S;
+
+			} else if ((R[1, 1] > R[2, 2])) {
+				// R[1,1] is the largest
+				S = Math.Sqrt(1 + R[1, 1] - R[0, 0] - R[2, 2]) * 2;
+				qw = (R[0, 2] - R[2, 0]) / S;
+				qx = (R[0, 1] + R[1, 0]) / S;
+				qy = 0.25 * S;
+				qz = (R[1, 2] + R[2, 1]) / S;
+			} else {
+				// R[2,2] is the largest
+				S = Math.Sqrt(1 + R[2,2] - R[0,0] - R[1,1]) * 2;
+				qw = (R[1, 0] - R[0, 1]) / S;
+				qx = (R[0, 2] + R[2, 0]) / S;
+				qy = (R[0, 1] + R[1, 0]) / S;
+				qz = 0.25f * S;
+			}
+
+
+			// calculate roll, pitch, yaw
+			double roll = Math.Atan2(2 * (qw * qx + qy * qz), 1 - 2 * (qx * qx + qy * qy));
+			double pitch = Math.Asin(2 * (qw * qy - qz * qx));
+			double yaw = Math.Atan2(2 * (qw * qz + qx * qy), 1 - 2 * (qy * qy + qz * qz));
+
+			// set the quaternion
+			return new Quaternion((float)qx, (float)qy, (float)qz, (float)qw);
+
+		}
+		private (bool, string) CheckAxisAlignment(Vector n, out string axis, double tol = 1e-6)
+		{
+			// Normalize the vector
+			if (n.L2Norm() == 0)
+			{
+				axis = "Invalid normal vector (zero vector)";
+				return (false, axis);
+			}
+
+			Vector nNorm = n.Normalize(2);  // L2 normalization
+			
+			// Standard basis vectors
+			Vector eX = Vector.Build.DenseOfArray(new double[] { 1, 0, 0 });
+			Vector eY = Vector.Build.DenseOfArray(new double[] { 0, 1, 0 });
+			Vector eZ = Vector.Build.DenseOfArray(new double[] { 0, 0, 1 });
+
+			// Compute dot products
+			double dX = Math.Abs(nNorm.DotProduct(eX));
+			double dY = Math.Abs(nNorm.DotProduct(eY));
+			double dZ = Math.Abs(nNorm.DotProduct(eZ));
+
+			// Check alignment and set the axis
+			if (Math.Abs(dX - 1) < tol)
+			{
+				axis = "X-axis";
+				return (true, axis);
+			}
+			if (Math.Abs(dY - 1) < tol)
+			{
+				axis = "Y-axis";
+				return (true, axis);
+			}
+			if (Math.Abs(dZ - 1) < tol)
+			{
+				axis = "Z-axis";
+				return (true, axis);
+			}
+
+			axis = "Not aligned with any primary axis";
+			return (false, axis);
+		}
+
 
         public GameObject CreateMeshGameObject(Matrix4x4 trs, Material mat = null, Transform parent = null)
         {
@@ -562,210 +733,85 @@ namespace LDraw
 				normalized_m.SetColumn(2, m.GetColumn(2) / scale.z);
 				normalized_m.SetColumn(3, new Vector4(0, 0, 0, 1));
 
-				// check if the matrix is orthogonal
-				Matrix4x4 transposed = normalized_m.transpose;
-				//Matrix4x4 identity = Matrix4x4.identity;
-				Matrix4x4 result = normalized_m * transposed;
-
-				// calculate the determinant to check if it is a proper rotation matrix
-				float det = normalized_m.determinant;
-
-
 				// m is the LDraw model line type 1 transformation matrix
 				// calculate the pure rotation matrix given the line type 1 value, from a to i.
 				// a is m.m00, i is m.m22
 
-				float a = m.m00;
-				float b = m.m01;
-				float c = m.m02;
-				float d = m.m10;
-				float e = m.m11;
-				float f = m.m12;
-				float g = m.m20;
-				float h = m.m21;
-				float i = m.m22;				
-
-
+				Matrix rotationMat = Matrix4x4ToMatrix(normalized_m);
 				
-				if ( result == Matrix4x4.identity && ( 1.0f + det ) < 0.0001f )
+				if ( IsImproperRotationMatrix(rotationMat) )
 				{
 
-					Matrix4x4 R_plus_I = new Matrix4x4();
-					for (int row = 0; row < 4; row++)
+
+					(Matrix properR, Vector normalVec) = DecomposeImproperRotation(rotationMat);
+
+					if( normalVec[0] > 0 ) scale.x = -scale.x;
+					if( normalVec[1] > 0 ) scale.y = -scale.y;
+					if( normalVec[2] > 0 ) scale.z = -scale.z;
+
+					// get the angle of the normal vector for the x-y plane
+					double angle = Math.Atan2(normalVec[1], normalVec[0]);
+					// get the angle of the normal vector for the x-z plane	
+					double angle2 = Math.Atan2(normalVec[2], normalVec[0]);
+
+					// if the angle or anglen2 is not 0 or perpendicular
+					if (angle != 0 || (angle - Math.PI / 2) < 1e-6 || angle2 != 0 || (angle2 - Math.PI / 2) < 1e-6)
 					{
-						for (int col = 0; col < 4; col++)
-						{
-							R_plus_I[row, col] = normalized_m[row, col] + Matrix4x4.identity[row, col];
+						// modify the meshes
+						
+						// Copy the mesh from the mesh filter
+						MeshFilter innerMeshFilter = go.GetComponent<MeshFilter>();
+						if (innerMeshFilter != null) {
+							Mesh meshTransformed = innerMeshFilter.mesh;
+
+							Matrix4x4 transformMatrix = trs;
+							Vector3[] vertices = meshTransformed.vertices;
+							// get the first indices of the submeshes
+							int[] subMeshIndices = meshTransformed.GetIndices(0);
+
+							for (int v = 0; v < vertices.Length; v++)
+							{
+								vertices[v] = transformMatrix.MultiplyPoint3x4(vertices[v]);
+							}
+							//meshTransformed.vertices = vertices;
+							meshTransformed.RecalculateNormals();
+							meshTransformed.RecalculateBounds();
+
+							rotation = Quaternion.identity;
+							scale = Vector3.one;
+
 						}
+					
+					}
+					else {
+
+						rotation = GetQuaternionFromMatrix(properR);
+
 					}
 
+					//normalized_m = Matrix4x4.TRS(position, rotation, scale);
 
-					Vector3 row0 = R_plus_I.GetRow(0);
-					Vector3 row1 = R_plus_I.GetRow(1);
-					Vector3 row2 = R_plus_I.GetRow(2);
-
-					Vector3 cross01 = Vector3.Cross(row0, row1);
-					Vector3 cross02 = Vector3.Cross(row0, row2);
-					Vector3 cross12 = Vector3.Cross(row1, row2);
-
-					float mag01 = cross01.magnitude;
-					float mag02 = cross02.magnitude;
-					float mag12 = cross12.magnitude;
-
-					Vector3 candidate = Vector3.zero;
-					if (mag01 >= mag02 && mag01 >= mag12)
-						candidate = cross01;
-					else if (mag02 >= mag01 && mag02 >= mag12)
-						candidate = cross02;
-					else
-						candidate = cross12;
-								
-
-
-					string msgText =  "IMPROPER ROTATION MATRIX : \n" + _Name + "\n" + "trs : \n " + trs + "is id : \n" + result + " > det :  " + det + "  / " + parent.name;
-					msgText += "\n  candidate : " + candidate;
+					string msgText =  "IMPROPER ROTATION MATRIX : \n" + _Name + "  / parent : " + parent.name
+					+ "\ntrs : " + trs;
+					msgText += "\n  rotationMat : \n" + rotationMat;
+					msgText += "\n  properR : \n" + properR;
+					msgText += "\n  normalVec : (" + normalVec[0] + ", " + normalVec[1] + ", " + normalVec[2] + ")";
+					msgText += "\n  angle : " + angle + "  / angle2 : " + angle2;
+					msgText += "\n  scale : " + scale;
+					msgText += "\n  rotate X : " + rotation.eulerAngles.x + "  / Y : " + rotation.eulerAngles.y + "  / Z : " + rotation.eulerAngles.z;
+					msgText += "\n  position : " + position;
+					//msgText += "\n  candidate : " + candidate;
 
 					go.AddComponent<Memo>().memoText = msgText;
 
 					Debug.Log(msgText);
 
-				#if IMPROPERRMATRIX
-					rotation = normalized_m.rotation;
-					normalized_m = Matrix4x4.TRS(position, rotation, scale);
-				#else
 
-					
-					// Copy the mesh from the mesh filter
-					MeshFilter innerMeshFilter = go.GetComponent<MeshFilter>();
-					if (innerMeshFilter != null) {
-						Mesh meshTransformed = new Mesh();
-						meshTransformed.vertices = (Vector3[])innerMeshFilter.sharedMesh.vertices.Clone();
-						//meshTransformed.triangles = (int[])innerMeshFilter.sharedMesh.triangles.Clone();
-						meshTransformed.normals = (Vector3[])innerMeshFilter.sharedMesh.normals.Clone();
-						meshTransformed.uv = (Vector2[])innerMeshFilter.sharedMesh.uv.Clone();
-						meshTransformed.colors = (Color[])innerMeshFilter.sharedMesh.colors.Clone();
-						meshTransformed.tangents = (Vector4[])innerMeshFilter.sharedMesh.tangents.Clone();
-						meshTransformed.subMeshCount = innerMeshFilter.sharedMesh.subMeshCount;
-						for (int subMesh = 0; subMesh < innerMeshFilter.sharedMesh.subMeshCount; subMesh++) {
-							meshTransformed.SetIndices((int[])innerMeshFilter.sharedMesh.GetIndices(subMesh).Clone(), innerMeshFilter.sharedMesh.GetTopology(subMesh), subMesh);
-						}
-						innerMeshFilter.sharedMesh.name = innerMeshFilter.sharedMesh.name + "_transformed";
-						innerMeshFilter.sharedMesh = meshTransformed;
-
-						Matrix4x4 transformMatrix = trs;
-						Vector3[] vertices = innerMeshFilter.sharedMesh.vertices;
-						for (int v = 0; v < vertices.Length; v++)
-						{
-							vertices[v] = transformMatrix.MultiplyPoint3x4(vertices[v]);
-						}
-						innerMeshFilter.sharedMesh.vertices = vertices;
-						//innerMeshFilter.sharedMesh.RecalculateNormals();
-
-						innerMeshFilter.sharedMesh.RecalculateBounds();
-					}
-					
-					rotation = Quaternion.identity;
-					scale = Vector3.one;
-				#endif
 				}
 				else
 				{
-#if PURE_ROTATION
-					// Extract the Z–axis and normalize it:
-					Vector3 zAxis = new Vector3(c, f, i).normalized;
+					rotation = GetQuaternionFromMatrix(rotationMat);
 
-					// Extract the X–axis candidate and remove any component along zAxis:
-					Vector3 xAxisCandidate = new Vector3(a, d, g);
-					Vector3 xAxis = xAxisCandidate - Vector3.Dot(xAxisCandidate, zAxis) * zAxis;
-					xAxis.Normalize();
-
-					//Determine the Y–axis using the cross product (to ensure a right–handed system):
-					Vector3 yAxis = Vector3.Cross(zAxis, xAxis);
-
-					// Create the rotation matrix
-					float m00 = xAxis.x;
-					float m01 = yAxis.x;
-					float m02 = zAxis.x;
-					float m10 = xAxis.y;
-					float m11 = yAxis.y;
-					float m12 = zAxis.y;
-					float m20 = xAxis.z;
-					float m21 = yAxis.z;
-					float m22 = zAxis.z;
-#else
-					float m00 = a;
-					float m01 = b;
-					float m02 = c;
-					float m10 = d;
-					float m11 = e;
-					float m12 = f;
-					float m20 = g;
-					float m21 = h;
-					float m22 = i;
-#endif
-
-
-
-					// calculate the quaternion
-
-					float qw, qx, qy, qz, S;
-
-					// get the trace
-					float trace = m00 + m11 + m22;
-					
-
-					if (trace > 0) {
-						// matrix to quaternion
-						qw = Mathf.Sqrt(1f + m00 + m11 + m22) / 2;
-
-						S = 4 * qw;
-						qx = (m21 - m12) / S;
-						qy = (m02 - m20) / S;
-						qz = (m10 - m01) / S;
-					} else if ((m00 > m11) && (m00 > m22)) {
-						// m00 is the largest
-						S = Mathf.Sqrt(1 + m00 - m11 - m22) * 2;
-						qw = (m21 - m12) / S;
-						qx = 0.25f * S;
-						qy = (m01 + m10) / S;
-						qz = (m02 + m20) / S;
-
-					} else if (m11 > m22) {
-						// m11 is the largest
-						S = Mathf.Sqrt(1 + m11 - m00 - m22) * 2;
-						qw = (m02 - m20) / S;
-						qx = (m01 + m10) / S;
-						qy = 0.25f * S;
-						qz = (m12 + m21) / S;
-					} else {
-						// m22 is the largest
-						S = Mathf.Sqrt(1 + m22 - m00 - m11) * 2;
-						qw = (m10 - m01) / S;
-						qx = (m02 + m20) / S;
-						qy = (m12 + m21) / S;
-						qz = 0.25f * S;
-					}
-
-
-					// calculate roll, pitch, yaw
-					float roll = Mathf.Atan2(2 * (qw * qx + qy * qz), 1 - 2 * (qx * qx + qy * qy));
-					float pitch = Mathf.Asin(2 * (qw * qy - qz * qx));
-					float yaw = Mathf.Atan2(2 * (qw * qz + qx * qy), 1 - 2 * (qy * qy + qz * qz));
-
-					if( parent != null && parent.name == "4624" ) {
-						Debug.Log( "trs : \n" + trs );
-						Debug.Log( "from a to i : \n" + a + " " + b + " " + c + "\n" + d + " " + e + " " + f + "\n" + g + " " + h + " " + i );
-						Debug.Log( "m00 : " + m00 + "  / m01 : " + m01 + "  / m02 : " + m02 + 
-							" m10 : " + m10 + "  / m11 : " + m11 + "  / m12 : " + m12 + 
-							" m20 : " + m20 + "  / m21 : " + m21 + "  / m22 : " + m22 );
-
-						// show roll, pitch, yaw in degrees
-						Debug.Log($"Roll: {roll * Mathf.Rad2Deg}, Pitch: {pitch * Mathf.Rad2Deg}, Yaw: {yaw * Mathf.Rad2Deg}");
-						Debug.Log($"Quaternion - X: {qx}, Y: {qy}, Z: {qz}, W: {qw}");
-					}
-
-					// set the quaternion
-					rotation = new Quaternion(qx, qy, qz, qw);
 				}
 
 				go.transform.localPosition = position;

@@ -201,6 +201,9 @@ public class EditorFontSize : EditorWindow
         evenBG.clipping = oddBG.clipping = TextClipping.Clip;
         evenBG.margin = oddBG.margin =
         evenBG.padding = oddBG.padding = new RectOffset();
+
+		Debug.Log( "Icon Size : " + EditorGUIUtility.GetIconSize().ToString() );
+		EditorGUIUtility.SetIconSize( new Vector2( 32, 32 ) );
     }
 
     int rowCount = 0;
