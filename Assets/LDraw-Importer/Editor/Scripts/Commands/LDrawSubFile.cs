@@ -32,7 +32,7 @@ namespace LDraw
 		{
 
             var args = serialized.Split(' ');
-            Debug.Log("SubFile : " + serialized + "\n" + args[14]);
+            //Debug.Log("SubFile : " + serialized + "\n" + args[14]);
             float[] param = new float[12];
 
 			_Name = LDrawConfig.GetFileName(args, 14);

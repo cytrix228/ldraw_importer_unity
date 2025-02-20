@@ -636,7 +636,7 @@ namespace LDraw
 			// transform all vertices in the meshes and the polylines
 			for (int i = 0; i < verts.Count; i++)
 			{
-				verts[i] = transformMat.MultiplyPoint3x4(verts[i]);
+				//verts[i] = transformMat.MultiplyPoint3x4(verts[i]);
 			}
 
 		}
