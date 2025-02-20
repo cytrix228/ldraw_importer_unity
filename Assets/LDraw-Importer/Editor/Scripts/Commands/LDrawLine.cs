@@ -7,39 +7,40 @@ namespace LDraw
 {
 	public class LDrawLine : LDrawCommand
 	{
-		public override void PrepareMeshData( List<int> lines, List<Vector3> verts)
+		public override int PrepareMeshData( List<List<int>> polylines, List<Vector3> verts)
 		{
 			var vertLen = verts.Count;
 
-			//Debug.Log( "LDrawLine  at vert count : " + vertLen );
-
-			// for (int i = 0; i < 2; i++)
-			// {
-			// 	lines.Add(vertLen + i);
-			// }
-
-			// for (int i = 0; i < _Verts.Length; i++)
-			// {
-			// 	verts.Add(_Verts[i]);
-			// }
-
-			// check the last vertext of the previous line
-			// if the last vertext of the previous line is the same as the first vertext of this line
-			// then add the last vertext of this line to the previous line
-			// otherwise, add two vertices of this line to the vertices list
+			int iCount = 0;
+			int iLineCount = polylines.Count;
+			List<int> lines = null;
+			if (iLineCount == 0)
+			{
+				lines = new List<int>();
+				polylines.Add(lines);
+			}
+			else if (iLineCount > 0)
+			{
+				lines = polylines[iLineCount - 1];
+			}
+			
 			if (vertLen > 1)
 			{
 				if (verts[vertLen - 1] == _Verts[0])
 				{
 					verts.Add(_Verts[1]);
 					lines.Add(vertLen);
+					iCount += 1;
 				}
 				else
 				{
+					lines = new List<int>();
+					polylines.Add(lines);
 					verts.Add(_Verts[0]);
 					lines.Add(vertLen);
 					verts.Add(_Verts[1]);
 					lines.Add(vertLen + 1);
+					iCount += 2;
 				}
 			}
 			else
@@ -48,8 +49,10 @@ namespace LDraw
 				lines.Add(vertLen);
 				verts.Add(_Verts[1]);
 				lines.Add(vertLen + 1);
+				iCount += 2;
 			}
 
+			return iCount;
 		}
 
 		public override void Deserialize(string serialized)

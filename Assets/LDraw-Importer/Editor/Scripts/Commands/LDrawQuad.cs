@@ -7,8 +7,16 @@ namespace LDraw
 {
 	public class LDrawQuad : LDrawCommand
 	{ 
-		public override void PrepareMeshData(List<int> triangles, List<Vector3> verts)
+		public override int PrepareMeshData( List<List<int>> meshes, List<Vector3> verts)
 		{
+			List<int> triangles = null;
+			if (meshes.Count == 0)
+			{
+				meshes.Add(new List<int>());
+			}
+			triangles = meshes[meshes.Count - 1];
+
+			int iCount = 0;
 			var v = _Verts;
 			var nA = Vector3.Cross(v[1] - v[0], v[2] - v[0]);
 			var nB = Vector3.Cross(v[1] - v[0], v[2] - v[0]);
@@ -28,7 +36,9 @@ namespace LDraw
 			for (int i = 0; i < indexes.Length; i++)
 			{
 				verts.Add(v[indexes[i]]);
+				iCount++;
 			}
+			return iCount;
 		}
     
 		public override void Deserialize(string serialized)

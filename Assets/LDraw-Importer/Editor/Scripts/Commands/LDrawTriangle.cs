@@ -7,13 +7,20 @@ namespace LDraw
 {
 	public class LDrawTriangle : LDrawCommand
 	{
-		public override void PrepareMeshData( List<int> triangles, List<Vector3> verts)
+		public override int PrepareMeshData( List<List<int>> meshes, List<Vector3> verts)
 		{
+			int iCount = 0;
 			var vertLen = verts.Count;
+
+			if(meshes.Count == 0)
+			{
+				meshes.Add(new List<int>());
+			}
 
 			for (int i = 0; i < 3; i++)
 			{
-				triangles.Add(vertLen + i);
+				meshes[0].Add(vertLen + i);
+				iCount++;
 			}
 
 			for (int i = 0; i < _Verts.Length; i++)
@@ -21,6 +28,7 @@ namespace LDraw
 				verts.Add(_Verts[i]);
 			}
 
+			return iCount;
 		}
 
 		public override void Deserialize(string serialized)

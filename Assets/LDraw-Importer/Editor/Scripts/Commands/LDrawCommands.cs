@@ -129,7 +129,7 @@ namespace LDraw
 		}
 
 
-        public abstract void PrepareMeshData(List<int> triangles, List<Vector3> verts);
+        public abstract int PrepareMeshData(List<List<int>> triangles, List<Vector3> verts);
         public abstract void Deserialize(string serialized);
 
     }

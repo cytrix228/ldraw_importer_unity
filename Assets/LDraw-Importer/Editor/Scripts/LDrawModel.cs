@@ -302,9 +302,16 @@ namespace LDraw
         #region fields and properties
 
         private string _Name;
+        private LDrawSubFile _subFile;
         private List<LDrawCommand> _Commands;
         private List<string> _SubModels;
         private static Dictionary<string, LDrawModel> _models = new Dictionary<string, LDrawModel>();
+
+        public LDrawSubFile SubFile
+        {
+        	get { return _subFile; }
+        	set { _subFile = value; }
+        }
         
         public string Name
         {
@@ -556,6 +563,77 @@ namespace LDraw
 			return (false, axis);
 		}
 
+		public void PrepareMeshData(Matrix4x4 transformMat, List<List<int>> meshes, List<List<int>> polylines, List<Vector3> verts)
+		{
+			LDrawPart partCommand = null;
+
+			//Debug.Log( "   _Commands.Count : " + _Commands.Count );
+			bool isLineStarted = false;
+            for (int i = 0; i < _Commands.Count; i++)
+            {
+                //var sfCommand = _Commands[i] as LDrawSubFile;
+				switch( _Commands[i].GetCommandType() ) {
+					case CommandType.Line:
+					case CommandType.OptionalLine:
+						var lineCommand = _Commands[i];
+						if(lineCommand != null ) {
+							if( !isLineStarted) {
+								//Debug.Log("Line Started : " + lineCommand.GetVert(0) + "  / " + lineCommand.GetVert(1) );
+
+								isLineStarted = true;
+								lineCommand.PrepareMeshData(polylines, verts);
+							}
+							else {
+								int iAdded = lineCommand.PrepareMeshData(polylines, verts);
+								if( iAdded > 1 ) 
+								{
+
+								}
+							}
+
+						}
+						break;
+					
+					default:
+					case CommandType.Triangle:
+					case CommandType.Quad:
+						if( isLineStarted ) {
+							//Debug.Log("Line Ended 2 : " + lines[0] + "  / " + lines[1] );
+							polylines.Add(new List<int>());
+							isLineStarted = false;
+						}
+						LDrawCommand command = _Commands[i];
+						if(command != null ) {
+							command.PrepareMeshData(meshes, verts);
+						}
+
+					
+						break;
+					case CommandType.SubFile:
+						var sfCommand = _Commands[i] as LDrawSubFile;
+						sfCommand.PrepareMeshData(meshes, polylines, verts);
+						break;
+
+					case CommandType.PartDesc:
+						partCommand = _Commands[i] as LDrawPart;
+						if(partCommand != null) {
+							break;
+						}
+						break;
+
+				}
+
+			} // end of for loop
+
+
+			// transform all vertices in the meshes and the polylines
+			for (int i = 0; i < verts.Count; i++)
+			{
+				verts[i] = transformMat.MultiplyPoint3x4(verts[i]);
+			}
+
+		}
+
 
         public GameObject CreateMeshGameObject(Matrix4x4 trs, Material mat = null, Transform parent = null)
         {
@@ -564,11 +642,13 @@ namespace LDraw
         
 			//Debug.Log("   in CreateMeshGameObject : " + _Name );
 
-            var triangles = new List<int>();
+			var meshes = new List<List<int>>();
+			meshes.Add(new List<int>());
+
             var verts = new List<Vector3>();
 
-			var polylines = new List<List<Vector3>>();
-			List<Vector3> lines = null;
+			var polylines = new List<List<int>>();
+			List<int> lines = null;
 		
 			
 
@@ -589,41 +669,20 @@ namespace LDraw
 								//Debug.Log("Line Started : " + lineCommand.GetVert(0) + "  / " + lineCommand.GetVert(1) );
 
 								isLineStarted = true;
-								lines = new List<Vector3>
-								{
-									lineCommand.GetVert(0),
-									lineCommand.GetVert(1)
-								};
+								lineCommand.PrepareMeshData(polylines, verts);
 							}
 							else {
-								Vector3 vStart = lineCommand.GetVert(0);
-								Vector3 vLast = lines[lines.Count - 1];
-								if( vStart == vLast ) {
-									//Debug.Log("Line Continued : " + lineCommand.GetVert(0) + "  / " + lineCommand.GetVert(1) );
-									lines.Add( lineCommand.GetVert(1) );
-								}
-								else {
-									//Debug.Log("Line Ended 1 : " + lineCommand.GetVert(0) + "  / " + lineCommand.GetVert(1) );
-									polylines.Add(lines);
+								int iAdded = lineCommand.PrepareMeshData(polylines, verts);
+								if( iAdded > 1 ) 
+								{
 
-									lines = new List<Vector3>
-									{
-										lineCommand.GetVert(0),
-										lineCommand.GetVert(1)
-									};
-									
-									//Debug.Log( "   last line vert 0 : " + polylines[ polylines.Count - 1 ][0] );
-									//Debug.Log( "   last line vert 1 : " + polylines[ polylines.Count - 1 ][1] );
 								}
 							}
 
-							if( i == _Commands.Count - 1 ) {
-								//Debug.Log("Line Ended 3 : " + lines[0] + "  / " + lines[1] );
-								polylines.Add(lines);
-							}
 						}
 						break;
 					
+				
 					default:
 					case CommandType.Triangle:
 					case CommandType.Quad:
@@ -634,7 +693,7 @@ namespace LDraw
 						}
 						LDrawCommand command = _Commands[i];
 						if(command != null ) {
-							command.PrepareMeshData(triangles, verts);
+							command.PrepareMeshData(meshes, verts);
 						}
 
 					
@@ -692,7 +751,7 @@ namespace LDraw
 				meshFilter = go.GetComponent<MeshFilter>();
 				
 				//Debug.Log("PrepareMesh : " + verts.Count + "  / " + triangles.Count + "  / " + polylines.Count );
-				meshFilter.sharedMesh = PrepareMesh(verts, triangles, polylines); // save mesh to disk
+				meshFilter.sharedMesh = PrepareMesh(verts, meshes, polylines); // save mesh to disk
 				var mr = go.AddComponent<MeshRenderer>();
 				if (mat != null)
 				{
@@ -920,7 +979,7 @@ namespace LDraw
 
             return go;
         }
-        private Mesh PrepareMesh(List<Vector3> verts, List<int> triangles, List<List<Vector3>> polylines )
+        private Mesh PrepareMesh(List<Vector3> verts, List<List<int>> triangles, List<List<int>> polylines )
         {  
             
             Mesh mesh = LDrawConfig.Instance.GetMesh(_Name);
@@ -933,6 +992,10 @@ namespace LDraw
             mesh.name = _Name;
             var frontVertsCount = verts.Count;
 
+			int iSubTriangles = triangles.Count;
+			int iSubPolyline = polylines.Count;
+			//Debug.Log("Name : " + _Name + "  / verts.Count : " + verts.Count + "  / triangles.Count : " + triangles.Count + "  / polylines.Count : " + polylines.Count );
+			mesh.subMeshCount = iSubTriangles + iSubPolyline;
 			if( verts.Count > 0 ) {
 				//backface
 #if BACKFACE
@@ -956,26 +1019,34 @@ namespace LDraw
 
 				Debug.Log("Name : " + _Name + "  / verts.Count : " + verts.Count + "  / triangles.Count : " + triangles.Count );
 				mesh.SetVertices(verts);
-				mesh.SetTriangles(triangles, 0);
+				for (int i = 0; i < iSubTriangles; i++)
+				{
+					mesh.SetTriangles(triangles[i], i);
+				}
 				
 				mesh.RecalculateNormals();
+
+				for( int i = 0; i < iSubPolyline; i++ ) {
+					mesh.SetIndices(polylines[i].ToArray(), MeshTopology.LineStrip, iSubTriangles + i);
+				}
+
 				mesh.RecalculateBounds();
 			}
 
 
-			if( polylines.Count > 0  ) {
+			// if( polylines.Count > 0  ) {
 
-				// if there is a mesh, add the polylines as additional submeshes
-				if( verts.Count > 0 ) {
+			// 	// if there is a mesh, add the polylines as additional submeshes
+			// 	if( verts.Count > 0 ) {
 
-					mesh = PolylineMeshUtil.AddPolylinesToExistingMesh(mesh, polylines );
-				}
-				else {
-					// if there is no mesh, create a new mesh with the polylines
-					mesh = PolylineMeshUtil.CreateMultiplePolylinesMesh(polylines);
-				}
+			// 		mesh = PolylineMeshUtil.AddPolylinesToExistingMesh(mesh, polylines );
+			// 	}
+			// 	else {
+			// 		// if there is no mesh, create a new mesh with the polylines
+			// 		mesh = PolylineMeshUtil.CreateMultiplePolylinesMesh(polylines);
+			// 	}
 
-			}
+			// }
 
             mesh.name = _Name;
             LDrawConfig.Instance.SaveMesh(mesh);

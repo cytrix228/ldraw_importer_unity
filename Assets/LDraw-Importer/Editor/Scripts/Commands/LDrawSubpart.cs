@@ -7,10 +7,11 @@ namespace LDraw
 {
 	public class LDrawSubpart : LDrawCommand
 	{
-		public override void PrepareMeshData( List<int> triangles, List<Vector3> verts)
+		public override int PrepareMeshData( List<List<int>> meshes, List<Vector3> verts)
 		{
 			
-
+			int iCount = 0;
+			return iCount;
 		}
 
 		public override void Deserialize(string serialized)

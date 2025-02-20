@@ -18,9 +18,14 @@ namespace LDraw
 			_Model.CreateMeshGameObject(_Matrix, GetMaterial(), parent);
 		}
 
-		public override void PrepareMeshData(List<int> triangles, List<Vector3> verts)
+		public override int PrepareMeshData( List<List<int>> meshes, List<Vector3> verts)
 		{
-			 
+			return 0;
+		}
+
+		public void PrepareMeshData(List<List<int>> meshes, List<List<int>> polylines, List<Vector3> verts)
+		{
+			_Model.PrepareMeshData(_Matrix, meshes, polylines, verts);
 		}
 
 		public override void Deserialize(string serialized)
@@ -48,6 +53,7 @@ namespace LDraw
 
 
 			_Model = LDrawModel.Create(_Name, LDrawConfig.Instance.GetSerializedPart(_Name));
+			_Model.SubFile = this;
 			
 			_Matrix = new Matrix4x4(
 				new Vector4(param[3], param[6], param[9],  0),
