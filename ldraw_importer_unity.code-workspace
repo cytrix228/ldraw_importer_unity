@@ -8,6 +8,7 @@
 		}
 	],
 	"settings": {
-		"dotnet.defaultSolution": "ldraw_importer_unity.sln"
+		"dotnet.defaultSolution": "ldraw_importer_unity.sln",
+		"dotnet.preferCSharpExtension": true
 	}
 }

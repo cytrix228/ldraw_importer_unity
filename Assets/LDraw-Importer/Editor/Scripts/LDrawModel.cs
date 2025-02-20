@@ -655,7 +655,7 @@ namespace LDraw
             var verts = new List<Vector3>();
 
 			var polylines = new List<List<int>>();
-			List<int> lines = null;
+			//List<int> lines = null;
 		
 			
 
@@ -666,6 +666,43 @@ namespace LDraw
 			if( partCommand != null ) {
 				Debug.Log( " Create part : " + _Name );
 				PrepareMeshData(trs, meshes, polylines, verts);
+
+				if (mat != null)
+				{
+					var childMrs = go.transform.GetComponentsInChildren<MeshRenderer>();
+					foreach (var meshRenderer in childMrs)
+					{
+						meshRenderer.material = mat;
+					}
+				}
+
+				MeshFilter meshFilter = null;
+				if (verts.Count > 0 || polylines.Count > 0)
+				{
+					go.AddComponent<MeshFilter>();
+			
+					meshFilter = go.GetComponent<MeshFilter>();
+					
+					//Debug.Log("PrepareMesh : " + verts.Count + "  / " + triangles.Count + "  / " + polylines.Count );
+					meshFilter.sharedMesh = PrepareMesh(verts, meshes, polylines); // save mesh to disk
+					var mr = go.AddComponent<MeshRenderer>();
+					if (mat != null)
+					{
+						mr.sharedMaterial = mat;
+					
+					}
+
+				}
+
+				go.transform.SetParent(parent);
+
+				// output name of go
+				//Debug.Log("GameObject name : " + go.name );
+				Console.WriteLine("GameObject name : " + go.name + "  Merge " );
+				//Mesh mergedMesh = MergeChildrenMeshes.Merge(go);
+				//Debug.Log("Merged mesh has " + mergedMesh.vertexCount + " vertices.");				
+
+				return go;
 			}
 
 			//bool isLineStarted = false;
@@ -673,43 +710,6 @@ namespace LDraw
             {
                 //var sfCommand = _Commands[i] as LDrawSubFile;
 				switch( _Commands[i].GetCommandType() ) {
-					// case CommandType.Line:
-					// case CommandType.OptionalLine:
-					// 	var lineCommand = _Commands[i];
-					// 	if(lineCommand != null ) {
-					// 		if( !isLineStarted) {
-					// 			//Debug.Log("Line Started : " + lineCommand.GetVert(0) + "  / " + lineCommand.GetVert(1) );
-
-					// 			isLineStarted = true;
-					// 			lineCommand.PrepareMeshData(polylines, verts);
-					// 		}
-					// 		else {
-					// 			int iAdded = lineCommand.PrepareMeshData(polylines, verts);
-					// 			if( iAdded > 1 ) 
-					// 			{
-
-					// 			}
-					// 		}
-
-					// 	}
-					// 	break;
-					
-				
-					// default:
-					// case CommandType.Triangle:
-					// case CommandType.Quad:
-					// 	if( isLineStarted ) {
-					// 		//Debug.Log("Line Ended 2 : " + lines[0] + "  / " + lines[1] );
-					// 		polylines.Add(lines);
-					// 		isLineStarted = false;
-					// 	}
-					// 	LDrawCommand command = _Commands[i];
-					// 	if(command != null ) {
-					// 		command.PrepareMeshData(meshes, verts);
-					// 	}
-
-					
-					// 	break;
 					case CommandType.SubFile:
 						var sfCommand = _Commands[i] as LDrawSubFile;
 						sfCommand.GetModelGameObject(go.transform);
@@ -721,57 +721,13 @@ namespace LDraw
 						// 	break;
 						// }
 						break;
+					default:
+						break;
 
 				}
 
 			}
 
-			if (mat != null)
-			{
-				var childMrs = go.transform.GetComponentsInChildren<MeshRenderer>();
-				foreach (var meshRenderer in childMrs)
-				{
-					meshRenderer.material = mat;
-				}
-			}
-
-			MeshFilter meshFilter = null;
-#if ADD_VISUALGO
-			GameObject visualGO = null;
-			if (verts.Count > 0 || polylines.Count > 0)
-			{
-				visualGO = new GameObject("mesh");
-				visualGO.transform.SetParent(go.transform);
-				meshFilter = visualGO.AddComponent<MeshFilter>();
-		
-				//Debug.Log("PrepareMesh : " + verts.Count + "  / " + triangles.Count + "  / " + polylines.Count );
-				meshFilter.sharedMesh = PrepareMesh(verts, triangles, polylines); // save mesh to disk
-				var mr = visualGO.AddComponent<MeshRenderer>();
-				if (mat != null)
-				{
-					mr.sharedMaterial = mat;
-				
-				}
-
-			}
-#else
-			if (verts.Count > 0 || polylines.Count > 0)
-			{
-				go.AddComponent<MeshFilter>();
-		
-				meshFilter = go.GetComponent<MeshFilter>();
-				
-				//Debug.Log("PrepareMesh : " + verts.Count + "  / " + triangles.Count + "  / " + polylines.Count );
-				meshFilter.sharedMesh = PrepareMesh(verts, meshes, polylines); // save mesh to disk
-				var mr = go.AddComponent<MeshRenderer>();
-				if (mat != null)
-				{
-					mr.sharedMaterial = mat;
-				
-				}
-
-			}
-#endif
 			
             //go.transform.ApplyLocalTRS(trs);
 
@@ -952,30 +908,6 @@ namespace LDraw
 				go.transform.localScale    = scale;
 			}
 #endif
-
-
-			
-			// UnityEngine.Vector4 column3 = trs.GetColumn(3);
-			// if( column3[0] == 14.2849 && column3[1] == 20.4009 && column3[2] == -7 ) {
-			// 	Debug.Log("trs : " + trs );
-			// }
-
-			// get the parent name
-			// if( _Name == "rect2p" && parent.name == "4084" ) {
-			// 	// get the rotation from the transform
-			// 	UnityEngine.Quaternion rotation = go.transform.rotation;
-
-			// 	// into degrees
-			// 	float x = rotation.eulerAngles.x;
-			// 	float y = rotation.eulerAngles.y;
-			// 	float z = rotation.eulerAngles.z;
-
-
-			// 	Debug.Log( "trs : " + trs );
-			// 	Debug.Log($"Rotation in degrees - X: {x}, Y: {y}, Z: {z}");
-
-			// }
-
 
         
             go.transform.SetParent(parent);
