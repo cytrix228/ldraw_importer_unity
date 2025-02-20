@@ -303,6 +303,8 @@ namespace LDraw
 
         private string _Name;
         private LDrawSubFile _subFile;
+
+		private LDrawCommand _partDescv;
         private List<LDrawCommand> _Commands;
         private List<string> _SubModels;
         private static Dictionary<string, LDrawModel> _models = new Dictionary<string, LDrawModel>();
@@ -338,7 +340,10 @@ namespace LDraw
                     if (!String.IsNullOrEmpty(line))
                     {
                         var command = LDrawCommand.DeserializeCommand(line, this);
-                        if (command != null)
+						if(command.GetCommandType() == CommandType.PartDesc) {
+                            _partDescv = command;
+                        }
+						else if (command != null)
                             _Commands.Add(command);
                     }
                 }
@@ -652,10 +657,11 @@ namespace LDraw
 		
 			
 
-			LDrawPart partCommand = null;
+			LDrawPart partCommand = _partDescv as LDrawPart;
         
 
 			//Debug.Log( "   _Commands.Count : " + _Commands.Count );
+			/*
 			bool isLineStarted = false;
             for (int i = 0; i < _Commands.Count; i++)
             {
@@ -713,7 +719,10 @@ namespace LDraw
 				}
 
 			}
-
+			*/
+			if( partCommand != null ) {
+				PrepareMeshData(trs, meshes, polylines, verts);
+			}
 
 			if (mat != null)
 			{
