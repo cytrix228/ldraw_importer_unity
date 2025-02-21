@@ -8,16 +8,16 @@ Kernel version:          6.11.0-17-generic
 Architecture:            x86_64
 Available memory:        128490 MB
 [Licensing::Module] Trying to connect to existing licensing client channel...
-[Licensing::IpcConnector] Successfully connected to the License Client on channel: "LicenseClient-cytrix" at "2025-02-21T00:07:51.60921Z"
+[Licensing::IpcConnector] Successfully connected to the License Client on channel: "LicenseClient-cytrix" at "2025-02-21T01:01:56.555491Z"
 [SignatureVerifier] Application signature verification not supported on this platform.
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.16.2+bdef8f5
-  Session Id:              50bb66b26f554ccca08b06473e9e731c
+  Session Id:              630220a98db54cf7b15509a047fae607
   Correlation Id:          2a2e5c6f913e7480a6d903975fd2b4c2
-  External correlation Id: 3671228060346488978
+  External correlation Id: 4155216873674825621
   Machine Id:              b1xZMLw5EXhuVIljp7eYSZ25wk4=
 [Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-cytrix" (connect: 0.00s, validation: 0.01s, handshake: 0.00s)
-[Licensing::IpcConnector] Successfully connected to the License Notification on channel: "LicenseClient-cytrix-notifications" at "2025-02-21T00:07:51.62056Z"
+[Licensing::IpcConnector] Successfully connected to the License Notification on channel: "LicenseClient-cytrix-notifications" at "2025-02-21T01:01:56.566846Z"
 [Licensing::Module] Error: Access token is unavailable; failed to update
 [Licensing::Client] Successfully updated license
 [Licensing::Client] Successfully resolved entitlement details
@@ -72,18 +72,18 @@ Successfully changed project path to: /home/cytrix/project/Lets3DGame/ldraw_impo
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [128989412275520]  Target information:
+Player connection [134174412891456]  Target information:
 
-Player connection [128989412275520]  * "[IP] 172.30.1.30 [Port] 55504 [Flags] 2 [Guid] 541640313 [EditorId] 541640313 [Version] 1048832 [Id] LinuxEditor(16,172.30.1.30) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" 
+Player connection [134174412891456]  * "[IP] 172.30.1.30 [Port] 55504 [Flags] 2 [Guid] 2047053217 [EditorId] 2047053217 [Version] 1048832 [Id] LinuxEditor(16,172.30.1.30) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" 
 
-Player connection [128989412275520]  * "[IP] 172.17.0.1 [Port] 55504 [Flags] 2 [Guid] 541640313 [EditorId] 541640313 [Version] 1048832 [Id] LinuxEditor(16,172.30.1.30) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" 
+Player connection [134174412891456]  * "[IP] 172.17.0.1 [Port] 55504 [Flags] 2 [Guid] 2047053217 [EditorId] 2047053217 [Version] 1048832 [Id] LinuxEditor(16,172.30.1.30) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" 
 
-Player connection [128989412275520] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [128989412275520] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [134174412891456] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [134174412891456] Host joined alternative multi-casting on [225.0.0.222:34997]...
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
 [Physics::Module] Id: 0xdecafbad
-[Package Manager] Connected to IPC stream "Upm-2499227" after 0.2 seconds.
+[Package Manager] Connected to IPC stream "Upm-2526115" after 0.2 seconds.
 Library Redirect Path: Library/
 [Package Manager] Restoring resolved packages state from cache
 [Licensing::Client] Successfully resolved entitlement details
@@ -156,7 +156,7 @@ Library Redirect Path: Library/
 [Subsystems] No new subsystems found in resolved package list.
 Package Manager log level set to [2]
 [Package Manager] Done registering packages in 0.27 seconds
-Refreshing native plugins compatible for Editor in 4.54 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 4.01 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.38f1 (82314a941f2d)
 [Subsystems] Discovering subsystems at path /home/cytrix/Unity/Hub/Editor/6000.0.38f1/Editor/Data/Resources/UnitySubsystems
@@ -172,7 +172,7 @@ Initialize mono
 Mono path[0] = '/home/cytrix/Unity/Hub/Editor/6000.0.38f1/Editor/Data/Managed'
 Mono path[1] = '/home/cytrix/Unity/Hub/Editor/6000.0.38f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-linux'
 Mono config path = '/home/cytrix/Unity/Hub/Editor/6000.0.38f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56227
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56115
 Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
 Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
 ImportWorker Server TCP listen port: 0
@@ -185,8 +185,8 @@ Register platform support module: /home/cytrix/Unity/Hub/Editor/6000.0.38f1/Edit
 [Licensing::Client] Successfully resolved entitlement details
 Register platform support module: /home/cytrix/Unity/Hub/Editor/6000.0.38f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
 Register platform support module: /home/cytrix/Unity/Hub/Editor/6000.0.38f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0.023891 seconds.
-- Loaded All Assemblies, in  0.361 seconds
+Registered in 0.023774 seconds.
+- Loaded All Assemblies, in  0.354 seconds
 Native extension for LinuxStandalone target not found
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
@@ -195,35 +195,35 @@ Native extension for Android target not found
 Android Extension - Scanning For ADB Devices 630 ms
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.144 seconds
-Domain Reload Profiling: 1505ms
-	BeginReloadAssembly (80ms)
+- Finished resetting the current domain, in  1.066 seconds
+Domain Reload Profiling: 1421ms
+	BeginReloadAssembly (78ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (36ms)
+	RebuildCommonClasses (37ms)
 	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (75ms)
-	LoadAllAssembliesAndSetupDomain (162ms)
-		LoadAssemblies (80ms)
+	initialDomainReloadingComplete (73ms)
+	LoadAllAssembliesAndSetupDomain (158ms)
+		LoadAssemblies (78ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (159ms)
-			TypeCache.Refresh (157ms)
-				TypeCache.ScanAssembly (142ms)
+		AnalyzeDomain (155ms)
+			TypeCache.Refresh (153ms)
+				TypeCache.ScanAssembly (139ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (1144ms)
+	FinalizeReload (1066ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1108ms)
+		SetupLoadedEditorAssemblies (1031ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (815ms)
-			SetLoadedEditorAssemblies (12ms)
-			BeforeProcessingInitializeOnLoad (87ms)
-			ProcessInitializeOnLoadAttributes (137ms)
-			ProcessInitializeOnLoadMethodAttributes (57ms)
+			InitializePlatformSupportModulesInManaged (794ms)
+			SetLoadedEditorAssemblies (11ms)
+			BeforeProcessingInitializeOnLoad (68ms)
+			ProcessInitializeOnLoadAttributes (106ms)
+			ProcessInitializeOnLoadMethodAttributes (52ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -246,27 +246,27 @@ Application.AssetDatabase Initial Refresh Start
 [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
       Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
 [40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[2]
-      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping application/grpc - - 200 - application/grpc 48.9465ms
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping application/grpc - - 200 - application/grpc 52.4667ms
 Starting: /home/cytrix/Unity/Hub/Editor/6000.0.38f1/Editor/Data/bee_backend --dont-print-to-structured-log --ipc --defer-dag-verification --dagfile="Library/Bee/2400b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
 WorkingDir: /media/cytrix/usbdata1/project/Lets3DGame/ldraw_importer_unity
 DisplayProgressbar: Compiling Scripts
-ExitCode: 0 Duration: 2s546ms
+ExitCode: 0 Duration: 2s698ms
 [716/719    2s] Csc Library/Bee/artifacts/2400b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
 Assets/Editor/BuildScript.cs(13,23): warning CS0618: 'BuildOptions.EnableHeadlessMode' is obsolete: 'Use StandaloneBuildSubtarget.Server instead'
-[717/719    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
-[718/719    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
-*** Tundra build success (2.51 seconds), 3 items updated, 719 evaluated
+[717/719    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+[718/719    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+*** Tundra build success (2.67 seconds), 3 items updated, 719 evaluated
 Assets/Editor/BuildScript.cs(13,23): warning CS0618: 'BuildOptions.EnableHeadlessMode' is obsolete: 'Use StandaloneBuildSubtarget.Server instead'
-AssetDatabase: script compilation time: 3.098636s
+AssetDatabase: script compilation time: 3.263234s
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.740 seconds
-Refreshing native plugins compatible for Editor in 2.23 ms, found 0 plugins.
+- Loaded All Assemblies, in  0.716 seconds
+Refreshing native plugins compatible for Editor in 1.32 ms, found 0 plugins.
 Native extension for LinuxStandalone target not found
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.34 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 1.36 ms, found 0 plugins.
 Loaded VersionHandlerImpl
 UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
 UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
@@ -434,77 +434,77 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (
 (Filename: /home/bokken/build/output/unity/unity/Editor/Mono/EditorAssemblies.cs Line: 118)
 
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.126 seconds
-Domain Reload Profiling: 1864ms
-	BeginReloadAssembly (279ms)
+- Finished resetting the current domain, in  1.080 seconds
+Domain Reload Profiling: 1795ms
+	BeginReloadAssembly (274ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (12ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (159ms)
+		CreateAndSetChildDomain (168ms)
 	RebuildCommonClasses (36ms)
-	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (26ms)
-	LoadAllAssembliesAndSetupDomain (388ms)
-		LoadAssemblies (284ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (25ms)
+	LoadAllAssembliesAndSetupDomain (371ms)
+		LoadAssemblies (270ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (162ms)
-			TypeCache.Refresh (117ms)
-				TypeCache.ScanAssembly (101ms)
-			BuildScriptInfoCaches (40ms)
+		AnalyzeDomain (159ms)
+			TypeCache.Refresh (116ms)
+				TypeCache.ScanAssembly (99ms)
+			BuildScriptInfoCaches (39ms)
 			ResolveRequiredComponents (2ms)
-	FinalizeReload (1126ms)
+	FinalizeReload (1081ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (997ms)
+		SetupLoadedEditorAssemblies (926ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (90ms)
+			InitializePlatformSupportModulesInManaged (83ms)
 			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (213ms)
-			ProcessInitializeOnLoadAttributes (464ms)
-			ProcessInitializeOnLoadMethodAttributes (223ms)
-			AfterProcessingInitializeOnLoad (3ms)
+			BeforeProcessingInitializeOnLoad (154ms)
+			ProcessInitializeOnLoadAttributes (476ms)
+			ProcessInitializeOnLoadMethodAttributes (205ms)
+			AfterProcessingInitializeOnLoad (4ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (5ms)
-Refreshing native plugins compatible for Editor in 1.32 ms, found 0 plugins.
+		AwakeInstancesAfterBackupRestoration (6ms)
+Refreshing native plugins compatible for Editor in 1.36 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Asset Pipeline Refresh (id=0b19944e8910649fca3b2c8223fe43fe): Total: 5.647 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+Asset Pipeline Refresh (id=10b905af98316e4fdbce4e95817d5521): Total: 5.727 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
 	Summary:
 		Imports: total=0 (actual=0, local cache=0, cache server=0)
-		Asset DB Process Time: managed=0 ms, native=1618 ms
-		Asset DB Callback time: managed=122 ms, native=4 ms
-		Scripting: domain reloads=1, domain reload time=772 ms, compile time=3100 ms, other=28 ms
+		Asset DB Process Time: managed=0 ms, native=1556 ms
+		Asset DB Callback time: managed=118 ms, native=6 ms
+		Scripting: domain reloads=1, domain reload time=751 ms, compile time=3265 ms, other=29 ms
 		Project Asset Count: scripts=840, non-scripts=1214
 		Asset File Changes: new=0, changed=1, moved=0, deleted=0
 		Scan Filter Count: 1
 	InvokeCustomDependenciesCallbacks: 0.005ms
-	InvokePackagesCallback: 0.548ms
-	ApplyChangesToAssetFolders: 0.457ms
-	Scan: 277.169ms
-	OnSourceAssetsModified: 0.751ms
-	CategorizeAssetsWithTransientArtifact: 19.714ms
-	ProcessAssetsWithTransientArtifactChanges: 58.233ms
-	CategorizeAssets: 18.201ms
-	ImportOutOfDateAssets: 1137.777ms (-1963.641ms without children)
-		CompileScripts: 3100.239ms
+	InvokePackagesCallback: 0.664ms
+	ApplyChangesToAssetFolders: 0.547ms
+	Scan: 302.650ms
+	OnSourceAssetsModified: 0.705ms
+	CategorizeAssetsWithTransientArtifact: 19.566ms
+	ProcessAssetsWithTransientArtifactChanges: 40.267ms
+	CategorizeAssets: 18.822ms
+	ImportOutOfDateAssets: 1091.001ms (-2175.128ms without children)
+		CompileScripts: 3264.899ms
 		ReloadNativeAssets: 0.000ms
-		UnloadImportedAssets: 0.342ms
-		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.398ms
+		UnloadImportedAssets: 0.330ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.439ms
 		InitializingProgressBar: 0.000ms
-		PostProcessAllAssetNotificationsAddChangedAssets: 0.000ms
-		OnDemandSchedulerStart: 0.438ms
-	PostProcessAllAssets: 123.771ms
-	Hotreload: 2.407ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 0.458ms
+	PostProcessAllAssets: 121.276ms
+	Hotreload: 2.453ms
 	GatherAllCurrentPrimaryArtifactRevisions: 0.000ms
-	UnloadStreamsBegin: 2.016ms
-	PersistCurrentRevisions: 0.075ms
+	UnloadStreamsBegin: 1.956ms
+	PersistCurrentRevisions: 0.137ms
 	UnloadStreamsEnd: 0.001ms
-	GenerateScriptTypeHashes: 1.690ms
-	Untracked: 4006.227ms
+	GenerateScriptTypeHashes: 1.874ms
+	Untracked: 4126.879ms
 
 Application.AssetDatabase Initial Refresh End
-Scanning for USB devices : 5.816ms
+Scanning for USB devices : 5.761ms
 Initializing Unity extensions:
 [Licensing::Client] Successfully resolved entitlement details
 UpdateMenuTitleForLanguage: 10
@@ -513,8 +513,8 @@ UpdateMenuTitleForLanguage: 10
 [MODES] Loading mode Default (0) for mode-current-id-LDraw-Importer
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 2940 unused Assets / (1.0 MB). Loaded Objects now: 3464.
-Memory consumption went from 121.8 MB to 120.8 MB.
-Total: 14.335901 ms (FindLiveObjects: 0.423048 ms CreateObjectMapping: 0.320698 ms MarkObjects: 11.805232 ms  DeleteObjects: 1.786347 ms)
+Memory consumption went from 121.9 MB to 120.9 MB.
+Total: 18.489686 ms (FindLiveObjects: 0.450376 ms CreateObjectMapping: 0.307289 ms MarkObjects: 15.903415 ms  DeleteObjects: 1.827959 ms)
 
 Load resource : Assets/Resources/Config.asset
 Load resource : Assets/Resources/Config.asset
@@ -1375,14 +1375,14 @@ UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/build/output
 UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
 UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.Mesh> (string) (at /home/bokken/build/output/unity/unity/Modules/AssetDatabase/Editor/ScriptBindings/AssetDatabase.bindings.cs:337)
 LDraw.LDrawConfig:GetMesh (string) (at Assets/LDraw-Importer/Editor/Scripts/LDrawConfig.cs:272)
-LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:948)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:705)
+LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:962)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:719)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawEditorWindow:GenerateSomeModel () (at Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs:71)
 
 [Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs line 71]
@@ -1646,14 +1646,14 @@ UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/build/output
 UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
 UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.Mesh> (string) (at /home/bokken/build/output/unity/unity/Modules/AssetDatabase/Editor/ScriptBindings/AssetDatabase.bindings.cs:337)
 LDraw.LDrawConfig:GetMesh (string) (at Assets/LDraw-Importer/Editor/Scripts/LDrawConfig.cs:272)
-LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:948)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:705)
+LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:962)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:719)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawEditorWindow:GenerateSomeModel () (at Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs:71)
 
 [Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs line 71]
@@ -2059,14 +2059,14 @@ UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/build/output
 UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
 UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.Mesh> (string) (at /home/bokken/build/output/unity/unity/Modules/AssetDatabase/Editor/ScriptBindings/AssetDatabase.bindings.cs:337)
 LDraw.LDrawConfig:GetMesh (string) (at Assets/LDraw-Importer/Editor/Scripts/LDrawConfig.cs:272)
-LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:948)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:705)
+LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:962)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:719)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawEditorWindow:GenerateSomeModel () (at Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs:71)
 
 [Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs line 71]
@@ -2665,16 +2665,16 @@ UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/build/output
 UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
 UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.Mesh> (string) (at /home/bokken/build/output/unity/unity/Modules/AssetDatabase/Editor/ScriptBindings/AssetDatabase.bindings.cs:337)
 LDraw.LDrawConfig:GetMesh (string) (at Assets/LDraw-Importer/Editor/Scripts/LDrawConfig.cs:272)
-LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:948)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:705)
+LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:962)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:719)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawEditorWindow:GenerateSomeModel () (at Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs:71)
 
 [Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs line 71]
@@ -3248,14 +3248,14 @@ UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/build/output
 UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
 UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.Mesh> (string) (at /home/bokken/build/output/unity/unity/Modules/AssetDatabase/Editor/ScriptBindings/AssetDatabase.bindings.cs:337)
 LDraw.LDrawConfig:GetMesh (string) (at Assets/LDraw-Importer/Editor/Scripts/LDrawConfig.cs:272)
-LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:948)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:705)
+LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:962)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:719)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawEditorWindow:GenerateSomeModel () (at Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs:71)
 
 [Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs line 71]
@@ -3433,14 +3433,14 @@ UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/build/output
 UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
 UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.Mesh> (string) (at /home/bokken/build/output/unity/unity/Modules/AssetDatabase/Editor/ScriptBindings/AssetDatabase.bindings.cs:337)
 LDraw.LDrawConfig:GetMesh (string) (at Assets/LDraw-Importer/Editor/Scripts/LDrawConfig.cs:272)
-LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:948)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:705)
+LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:962)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:719)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawEditorWindow:GenerateSomeModel () (at Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs:71)
 
 [Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs line 71]
@@ -6093,14 +6093,14 @@ UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/build/output
 UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
 UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.Mesh> (string) (at /home/bokken/build/output/unity/unity/Modules/AssetDatabase/Editor/ScriptBindings/AssetDatabase.bindings.cs:337)
 LDraw.LDrawConfig:GetMesh (string) (at Assets/LDraw-Importer/Editor/Scripts/LDrawConfig.cs:272)
-LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:948)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:705)
+LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:962)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:719)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawEditorWindow:GenerateSomeModel () (at Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs:71)
 
 [Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs line 71]
@@ -6357,14 +6357,14 @@ UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/build/output
 UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
 UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.Mesh> (string) (at /home/bokken/build/output/unity/unity/Modules/AssetDatabase/Editor/ScriptBindings/AssetDatabase.bindings.cs:337)
 LDraw.LDrawConfig:GetMesh (string) (at Assets/LDraw-Importer/Editor/Scripts/LDrawConfig.cs:272)
-LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:948)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:705)
+LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:962)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:719)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawEditorWindow:GenerateSomeModel () (at Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs:71)
 
 [Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs line 71]
@@ -6419,14 +6419,14 @@ UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/build/output
 UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
 UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.Mesh> (string) (at /home/bokken/build/output/unity/unity/Modules/AssetDatabase/Editor/ScriptBindings/AssetDatabase.bindings.cs:337)
 LDraw.LDrawConfig:GetMesh (string) (at Assets/LDraw-Importer/Editor/Scripts/LDrawConfig.cs:272)
-LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:948)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:705)
+LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:962)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:719)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawEditorWindow:GenerateSomeModel () (at Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs:71)
 
 [Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs line 71]
@@ -6532,14 +6532,14 @@ UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/build/output
 UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
 UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.Mesh> (string) (at /home/bokken/build/output/unity/unity/Modules/AssetDatabase/Editor/ScriptBindings/AssetDatabase.bindings.cs:337)
 LDraw.LDrawConfig:GetMesh (string) (at Assets/LDraw-Importer/Editor/Scripts/LDrawConfig.cs:272)
-LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:948)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:705)
+LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:962)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:719)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawEditorWindow:GenerateSomeModel () (at Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs:71)
 
 [Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs line 71]
@@ -7278,14 +7278,14 @@ UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/build/output
 UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
 UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.Mesh> (string) (at /home/bokken/build/output/unity/unity/Modules/AssetDatabase/Editor/ScriptBindings/AssetDatabase.bindings.cs:337)
 LDraw.LDrawConfig:GetMesh (string) (at Assets/LDraw-Importer/Editor/Scripts/LDrawConfig.cs:272)
-LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:948)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:705)
+LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:962)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:719)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawEditorWindow:GenerateSomeModel () (at Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs:71)
 
 [Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs line 71]
@@ -7337,14 +7337,14 @@ UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/build/output
 UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
 UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.Mesh> (string) (at /home/bokken/build/output/unity/unity/Modules/AssetDatabase/Editor/ScriptBindings/AssetDatabase.bindings.cs:337)
 LDraw.LDrawConfig:GetMesh (string) (at Assets/LDraw-Importer/Editor/Scripts/LDrawConfig.cs:272)
-LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:948)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:705)
+LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:962)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:719)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawEditorWindow:GenerateSomeModel () (at Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs:71)
 
 [Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs line 71]
@@ -7448,14 +7448,14 @@ UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/build/output
 UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
 UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.Mesh> (string) (at /home/bokken/build/output/unity/unity/Modules/AssetDatabase/Editor/ScriptBindings/AssetDatabase.bindings.cs:337)
 LDraw.LDrawConfig:GetMesh (string) (at Assets/LDraw-Importer/Editor/Scripts/LDrawConfig.cs:272)
-LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:948)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:705)
+LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:962)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:719)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawEditorWindow:GenerateSomeModel () (at Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs:71)
 
 [Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs line 71]
@@ -7623,14 +7623,14 @@ UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/build/output
 UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
 UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.Mesh> (string) (at /home/bokken/build/output/unity/unity/Modules/AssetDatabase/Editor/ScriptBindings/AssetDatabase.bindings.cs:337)
 LDraw.LDrawConfig:GetMesh (string) (at Assets/LDraw-Importer/Editor/Scripts/LDrawConfig.cs:272)
-LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:948)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:705)
+LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:962)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:719)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawEditorWindow:GenerateSomeModel () (at Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs:71)
 
 [Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs line 71]
@@ -7714,16 +7714,16 @@ UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/build/output
 UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
 UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.Mesh> (string) (at /home/bokken/build/output/unity/unity/Modules/AssetDatabase/Editor/ScriptBindings/AssetDatabase.bindings.cs:337)
 LDraw.LDrawConfig:GetMesh (string) (at Assets/LDraw-Importer/Editor/Scripts/LDrawConfig.cs:272)
-LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:948)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:705)
+LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:962)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:719)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawEditorWindow:GenerateSomeModel () (at Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs:71)
 
 [Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs line 71]
@@ -7793,16 +7793,16 @@ UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/build/output
 UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
 UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.Mesh> (string) (at /home/bokken/build/output/unity/unity/Modules/AssetDatabase/Editor/ScriptBindings/AssetDatabase.bindings.cs:337)
 LDraw.LDrawConfig:GetMesh (string) (at Assets/LDraw-Importer/Editor/Scripts/LDrawConfig.cs:272)
-LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:948)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:705)
+LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:962)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:719)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawEditorWindow:GenerateSomeModel () (at Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs:71)
 
 [Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs line 71]
@@ -7879,16 +7879,16 @@ UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/build/output
 UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
 UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.Mesh> (string) (at /home/bokken/build/output/unity/unity/Modules/AssetDatabase/Editor/ScriptBindings/AssetDatabase.bindings.cs:337)
 LDraw.LDrawConfig:GetMesh (string) (at Assets/LDraw-Importer/Editor/Scripts/LDrawConfig.cs:272)
-LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:948)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:705)
+LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:962)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:719)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawEditorWindow:GenerateSomeModel () (at Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs:71)
 
 [Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs line 71]
@@ -8293,14 +8293,14 @@ UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/build/output
 UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
 UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.Mesh> (string) (at /home/bokken/build/output/unity/unity/Modules/AssetDatabase/Editor/ScriptBindings/AssetDatabase.bindings.cs:337)
 LDraw.LDrawConfig:GetMesh (string) (at Assets/LDraw-Importer/Editor/Scripts/LDrawConfig.cs:272)
-LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:948)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:705)
+LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:962)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:719)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawEditorWindow:GenerateSomeModel () (at Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs:71)
 
 [Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs line 71]
@@ -8821,14 +8821,14 @@ UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/build/output
 UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
 UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.Mesh> (string) (at /home/bokken/build/output/unity/unity/Modules/AssetDatabase/Editor/ScriptBindings/AssetDatabase.bindings.cs:337)
 LDraw.LDrawConfig:GetMesh (string) (at Assets/LDraw-Importer/Editor/Scripts/LDrawConfig.cs:272)
-LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:948)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:705)
+LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:962)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:719)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawEditorWindow:GenerateSomeModel () (at Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs:71)
 
 [Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs line 71]
@@ -8900,14 +8900,14 @@ UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/build/output
 UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
 UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.Mesh> (string) (at /home/bokken/build/output/unity/unity/Modules/AssetDatabase/Editor/ScriptBindings/AssetDatabase.bindings.cs:337)
 LDraw.LDrawConfig:GetMesh (string) (at Assets/LDraw-Importer/Editor/Scripts/LDrawConfig.cs:272)
-LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:948)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:705)
+LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:962)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:719)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawEditorWindow:GenerateSomeModel () (at Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs:71)
 
 [Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs line 71]
@@ -9432,14 +9432,14 @@ UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/build/output
 UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
 UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.Mesh> (string) (at /home/bokken/build/output/unity/unity/Modules/AssetDatabase/Editor/ScriptBindings/AssetDatabase.bindings.cs:337)
 LDraw.LDrawConfig:GetMesh (string) (at Assets/LDraw-Importer/Editor/Scripts/LDrawConfig.cs:272)
-LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:948)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:705)
+LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:962)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:719)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawEditorWindow:GenerateSomeModel () (at Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs:71)
 
 [Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs line 71]
@@ -10308,14 +10308,14 @@ UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/build/output
 UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
 UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.Mesh> (string) (at /home/bokken/build/output/unity/unity/Modules/AssetDatabase/Editor/ScriptBindings/AssetDatabase.bindings.cs:337)
 LDraw.LDrawConfig:GetMesh (string) (at Assets/LDraw-Importer/Editor/Scripts/LDrawConfig.cs:272)
-LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:948)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:705)
+LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:962)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:719)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawEditorWindow:GenerateSomeModel () (at Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs:71)
 
 [Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs line 71]
@@ -10456,14 +10456,14 @@ UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/build/output
 UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
 UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.Mesh> (string) (at /home/bokken/build/output/unity/unity/Modules/AssetDatabase/Editor/ScriptBindings/AssetDatabase.bindings.cs:337)
 LDraw.LDrawConfig:GetMesh (string) (at Assets/LDraw-Importer/Editor/Scripts/LDrawConfig.cs:272)
-LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:948)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:705)
+LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:962)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:719)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawEditorWindow:GenerateSomeModel () (at Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs:71)
 
 [Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs line 71]
@@ -12012,16 +12012,16 @@ UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/build/output
 UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
 UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.Mesh> (string) (at /home/bokken/build/output/unity/unity/Modules/AssetDatabase/Editor/ScriptBindings/AssetDatabase.bindings.cs:337)
 LDraw.LDrawConfig:GetMesh (string) (at Assets/LDraw-Importer/Editor/Scripts/LDrawConfig.cs:272)
-LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:948)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:705)
+LDraw.LDrawModel:PrepareMesh (System.Collections.Generic.List`1<UnityEngine.Vector3>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>,System.Collections.Generic.List`1<System.Collections.Generic.List`1<int>>) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:962)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:719)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawSubFile:GetModelGameObject (UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/Commands/LDrawSubFile.cs:18)
-LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:733)
+LDraw.LDrawModel:CreateMeshGameObject (UnityEngine.Matrix4x4,UnityEngine.Material,UnityEngine.Transform) (at Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:747)
 LDraw.LDrawEditorWindow:GenerateSomeModel () (at Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs:71)
 
 [Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs line 71]
@@ -14974,7 +14974,7 @@ DenseMatrix 3x3-Double
  is orthogonal : True 
 determinant + 1 : 2
 NullReferenceException: Object reference not set to an instance of an object
-  at LDraw.LDrawModel.CreateMeshGameObject (UnityEngine.Matrix4x4 trs, UnityEngine.Material mat, UnityEngine.Transform parent) [0x00674] in /media/cytrix/usbdata1/project/Lets3DGame/ldraw_importer_unity/Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:910 
+  at LDraw.LDrawModel.CreateMeshGameObject (UnityEngine.Matrix4x4 trs, UnityEngine.Material mat, UnityEngine.Transform parent) [0x00674] in /media/cytrix/usbdata1/project/Lets3DGame/ldraw_importer_unity/Assets/LDraw-Importer/Editor/Scripts/LDrawModel.cs:924 
   at LDraw.LDrawEditorWindow.GenerateSomeModel () [0x000eb] in /media/cytrix/usbdata1/project/Lets3DGame/ldraw_importer_unity/Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs:71 
 
 (Filename: Assets/LDraw-Importer/Editor/Scripts/UI/LDrawEditorWindow.cs Line: 71)
@@ -14984,7 +14984,7 @@ executeMethod method LDraw.LDrawEditorWindow.GenerateSomeModel threw exception.
 Aborting batchmode due to failure:
 executeMethod method LDraw.LDrawEditorWindow.GenerateSomeModel threw exception.
 
-Killing ADB server in 0.043501 seconds.
+Killing ADB server in 0.03935 seconds.
 [Physics::Module] Cleanup current backned.
 [Physics::Module] Id: 0xf2b8ea05
 Input System module state changed to: ShutdownInProgress.

@@ -642,16 +642,30 @@ namespace LDraw
 			float maxx = float.MinValue;
 			float maxy = float.MinValue;
 			float maxz = float.MinValue;
-			for (int i = 0; i < verts.Count; i++)
-			{
-				//verts[i] = transformMat.MultiplyPoint3x4(verts[i]);
-				if( verts[i].x > maxx ) maxx = verts[i].x;
-				if( verts[i].y > maxy ) maxy = verts[i].y;
-				if( verts[i].z > maxz ) maxz = verts[i].z;
-				if( verts[i].x < minx ) minx = verts[i].x;
-				if( verts[i].y < miny ) miny = verts[i].y;
-				if( verts[i].z < minz ) minz = verts[i].z;
+			foreach( List<int> mesh in meshes ) {
+				for( int i = 0; i < mesh.Count; i++ ) {
+					//verts[i] = transformMat.MultiplyPoint3x4(verts[i]);
+					if( verts[mesh[i]].x > maxx ) maxx = verts[mesh[i]].x;
+					if( verts[mesh[i]].y > maxy ) maxy = verts[mesh[i]].y;
+					if( verts[mesh[i]].z > maxz ) maxz = verts[mesh[i]].z;
+					if( verts[mesh[i]].x < minx ) minx = verts[mesh[i]].x;
+					if( verts[mesh[i]].y < miny ) miny = verts[mesh[i]].y;
+					if( verts[mesh[i]].z < minz ) minz = verts[mesh[i]].z;
+				}
 			}
+
+			foreach( List<int> line in polylines ) {
+				for( int i = 0; i < line.Count; i++ ) {
+					//verts[i] = transformMat.MultiplyPoint3x4(verts[i]);
+					if( verts[line[i]].x > maxx ) maxx = verts[line[i]].x;
+					if( verts[line[i]].y > maxy ) maxy = verts[line[i]].y;
+					if( verts[line[i]].z > maxz ) maxz = verts[line[i]].z;
+					if( verts[line[i]].x < minx ) minx = verts[line[i]].x;
+					if( verts[line[i]].y < miny ) miny = verts[line[i]].y;
+					if( verts[line[i]].z < minz ) minz = verts[line[i]].z;
+				}
+			}
+
 
 			Console.WriteLine("Min Max Name : "+ _Name + " " + minx + " " + miny + " " + minz 
 							+ " " + maxx + " " + maxy + " " + maxz );
