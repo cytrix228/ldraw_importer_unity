@@ -406,7 +406,7 @@ namespace LDraw
 			// Calculate the determinant of R
 			double determinant = R.Determinant();
 
-			Debug.Log( "name : " + _Name + "\n shouldBeIdentity : \n" + shouldBeIdentity
+			Console.WriteLine( "name : " + _Name + "\n shouldBeIdentity : \n" + shouldBeIdentity
 			 + "\n identity : " + identity + "\n is orthogonal : " + isOrthogonal + " \ndeterminant + 1 : " + Math.Abs(determinant + 1));
 
 			// An improper rotation matrix is orthogonal and has a determinant of -1
@@ -634,10 +634,27 @@ namespace LDraw
 
 
 			// transform all vertices in the meshes and the polylines
+
+			// find min, max vertex.
+			float minx = float.MaxValue;
+			float miny = float.MaxValue;
+			float minz = float.MaxValue;
+			float maxx = float.MinValue;
+			float maxy = float.MinValue;
+			float maxz = float.MinValue;
 			for (int i = 0; i < verts.Count; i++)
 			{
 				//verts[i] = transformMat.MultiplyPoint3x4(verts[i]);
+				if( verts[i].x > maxx ) maxx = verts[i].x;
+				if( verts[i].y > maxy ) maxy = verts[i].y;
+				if( verts[i].z > maxz ) maxz = verts[i].z;
+				if( verts[i].x < minx ) minx = verts[i].x;
+				if( verts[i].y < miny ) miny = verts[i].y;
+				if( verts[i].z < minz ) minz = verts[i].z;
 			}
+
+			Console.WriteLine("Min Max Name : "+ _Name + " " + minx + " " + miny + " " + minz 
+							+ " " + maxx + " " + maxy + " " + maxz );
 
 		}
 
@@ -664,7 +681,8 @@ namespace LDraw
 
 			//Debug.Log( "   _Commands.Count : " + _Commands.Count );
 			if( partCommand != null ) {
-				Debug.Log( " Create part : " + _Name );
+				//Debug.Log( " Create part : " + _Name );
+				Console.WriteLine("  Create part mesh : " + _Name);
 				PrepareMeshData(trs, meshes, polylines, verts);
 
 				if (mat != null)
@@ -683,7 +701,7 @@ namespace LDraw
 			
 					meshFilter = go.GetComponent<MeshFilter>();
 					
-					//Debug.Log("PrepareMesh : " + verts.Count + "  / " + triangles.Count + "  / " + polylines.Count );
+					Console.WriteLine("PrepareMesh : " + verts.Count + "  / " + meshes.Count + "  / " + polylines.Count );
 					meshFilter.sharedMesh = PrepareMesh(verts, meshes, polylines); // save mesh to disk
 					var mr = go.AddComponent<MeshRenderer>();
 					if (mat != null)
@@ -698,7 +716,7 @@ namespace LDraw
 
 				// output name of go
 				//Debug.Log("GameObject name : " + go.name );
-				Console.WriteLine("GameObject name : " + go.name + "  Merge " );
+				//Console.WriteLine("GameObject name : " + go.name + "  Merge " );
 				//Mesh mergedMesh = MergeChildrenMeshes.Merge(go);
 				//Debug.Log("Merged mesh has " + mergedMesh.vertexCount + " vertices.");				
 
@@ -774,9 +792,9 @@ namespace LDraw
 					float z = rotation.eulerAngles.z;
 
 
-					Debug.Log( "trs : " + trs );
+					//Debug.Log( "trs : " + trs );
 					Console.WriteLine( "trs : \n" + trs );
-					Debug.Log($"Rotation in degrees - X: {x}, Y: {y}, Z: {z}");
+					//Debug.Log($"Rotation in degrees - X: {x}, Y: {y}, Z: {z}");
 					Console.WriteLine($"  >> Rotation in degrees - X: {x}, Y: {y}, Z: {z}");
 
 				}
@@ -878,7 +896,8 @@ namespace LDraw
 
 					go.AddComponent<Memo>().memoText = msgText;
 
-					Debug.Log(msgText);
+					//Debug.Log(msgText);
+					Console.WriteLine(msgText);
 
 
 				}
@@ -901,6 +920,7 @@ namespace LDraw
 					
 
 					go.AddComponent<Memo>().memoText = msgText;
+					Console.WriteLine(msgText);
 				}
 
 				go.transform.localPosition = position;
@@ -960,21 +980,21 @@ namespace LDraw
 #endif
 				//end backface
 
-				Debug.Log("Name : " + _Name + "  / verts.Count : " + verts.Count + "  / triangles.Count : " + triangles.Count + "  / polylines.Count : " + polylines.Count );
+				Console.WriteLine("Name : " + _Name + "  / verts.Count : " + verts.Count + "  / triangles.Count : " + triangles.Count + "  / polylines.Count : " + polylines.Count );
 				mesh.SetVertices(verts);
 				for (int i = 0; i < iSubTriangles; i++)
 				{
 					mesh.SetTriangles(triangles[i], i);
 				}
-				
 				mesh.RecalculateNormals();
+				mesh.RecalculateBounds();
+				
 
 			
 				for( int i = 0; i < iSubPolyline; i++ ) {
 					mesh.SetIndices(polylines[i].ToArray(), MeshTopology.LineStrip, iSubTriangles + i);
 				}
 
-				mesh.RecalculateBounds();
 			}
 
 
