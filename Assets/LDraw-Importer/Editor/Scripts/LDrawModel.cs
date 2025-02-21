@@ -661,7 +661,7 @@ namespace LDraw
             {
 				Console.WriteLine("      mat : \n" + transformMat );
 				for( int i = iLastVert; i < verts.Count; i++ ) {
-					Console.WriteLine("      v : " + "[" + verts[i] + "]" );
+					//Console.WriteLine("      v : " + "[" + verts[i] + "]" );
 					verts[i] = transformMat.MultiplyPoint(verts[i]);
 					if( verts[i].x > maxx ) maxx = verts[i].x;
 					if( verts[i].y > maxy ) maxy = verts[i].y;
@@ -669,7 +669,7 @@ namespace LDraw
 					if( verts[i].x < minx ) minx = verts[i].x;
 					if( verts[i].y < miny ) miny = verts[i].y;
 					if( verts[i].z < minz ) minz = verts[i].z;
-					Console.WriteLine("      mat*v : " + verts[i] );
+					//Console.WriteLine("      mat*v : " + verts[i] );
 				
 				}
 			}
