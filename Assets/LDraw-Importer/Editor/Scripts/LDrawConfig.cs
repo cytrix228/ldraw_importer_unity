@@ -85,6 +85,7 @@ namespace LDraw
                 //Debug.Log("GetSerializedPart : " + name);
 
                 //var serialized = _Parts.ContainsKey(name) ? File.ReadAllText(_Parts[name]) : _Models[name]; 
+				Console.WriteLine( "Get Serialized Part or Model : " + name );
                 if (_Parts.ContainsKey(name))
                 {
                     //Debug.Log( "Reading part : " + _Parts[name] );
@@ -238,6 +239,8 @@ namespace LDraw
                         {
                            
                             filename = GetFileName(args, 2);
+							filename = filename.ToLower();
+							
                             if (isFirst)
                             {
                                 _ModelFileNames.Add(Path.GetFileNameWithoutExtension(file), filename);

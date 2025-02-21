@@ -61,7 +61,7 @@ namespace LDraw
 			}
 
             window._CurrentPart = LDrawConfig.Instance.GetModelByFileName(
-				window._ModelNames[1]);
+				window._ModelNames[0]);
 			
 			Console.WriteLine("GenerateSomeModel window._CurrentPart : " + window._CurrentPart);
 

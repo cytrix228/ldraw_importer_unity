@@ -7,13 +7,13 @@
 
 0 !THEME Space / Unitron
 
-1 0 0 0 0 1 0 0 0 1 0 0 0 1 001 - Vehicle + Cockpit.ldr
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 001-Vehicle.ldr
 
 
 0 NOFILE
-0 FILE 001 - Vehicle.ldr
+0 FILE 001-Vehicle.ldr
 0 Vehicle
-0 Name: 001 - Vehicle.ldr
+0 Name: 001-Vehicle.ldr
 0 Author: Damien Roux [Darats]
 0 !LDRAW_ORG Model
 0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
@@ -26,46 +26,6 @@
 1 0 -100 -22 0 0 0 1 -1 0 0 0 -1 0 2593.dat
 1 0 120 -46 200 0 0 -1 0 1 0 1 0 0 2515b.dat
 1 0 -120 -46 200 0 0 1 0 1 0 -1 0 0 2515b.dat
-
-
-0 NOFILE
-0 FILE 001 - Vehicle - Antenna.ldr
-0 Vehicle - Antenna
-0 Name: 001 - Vehicle - Antenna.ldr
-0 Author: Damien Roux [Darats]
-0 !LDRAW_ORG Model
-0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
-
-0 !THEME Space / Unitron
-
-1 0 0 -36 0 0 0 1 0 1 0 -1 0 0 2433.dat
-1 42 0 -44 0 0 0 1 0 1 0 -1 0 0 2569.dat
-
-
-0 NOFILE
-0 FILE 001 - Vehicle + Minifig.ldr
-0 Vehicle + Minifig
-0 Name: 001 - Vehicle + Minifig.ldr
-0 Author: Damien Roux [Darats]
-0 !LDRAW_ORG Model
-0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
-
-0 !THEME Space / Unitron
-
-1 0 0 0 0 1 0 0 0 1 0 0 0 1 001 - Vehicle.ldr
-
-
-0 NOFILE
-0 FILE 001 - Vehicle + Cockpit.ldr
-0 Vehicle + Cockpit
-0 Name: 001 - Vehicle + Cockpit.ldr
-0 Author: Damien Roux [Darats]
-0 !LDRAW_ORG Model
-0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
-
-0 !THEME Space / Unitron
-
-1 0 0 0 0 1 0 0 0 1 0 0 0 1 001 - Vehicle + Minifig.ldr
 
 
 0 NOFILE

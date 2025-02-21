@@ -1,5 +1,6 @@
 ﻿#define IMPROPERRMATRIX
 #define PURE_ROTATION
+// #define CREATE_POLYLINES
 
 using System;
 using System.Collections;
@@ -576,32 +577,53 @@ namespace LDraw
 
 			//Debug.Log( "   _Commands.Count : " + _Commands.Count );
 			bool isLineStarted = false;
+
+			int iLastMeshCount = meshes.Count;
+			int iLastMeshVert = -1;
+			if( iLastMeshCount > 0 ) {
+				iLastMeshVert = meshes[iLastMeshCount - 1].Count;
+				Console.WriteLine("      iLastMeshVert : " + iLastMeshVert);
+			}
+
+			int iLastPolylineCount = polylines.Count;
+			int iLastPolylineVert = -1;
+			if (iLastPolylineCount > 0)
+			{
+				iLastPolylineVert = polylines[iLastPolylineCount - 1].Count;
+				Console.WriteLine("      iLastPolylineVert : " + iLastPolylineVert);
+			}
+			
             for (int i = 0; i < _Commands.Count; i++)
             {
                 //var sfCommand = _Commands[i] as LDrawSubFile;
 				switch( _Commands[i].GetCommandType() ) {
 					case CommandType.Line:
 					case CommandType.OptionalLine:
-						var lineCommand = _Commands[i];
-						if(lineCommand != null ) {
-							if( !isLineStarted) {
-								//Debug.Log("Line Started : " + lineCommand.GetVert(0) + "  / " + lineCommand.GetVert(1) );
 
-								isLineStarted = true;
-								lineCommand.PrepareMeshData(polylines, verts);
-							}
-							else {
-								int iAdded = lineCommand.PrepareMeshData(polylines, verts);
-								if( iAdded > 1 ) 
-								{
+						#if CREATE_POLYLINES
+							var lineCommand = _Commands[i];
+							if(lineCommand != null ) {
+								if( !isLineStarted) {
+									//Debug.Log("Line Started : " + lineCommand.GetVert(0) + "  / " + lineCommand.GetVert(1) );
 
+									isLineStarted = true;
+									lineCommand.PrepareMeshData(polylines, verts);
 								}
-							}
+								else {
+									int iAdded = lineCommand.PrepareMeshData(polylines, verts);
+									if( iAdded > 1 ) 
+									{
 
-						}
+									}
+								}
+
+							}
+						#endif
+
 						break;
 					
 					default:
+						break;
 					case CommandType.Triangle:
 					case CommandType.Quad:
 						if( isLineStarted ) {
@@ -634,135 +656,76 @@ namespace LDraw
 
 
 			// transform all vertices in the meshes and the polylines
+			// transform all vertices
 
-			// find min, max vertex.
+	
+			// Reset min and max values for each PrepareMeshData call
 			float minx = float.MaxValue;
 			float miny = float.MaxValue;
 			float minz = float.MaxValue;
 			float maxx = float.MinValue;
 			float maxy = float.MinValue;
 			float maxz = float.MinValue;
-			foreach( List<int> mesh in meshes ) {
-				for( int i = 0; i < mesh.Count; i++ ) {
-					//verts[i] = transformMat.MultiplyPoint3x4(verts[i]);
-					if( verts[mesh[i]].x > maxx ) maxx = verts[mesh[i]].x;
-					if( verts[mesh[i]].y > maxy ) maxy = verts[mesh[i]].y;
-					if( verts[mesh[i]].z > maxz ) maxz = verts[mesh[i]].z;
-					if( verts[mesh[i]].x < minx ) minx = verts[mesh[i]].x;
-					if( verts[mesh[i]].y < miny ) miny = verts[mesh[i]].y;
-					if( verts[mesh[i]].z < minz ) minz = verts[mesh[i]].z;
+
+			Console.WriteLine( "      meshes name : " + _Name + " meshes count : " + meshes.Count + " polylines count : " + polylines.Count + "  vertices count : " + verts.Count );
+			if( iLastMeshCount > 0 )
+            {
+				Console.WriteLine("      mat : \n" + transformMat );
+				for( List<int> mesh = meshes[iLastMeshCount - 1]; (iLastMeshCount - 1) < meshes.Count; ) {
+					for( int i = iLastMeshVert; i < mesh.Count; i++ ) {
+						Console.WriteLine("      v : " + verts[mesh[i]] );
+						verts[mesh[i]] = transformMat.MultiplyPoint(verts[mesh[i]]);
+						if( verts[mesh[i]].x > maxx ) maxx = verts[mesh[i]].x;
+						if( verts[mesh[i]].y > maxy ) maxy = verts[mesh[i]].y;
+						if( verts[mesh[i]].z > maxz ) maxz = verts[mesh[i]].z;
+						if( verts[mesh[i]].x < minx ) minx = verts[mesh[i]].x;
+						if( verts[mesh[i]].y < miny ) miny = verts[mesh[i]].y;
+						if( verts[mesh[i]].z < minz ) minz = verts[mesh[i]].z;
+						Console.WriteLine("      mat*v : " + verts[mesh[i]] );
+
+
+					}
+					iLastMeshCount++;
+					if( iLastMeshCount < meshes.Count ) {
+						iLastMeshVert = 0;
+						mesh = meshes[iLastMeshCount];
+					}
+					else
+						break;
 				}
 			}
 
-			foreach( List<int> line in polylines ) {
-				for( int i = 0; i < line.Count; i++ ) {
-					//verts[i] = transformMat.MultiplyPoint3x4(verts[i]);
-					if( verts[line[i]].x > maxx ) maxx = verts[line[i]].x;
-					if( verts[line[i]].y > maxy ) maxy = verts[line[i]].y;
-					if( verts[line[i]].z > maxz ) maxz = verts[line[i]].z;
-					if( verts[line[i]].x < minx ) minx = verts[line[i]].x;
-					if( verts[line[i]].y < miny ) miny = verts[line[i]].y;
-					if( verts[line[i]].z < minz ) minz = verts[line[i]].z;
+
+			if( iLastPolylineCount > 0 ) 
+			{
+				for( List<int> polyline = polylines[ iLastPolylineCount - 1]; (iLastPolylineCount - 1) < polylines.Count; ) {
+					for( int i = iLastPolylineVert; i < polyline.Count; i++ ) {
+						verts[polyline[i]] = transformMat.MultiplyPoint(verts[polyline[i]]);
+						if( verts[polyline[i]].x > maxx ) maxx = verts[polyline[i]].x;
+						if( verts[polyline[i]].y > maxy ) maxy = verts[polyline[i]].y;
+						if( verts[polyline[i]].z > maxz ) maxz = verts[polyline[i]].z;
+						if( verts[polyline[i]].x < minx ) minx = verts[polyline[i]].x;
+						if( verts[polyline[i]].y < miny ) miny = verts[polyline[i]].y;
+						if( verts[polyline[i]].z < minz ) minz = verts[polyline[i]].z;
+					}
+					iLastPolylineCount++;
+					if( iLastPolylineCount < polylines.Count ) {
+						iLastPolylineVert = 0;
+						polyline = polylines[iLastPolylineCount - 1];
+					}
+					else
+						break;
 				}
 			}
 
-
-			Console.WriteLine("Min Max Name : "+ _Name + " " + minx + " " + miny + " " + minz 
+			Console.WriteLine("      Min Max Name : "+ _Name + " " + minx + " " + miny + " " + minz 
 							+ " " + maxx + " " + maxy + " " + maxz );
 
 		}
 
 
-        public GameObject CreateMeshGameObject(Matrix4x4 trs, Material mat = null, Transform parent = null)
-        {
-            if (_Commands.Count == 0) return null;
-            GameObject go = new GameObject(_Name);
-        
-			//Debug.Log("   in CreateMeshGameObject : " + _Name );
-
-			var meshes = new List<List<int>>();
-			meshes.Add(new List<int>());
-
-            var verts = new List<Vector3>();
-
-			var polylines = new List<List<int>>();
-			//List<int> lines = null;
-		
-			
-
-			LDrawPart partCommand = _partDescv as LDrawPart;
-        
-
-			//Debug.Log( "   _Commands.Count : " + _Commands.Count );
-			if( partCommand != null ) {
-				//Debug.Log( " Create part : " + _Name );
-				Console.WriteLine("  Create part mesh : " + _Name);
-				PrepareMeshData(trs, meshes, polylines, verts);
-
-				if (mat != null)
-				{
-					var childMrs = go.transform.GetComponentsInChildren<MeshRenderer>();
-					foreach (var meshRenderer in childMrs)
-					{
-						meshRenderer.material = mat;
-					}
-				}
-
-				MeshFilter meshFilter = null;
-				if (verts.Count > 0 || polylines.Count > 0)
-				{
-					go.AddComponent<MeshFilter>();
-			
-					meshFilter = go.GetComponent<MeshFilter>();
-					
-					Console.WriteLine("PrepareMesh : " + verts.Count + "  / " + meshes.Count + "  / " + polylines.Count );
-					meshFilter.sharedMesh = PrepareMesh(verts, meshes, polylines); // save mesh to disk
-					var mr = go.AddComponent<MeshRenderer>();
-					if (mat != null)
-					{
-						mr.sharedMaterial = mat;
-					
-					}
-
-				}
-
-				go.transform.SetParent(parent);
-
-				// output name of go
-				//Debug.Log("GameObject name : " + go.name );
-				//Console.WriteLine("GameObject name : " + go.name + "  Merge " );
-				//Mesh mergedMesh = MergeChildrenMeshes.Merge(go);
-				//Debug.Log("Merged mesh has " + mergedMesh.vertexCount + " vertices.");				
-
-				return go;
-			}
-
-			//bool isLineStarted = false;
-            for (int i = 0; i < _Commands.Count; i++)
-            {
-                //var sfCommand = _Commands[i] as LDrawSubFile;
-				switch( _Commands[i].GetCommandType() ) {
-					case CommandType.SubFile:
-						var sfCommand = _Commands[i] as LDrawSubFile;
-						sfCommand.GetModelGameObject(go.transform);
-						break;
-
-					case CommandType.PartDesc:
-						// partCommand = _Commands[i] as LDrawPart;
-						// if(partCommand != null) {
-						// 	break;
-						// }
-						break;
-					default:
-						break;
-
-				}
-
-			}
-
-			
-            //go.transform.ApplyLocalTRS(trs);
-
+		private void SetGameObjectTransform( GameObject go, Matrix4x4 trs)
+		{
 #if BY_MATRIX_ROTATION
 			{
 				// Assume 'm' is your 4x4 transform matrix
@@ -875,7 +838,7 @@ namespace LDraw
 
 							for (int v = 0; v < vertices.Length; v++)
 							{
-								vertices[v] = transformMatrix.MultiplyPoint3x4(vertices[v]);
+								//vertices[v] = transformMatrix.MultiplyPoint3x4(vertices[v]);
 							}
 							//meshTransformed.vertices = vertices;
 							//meshTransformed.RecalculateNormals();
@@ -896,8 +859,7 @@ namespace LDraw
 
 					//normalized_m = Matrix4x4.TRS(position, rotation, scale);
 
-					string msgText =  "IMPROPER ROTATION MATRIX : \n" + _Name + "  / parent : " + parent.name
-					+ "\ntrs : " + trs;
+					string msgText =  "IMPROPER ROTATION MATRIX : \n" + _Name; 
 					msgText += "\n  normalized_m : \n" + normalized_m;
                     msgText += "\n  rotationMat : \n" + rotationMat;
 					msgText += "\n  properR : \n" + properR;
@@ -921,8 +883,7 @@ namespace LDraw
 					(qw, qx, qy, qz) = GetQuaternionFromMatrix(normalized_m);
 					rotation = new Quaternion((float)qx, (float)qy, (float)qz, (float)qw);
 
-					string msgText =  "PROPER ROTATION MATRIX : \n" + _Name + "  / parent : " + parent.name
-					+ "\ntrs : " + trs;
+					string msgText =  "PROPER ROTATION MATRIX : \n" + _Name + "\ntrs : " + trs;
 					msgText += "\n  rotationMat : \n" + rotationMat;
 					msgText += "\n  normalized_m : \n"
 						+ normalized_m.m00 + ", " + normalized_m.m01 + ", " + normalized_m.m02
@@ -942,6 +903,100 @@ namespace LDraw
 				go.transform.localScale    = scale;
 			}
 #endif
+
+		}
+
+        public GameObject CreateMeshGameObject(Matrix4x4 trs, Material mat = null, Transform parent = null)
+        {
+            if (_Commands.Count == 0) return null;
+            GameObject go = new GameObject(_Name);
+        
+			//Debug.Log("   in CreateMeshGameObject : " + _Name );
+
+		
+			
+
+			LDrawPart partCommand = _partDescv as LDrawPart;
+        
+
+			//Debug.Log( "   _Commands.Count : " + _Commands.Count );
+			if( partCommand != null ) {
+				var meshes = new List<List<int>>();
+				meshes.Add(new List<int>());
+
+				var verts = new List<Vector3>();
+
+				var polylines = new List<List<int>>();
+				//List<int> lines = null;
+				//Debug.Log( " Create part : " + _Name );
+				Console.WriteLine("  Create part mesh : " + _Name);
+				PrepareMeshData(trs, meshes, polylines, verts);
+
+				if (mat != null)
+				{
+					var childMrs = go.transform.GetComponentsInChildren<MeshRenderer>();
+					foreach (var meshRenderer in childMrs)
+					{
+						meshRenderer.material = mat;
+					}
+				}
+
+				MeshFilter meshFilter = null;
+				if (verts.Count > 0 || polylines.Count > 0)
+				{
+					go.AddComponent<MeshFilter>();
+			
+					meshFilter = go.GetComponent<MeshFilter>();
+					
+					Console.WriteLine("PrepareMesh : " + verts.Count + "  / " + meshes.Count + "  / " + polylines.Count );
+					meshFilter.sharedMesh = PrepareMesh(verts, meshes, polylines); // save mesh to disk
+					var mr = go.AddComponent<MeshRenderer>();
+					if (mat != null)
+					{
+						mr.sharedMaterial = mat;
+					
+					}
+
+				}
+
+				go.transform.SetParent(parent);
+
+				// output name of go
+				//Debug.Log("GameObject name : " + go.name );
+				//Console.WriteLine("GameObject name : " + go.name + "  Merge " );
+				//Mesh mergedMesh = MergeChildrenMeshes.Merge(go);
+				//Debug.Log("Merged mesh has " + mergedMesh.vertexCount + " vertices.");				
+
+				return go;
+			}
+
+			//bool isLineStarted = false;
+            for (int i = 0; i < _Commands.Count; i++)
+            {
+                //var sfCommand = _Commands[i] as LDrawSubFile;
+				switch( _Commands[i].GetCommandType() ) {
+					case CommandType.SubFile:
+						var sfCommand = _Commands[i] as LDrawSubFile;
+						sfCommand.GetModelGameObject(go.transform);
+						break;
+
+					case CommandType.PartDesc:
+						// partCommand = _Commands[i] as LDrawPart;
+						// if(partCommand != null) {
+						// 	break;
+						// }
+						break;
+					default:
+						break;
+
+				}
+
+			}
+
+
+			SetGameObjectTransform(go, trs);			
+            //go.transform.ApplyLocalTRS(trs);
+
 
         
             go.transform.SetParent(parent);
