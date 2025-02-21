@@ -578,20 +578,8 @@ namespace LDraw
 			//Debug.Log( "   _Commands.Count : " + _Commands.Count );
 			bool isLineStarted = false;
 
-			int iLastMeshCount = meshes.Count;
-			int iLastMeshVert = -1;
-			if( iLastMeshCount > 0 ) {
-				iLastMeshVert = meshes[iLastMeshCount - 1].Count;
-				Console.WriteLine("      iLastMeshVert : " + iLastMeshVert);
-			}
+			int iLastVert = verts.Count;
 
-			int iLastPolylineCount = polylines.Count;
-			int iLastPolylineVert = -1;
-			if (iLastPolylineCount > 0)
-			{
-				iLastPolylineVert = polylines[iLastPolylineCount - 1].Count;
-				Console.WriteLine("      iLastPolylineVert : " + iLastPolylineVert);
-			}
 			
             for (int i = 0; i < _Commands.Count; i++)
             {
@@ -667,58 +655,28 @@ namespace LDraw
 			float maxy = float.MinValue;
 			float maxz = float.MinValue;
 
-			Console.WriteLine( "      meshes name : " + _Name + " meshes count : " + meshes.Count + " polylines count : " + polylines.Count + "  vertices count : " + verts.Count );
-			if( iLastMeshCount > 0 )
+			Console.WriteLine( "      meshes name : " + _Name + " meshes count : " + meshes.Count 
+					+ " polylines count : " + polylines.Count + "  vertices count : " + verts.Count );
+			if( verts.Count > 0 )
             {
 				Console.WriteLine("      mat : \n" + transformMat );
-				for( List<int> mesh = meshes[iLastMeshCount - 1]; (iLastMeshCount - 1) < meshes.Count; ) {
-					for( int i = iLastMeshVert; i < mesh.Count; i++ ) {
-						Console.WriteLine("      v " + "[" + mesh[i] + "] : " + verts[mesh[i]] );
-						verts[mesh[i]] = transformMat.MultiplyPoint(verts[mesh[i]]);
-						if( verts[mesh[i]].x > maxx ) maxx = verts[mesh[i]].x;
-						if( verts[mesh[i]].y > maxy ) maxy = verts[mesh[i]].y;
-						if( verts[mesh[i]].z > maxz ) maxz = verts[mesh[i]].z;
-						if( verts[mesh[i]].x < minx ) minx = verts[mesh[i]].x;
-						if( verts[mesh[i]].y < miny ) miny = verts[mesh[i]].y;
-						if( verts[mesh[i]].z < minz ) minz = verts[mesh[i]].z;
-						Console.WriteLine("      mat*v : " + verts[mesh[i]] );
-
-
-					}
-					iLastMeshCount++;
-					if( iLastMeshCount < meshes.Count ) {
-						iLastMeshVert = 0;
-						mesh = meshes[iLastMeshCount];
-					}
-					else
-						break;
+				for( int i = iLastVert; i < verts.Count; i++ ) {
+					Console.WriteLine("      v : " + "[" + verts[i] + "]" );
+					verts[i] = transformMat.MultiplyPoint(verts[i]);
+					if( verts[i].x > maxx ) maxx = verts[i].x;
+					if( verts[i].y > maxy ) maxy = verts[i].y;
+					if( verts[i].z > maxz ) maxz = verts[i].z;
+					if( verts[i].x < minx ) minx = verts[i].x;
+					if( verts[i].y < miny ) miny = verts[i].y;
+					if( verts[i].z < minz ) minz = verts[i].z;
+					Console.WriteLine("      mat*v : " + verts[i] );
+				
 				}
 			}
 
 
-			if( iLastPolylineCount > 0 ) 
-			{
-				for( List<int> polyline = polylines[ iLastPolylineCount - 1]; (iLastPolylineCount - 1) < polylines.Count; ) {
-					for( int i = iLastPolylineVert; i < polyline.Count; i++ ) {
-						verts[polyline[i]] = transformMat.MultiplyPoint(verts[polyline[i]]);
-						if( verts[polyline[i]].x > maxx ) maxx = verts[polyline[i]].x;
-						if( verts[polyline[i]].y > maxy ) maxy = verts[polyline[i]].y;
-						if( verts[polyline[i]].z > maxz ) maxz = verts[polyline[i]].z;
-						if( verts[polyline[i]].x < minx ) minx = verts[polyline[i]].x;
-						if( verts[polyline[i]].y < miny ) miny = verts[polyline[i]].y;
-						if( verts[polyline[i]].z < minz ) minz = verts[polyline[i]].z;
-					}
-					iLastPolylineCount++;
-					if( iLastPolylineCount < polylines.Count ) {
-						iLastPolylineVert = 0;
-						polyline = polylines[iLastPolylineCount - 1];
-					}
-					else
-						break;
-				}
-			}
 
-			Console.WriteLine("      Min Max Name : "+ _Name + " " + minx + " " + miny + " " + minz 
+			Console.WriteLine("      Min Max Name : " + _Name + " " + minx + " " + miny + " " + minz 
 							+ " " + maxx + " " + maxy + " " + maxz );
 
 		}

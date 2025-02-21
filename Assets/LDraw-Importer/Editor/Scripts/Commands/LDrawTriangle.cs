@@ -17,18 +17,23 @@ namespace LDraw
 				meshes.Add(new List<int>());
 			}
 
+			//Console.Write( "Triangle : " );
 			for (int i = 0; i < 3; i++)
 			{
-				meshes[0].Add(vertLen + i);
+				int iIndex = vertLen + i;
+				meshes[0].Add(iIndex);
+				//Console.Write( "[" + iIndex + "]" );
 				iCount++;
 			}
 
-			Console.Write( "Triangle : " );
-			for(int i = 0; i < 3; i++)
-			{
-				Console.Write( "[" + meshes[0][(vertLen + i)] + "]" );
-			}
-			Console.WriteLine();
+			int iMeshCount = meshes[0].Count - 3;
+			//Console.Write(" M: " + iMeshCount + " V: " + vertLen + " : ");
+
+			// for(int i = 0; i < 3; i++)
+			// {
+			// 	Console.Write( "[" + meshes[0][iMeshCount + i] + "]" );
+			// }
+			// Console.WriteLine();
 
 			for (int i = 0; i < _Verts.Length; i++)
 			{
