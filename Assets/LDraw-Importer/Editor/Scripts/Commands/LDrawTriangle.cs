@@ -23,6 +23,13 @@ namespace LDraw
 				iCount++;
 			}
 
+			Console.Write( "Triangle : " );
+			for(int i = 0; i < 3; i++)
+			{
+				Console.Write( "[" + meshes[0][(vertLen + i)] + "]" );
+			}
+			Console.WriteLine();
+
 			for (int i = 0; i < _Verts.Length; i++)
 			{
 				verts.Add(_Verts[i]);

@@ -673,7 +673,7 @@ namespace LDraw
 				Console.WriteLine("      mat : \n" + transformMat );
 				for( List<int> mesh = meshes[iLastMeshCount - 1]; (iLastMeshCount - 1) < meshes.Count; ) {
 					for( int i = iLastMeshVert; i < mesh.Count; i++ ) {
-						Console.WriteLine("      v : " + verts[mesh[i]] );
+						Console.WriteLine("      v " + "[" + mesh[i] + "] : " + verts[mesh[i]] );
 						verts[mesh[i]] = transformMat.MultiplyPoint(verts[mesh[i]]);
 						if( verts[mesh[i]].x > maxx ) maxx = verts[mesh[i]].x;
 						if( verts[mesh[i]].y > maxy ) maxy = verts[mesh[i]].y;
