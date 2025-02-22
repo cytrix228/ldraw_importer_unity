@@ -865,7 +865,7 @@ namespace LDraw
 		}
 
 
-	    private void WeldMesh( List<List<int>> meshes, List<List<int>> polylines, List<Vector3> vertices, out List<Vector3> outVertices, int tolerance = -4 )
+	    private void WeldMesh( List<List<int>> meshes, List<List<int>> polylines, List<Vector3> vertices, out List<Vector3> outVertices, int tolerance = 4 )
 		{
 			if ( vertices.Count == 0 ) {
 				outVertices = null;
@@ -892,10 +892,12 @@ namespace LDraw
 					Precision.Round(oldVertices[i].z, tolerance)
 				);
 
+				//Console.WriteLine($"  quantized : {quantized.x:F4}, {quantized.y:F4}, {quantized.z:F4}");
 				if (posToNewIndex.ContainsKey(quantized))
 				{
 					// This vertex is a duplicate; map it to the existing index.
 					vertexMapping[i] = posToNewIndex[quantized];
+					//Console.WriteLine("    Duplicate : " + i + " => " + vertexMapping[i] );
 				}
 				else
 				{
@@ -904,6 +906,7 @@ namespace LDraw
 					posToNewIndex.Add(quantized, newIndex);
 					newVertices.Add(oldVertices[i]);
 					vertexMapping[i] = newIndex;
+					//Console.WriteLine("    New : " + i + " => " + vertexMapping[i] );
 				}
 			}
 
@@ -915,6 +918,144 @@ namespace LDraw
 
 			outVertices = newVertices;
 			meshes[0] = newTriangles;
+		}
+
+
+		private void SmoothMesh(GameObject go, double smoothingAngle = 45.0 )
+		{
+			MeshFilter mf = go.GetComponent<MeshFilter>();
+			if (mf == null || mf.mesh == null)
+				return;
+
+			Mesh mesh = mf.mesh;
+			Vector3[] vertices = mesh.vertices;
+			int[] triangles = mesh.triangles;
+			Vector3[] faceNormals = new Vector3[triangles.Length / 3];
+
+			// Compute face normals.
+			for (int i = 0; i < triangles.Length; i += 3)
+			{
+				int i0 = triangles[i];
+				int i1 = triangles[i + 1];
+				int i2 = triangles[i + 2];
+
+				Vector3 v0 = vertices[i0];
+				Vector3 v1 = vertices[i1];
+				Vector3 v2 = vertices[i2];
+
+				Vector3 normal = Vector3.Cross(v1 - v0, v2 - v0).normalized;
+				faceNormals[i / 3] = normal;
+			}
+
+			// Precompute cosine of threshold for comparison.
+			float cosThreshold = (float)Trig.Cos( Trig.DegreeToRadian(smoothingAngle));
+
+			// Data structure to hold smoothing groups per vertex.
+			// For each original vertex, we store a list of groups.
+			// Each group is a list of face normals that are similar.
+			Dictionary<int, List<List<Vector3>>> vertexSmoothingGroups = new Dictionary<int, List<List<Vector3>>>();
+
+			// Build smoothing groups for each vertex.
+			for (int tri = 0; tri < triangles.Length / 3; tri++)
+			{
+				// For each vertex of the triangle.
+				for (int j = 0; j < 3; j++)
+				{
+					int vertIndex = triangles[tri * 3 + j];
+					if (!vertexSmoothingGroups.ContainsKey(vertIndex))
+						vertexSmoothingGroups[vertIndex] = new List<List<Vector3>>();
+
+					List<List<Vector3>> groups = vertexSmoothingGroups[vertIndex];
+					Vector3 currentFaceNormal = faceNormals[tri];
+					bool addedToGroup = false;
+
+					// Try to add the current face normal to an existing group.
+					foreach (List<Vector3> group in groups)
+					{
+						// Use the first normal in the group as the reference.
+						Vector3 referenceNormal = group[0];
+						if (Vector3.Dot(currentFaceNormal, referenceNormal) >= cosThreshold)
+						{
+							group.Add(currentFaceNormal);
+							addedToGroup = true;
+							break;
+						}
+					}
+
+					// If it doesn't fit in any group, create a new group.
+					if (!addedToGroup)
+					{
+						List<Vector3> newGroup = new List<Vector3> { currentFaceNormal };
+						groups.Add(newGroup);
+					}
+				}
+			}
+
+			// Now, rebuild the mesh by duplicating vertices that belong to multiple smoothing groups.
+			List<Vector3> newVertices = new List<Vector3>();
+			List<Vector3> newNormals = new List<Vector3>();
+			List<int> newTriangles = new List<int>();
+
+			// Mapping: original vertex index and smoothing group index -> new vertex index.
+			Dictionary<(int, int), int> vertexGroupMapping = new Dictionary<(int, int), int>();
+
+			// For each triangle, assign new vertices based on smoothing groups.
+			for (int tri = 0; tri < triangles.Length / 3; tri++)
+			{
+				int[] newTriIndices = new int[3];
+				for (int j = 0; j < 3; j++)
+				{
+					int origVertIndex = triangles[tri * 3 + j];
+					// Get the groups for this vertex.
+					List<List<Vector3>> groups = vertexSmoothingGroups[origVertIndex];
+					int groupIndex = -1;
+
+					// Find which group this face belongs to by comparing with the groups.
+					for (int g = 0; g < groups.Count; g++)
+					{
+						Vector3 refNormal = groups[g][0];
+						if (Vector3.Dot(faceNormals[tri], refNormal) >= cosThreshold)
+						{
+							groupIndex = g;
+							break;
+						}
+					}
+
+					if (groupIndex == -1)
+					{
+						// Fallback: if no group matches, create a new one.
+						groupIndex = groups.Count;
+						groups.Add(new List<Vector3> { faceNormals[tri] });
+					}
+
+					// Check if we've already created a vertex for this (origVertIndex, groupIndex) pair.
+					if (!vertexGroupMapping.TryGetValue((origVertIndex, groupIndex), out int newIndex))
+					{
+						// Create new vertex.
+						newIndex = newVertices.Count;
+						newVertices.Add(vertices[origVertIndex]);
+
+						// Average the normals in this group.
+						Vector3 avgNormal = Vector3.zero;
+						foreach (Vector3 n in groups[groupIndex])
+							avgNormal += n;
+						avgNormal.Normalize();
+						newNormals.Add(avgNormal);
+
+						vertexGroupMapping[(origVertIndex, groupIndex)] = newIndex;
+					}
+					newTriIndices[j] = newIndex;
+				}
+				// Add the re-assigned triangle.
+				newTriangles.AddRange(newTriIndices);
+			}
+
+			// Update the mesh.
+			mesh.Clear();
+			mesh.vertices = newVertices.ToArray();
+			mesh.normals = newNormals.ToArray();
+			mesh.triangles = newTriangles.ToArray();
+			mesh.RecalculateBounds();
 		}
 
 
@@ -942,11 +1083,10 @@ namespace LDraw
 				//List<int> lines = null;
 				//Debug.Log( " Create part : " + _Name );
 				Console.WriteLine("  Create part mesh : " + _Name);
-				PrepareMeshData(trs, meshes, polylines, verts);
+				PrepareMeshData( Matrix4x4.identity, meshes, polylines, verts);
 
 				// Weld the mesh to remove duplicate vertices
 				WeldMesh(meshes, polylines, verts, out List<Vector3> outVertices);
-
 				verts = outVertices;
 
 				if (mat != null)
@@ -982,7 +1122,9 @@ namespace LDraw
 				//Debug.Log("GameObject name : " + go.name );
 				//Console.WriteLine("GameObject name : " + go.name + "  Merge " );
 				//Mesh mergedMesh = MergeChildrenMeshes.Merge(go);
-				//Debug.Log("Merged mesh has " + mergedMesh.vertexCount + " vertices.");				
+				//Debug.Log("Merged mesh has " + mergedMesh.vertexCount + " vertices.");	
+
+				SetGameObjectTransform(go, trs);			
 
 				return go;
 			}
