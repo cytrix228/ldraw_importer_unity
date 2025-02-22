@@ -17,7 +17,7 @@ using Vector3 = UnityEngine.Vector3;
 using Vector4 = UnityEngine.Vector4;
 using Quaternion = UnityEngine.Quaternion;
 
-
+using MathNet.Numerics;
 using MathNet.Numerics.LinearAlgebra;
 using MathNet.Numerics.LinearAlgebra.Double;
 using MathNet.Numerics.LinearAlgebra.Factorization;
@@ -864,6 +864,60 @@ namespace LDraw
 
 		}
 
+
+	    private void WeldMesh( List<List<int>> meshes, List<List<int>> polylines, List<Vector3> vertices, out List<Vector3> outVertices, int tolerance = -4 )
+		{
+			if ( vertices.Count == 0 ) {
+				outVertices = null;
+				return;
+			}
+
+			Vector3[] oldVertices = vertices.ToArray();
+			int[] oldTriangles = meshes[0].ToArray();
+			List<Vector3> newVertices = new List<Vector3>();
+			List<int> newTriangles = new List<int>();
+
+			// Mapping from original vertex index to new index
+			int[] vertexMapping = new int[oldVertices.Length];
+
+			// Use a dictionary to map a quantized vertex position to its new index
+			Dictionary<Vector3, int> posToNewIndex = new Dictionary<Vector3, int>();
+
+			for (int i = 0; i < oldVertices.Length; i++)
+			{
+				// Quantize the vertex position using the tolerance to avoid floating point issues
+				Vector3 quantized = new Vector3(
+					Precision.Round(oldVertices[i].x, tolerance),
+					Precision.Round(oldVertices[i].y, tolerance),
+					Precision.Round(oldVertices[i].z, tolerance)
+				);
+
+				if (posToNewIndex.ContainsKey(quantized))
+				{
+					// This vertex is a duplicate; map it to the existing index.
+					vertexMapping[i] = posToNewIndex[quantized];
+				}
+				else
+				{
+					// New unique vertex found.
+					int newIndex = newVertices.Count;
+					posToNewIndex.Add(quantized, newIndex);
+					newVertices.Add(oldVertices[i]);
+					vertexMapping[i] = newIndex;
+				}
+			}
+
+			// Rebuild triangles with new indices.
+			for (int i = 0; i < oldTriangles.Length; i++)
+			{
+				newTriangles.Add(vertexMapping[oldTriangles[i]]);
+			}
+
+			outVertices = newVertices;
+			meshes[0] = newTriangles;
+		}
+
+
         public GameObject CreateMeshGameObject(Matrix4x4 trs, Material mat = null, Transform parent = null)
         {
             if (_Commands.Count == 0) return null;
@@ -889,6 +943,11 @@ namespace LDraw
 				//Debug.Log( " Create part : " + _Name );
 				Console.WriteLine("  Create part mesh : " + _Name);
 				PrepareMeshData(trs, meshes, polylines, verts);
+
+				// Weld the mesh to remove duplicate vertices
+				WeldMesh(meshes, polylines, verts, out List<Vector3> outVertices);
+
+				verts = outVertices;
 
 				if (mat != null)
 				{
