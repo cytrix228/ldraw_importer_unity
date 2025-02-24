@@ -744,8 +744,17 @@ namespace LDraw
 			{
 				Quaternion rotation = new Quaternion();
 				// Assume 'm' is your 4x4 transform matrix
-				Matrix4x4 m = new Matrix4x4(inTrs.GetColumn(0), -inTrs.GetColumn(1), inTrs.GetColumn(2),
-						new Vector4( inTrs.GetColumn(3).x, -inTrs.GetColumn(3).y, inTrs.GetColumn(3).z, inTrs.GetColumn(3).w ));
+				Vector4 col0 = inTrs.GetColumn(0);
+				Vector4 col1 = inTrs.GetColumn(1);
+				Vector4 col2 = inTrs.GetColumn(2);
+				Vector4 col3 = inTrs.GetColumn(3);
+				
+				Matrix4x4 m = new Matrix4x4(
+					new Vector4( col0.x, -col0.y, col0.z, 0),
+					new Vector4( -col1.x, col1.y, -col1.z, 0),
+					new Vector4( col2.x, -col2.y, col2.z, 0),
+					new Vector4( col3.x, -col3.y, col3.z, 1)
+				);
 
 				// Get the position
 				Vector3 position = m.GetColumn(3);
