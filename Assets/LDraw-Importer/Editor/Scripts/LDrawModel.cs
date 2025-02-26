@@ -749,6 +749,14 @@ namespace LDraw
 				Vector4 col2 = inTrs.GetColumn(2);
 				Vector4 col3 = inTrs.GetColumn(3);
 				
+
+				// Get the position
+				Vector3 position = col3;
+				m.SetColumn(3, new Vector4(0, 0, 0, 1));
+
+				// Get the scale
+				Vector3 scale = new Vector3(col0.magnitude, col1.magnitude, col2.magnitude);
+
 				Matrix4x4 m = new Matrix4x4(
 					new Vector4( col0.x, -col0.y, col0.z, 0),
 					new Vector4( -col1.x, col1.y, -col1.z, 0),
@@ -756,12 +764,6 @@ namespace LDraw
 					new Vector4( col3.x, -col3.y, col3.z, 1)
 				);
 
-				// Get the position
-				Vector3 position = m.GetColumn(3);
-				m.SetColumn(3, new Vector4(0, 0, 0, 1));
-
-				// Get the scale
-				Vector3 scale = new Vector3(m.GetColumn(0).magnitude, m.GetColumn(1).magnitude, m.GetColumn(2).magnitude);
 
 				Matrix4x4 normalized_m = new Matrix4x4();
 				// get the transform matrix without scale
