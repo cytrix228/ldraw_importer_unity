@@ -752,7 +752,6 @@ namespace LDraw
 
 				// Get the position
 				Vector3 position = col3;
-				m.SetColumn(3, new Vector4(0, 0, 0, 1));
 
 				// Get the scale
 				Vector3 scale = new Vector3(col0.magnitude, col1.magnitude, col2.magnitude);
@@ -763,6 +762,7 @@ namespace LDraw
 					new Vector4( col2.x, -col2.y, col2.z, 0),
 					new Vector4( col3.x, -col3.y, col3.z, 1)
 				);
+				m.SetColumn(3, new Vector4(0, 0, 0, 1));
 
 
 				Matrix4x4 normalized_m = new Matrix4x4();
@@ -775,6 +775,8 @@ namespace LDraw
 				// m is the LDraw model line type 1 transformation matrix
 				// calculate the pure rotation matrix given the line type 1 value, from a to i.
 				// a is m.m00, i is m.m22
+
+				normalized_m = Matrix4x4.identity;
 
 				Matrix rotationMat = Matrix4x4ToMatrix(normalized_m);
 				
@@ -1138,6 +1140,7 @@ namespace LDraw
 				//Debug.Log("Merged mesh has " + mergedMesh.vertexCount + " vertices.");	
 
 				SetGameObjectTransform(go, trs);			
+				//SetGameObjectTransform(go, Matrix4x4.identity);
 
 				return go;
 			}
