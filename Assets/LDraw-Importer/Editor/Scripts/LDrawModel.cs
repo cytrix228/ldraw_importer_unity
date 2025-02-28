@@ -682,12 +682,13 @@ namespace LDraw
 		}
 
 
-		private void SetGameObjectTransform( GameObject go, Matrix4x4 trs)
+		private void SetGameObjectTransform( GameObject go, Matrix4x4 inTrs)
 		{
 #if BY_MATRIX_ROTATION
 			{
 				// Assume 'm' is your 4x4 transform matrix
-				Matrix4x4 m = trs;
+				Matrix4x4 m = new Matrix4x4(inTrs.GetColumn(0), -inTrs.GetColumn(1), inTrs.GetColumn(2),
+						new Vector4( inTrs.GetColumn(3).x, -inTrs.GetColumn(3).y, inTrs.GetColumn(3).z, inTrs.GetColumn(3).w ));
 
 				// Extract translation (last column)
 				Vector3 position = m.GetColumn(3);
@@ -728,7 +729,7 @@ namespace LDraw
 
 
 					//Debug.Log( "trs : " + trs );
-					Console.WriteLine( "trs : \n" + trs );
+					Console.WriteLine( "m : \n" + m );
 					//Debug.Log($"Rotation in degrees - X: {x}, Y: {y}, Z: {z}");
 					Console.WriteLine($"  >> Rotation in degrees - X: {x}, Y: {y}, Z: {z}");
 
@@ -743,7 +744,17 @@ namespace LDraw
 			{
 				Quaternion rotation = new Quaternion();
 				// Assume 'm' is your 4x4 transform matrix
-				Matrix4x4 m = trs;
+				Vector4 col0 = inTrs.GetColumn(0);
+				Vector4 col1 = inTrs.GetColumn(1);
+				Vector4 col2 = inTrs.GetColumn(2);
+				Vector4 col3 = inTrs.GetColumn(3);
+				
+				Matrix4x4 m = new Matrix4x4(
+					new Vector4( col0.x, -col0.y, col0.z, 0),
+					new Vector4( -col1.x, col1.y, -col1.z, 0),
+					new Vector4( col2.x, -col2.y, col2.z, 0),
+					new Vector4( col3.x, -col3.y, col3.z, 1)
+				);
 
 				// Get the position
 				Vector3 position = m.GetColumn(3);
@@ -789,7 +800,7 @@ namespace LDraw
 							innerMeshFilter.sharedMesh = meshTransformed;
 							meshTransformed.name = go.name + "_transformed";
 
-							Matrix4x4 transformMatrix = trs;
+							Matrix4x4 transformMatrix = m;
 							Vector3[] vertices = meshTransformed.vertices;
 							// get the first indices of the submeshes
 							int[] subMeshIndices = meshTransformed.GetIndices(0);
@@ -841,7 +852,7 @@ namespace LDraw
 					(qw, qx, qy, qz) = GetQuaternionFromMatrix(normalized_m);
 					rotation = new Quaternion((float)qx, (float)qy, (float)qz, (float)qw);
 
-					string msgText =  "PROPER ROTATION MATRIX : \n" + _Name + "\ntrs : " + trs;
+					string msgText =  "PROPER ROTATION MATRIX : \n" + _Name + "\nTrs : \n" + m;
 					msgText += "\n  rotationMat : \n" + rotationMat;
 					msgText += "\n  normalized_m : \n"
 						+ normalized_m.m00 + ", " + normalized_m.m01 + ", " + normalized_m.m02

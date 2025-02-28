@@ -119,7 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &227238473
+=======
+--- !u!1 &28993717
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,23 +131,34 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 227238474}
   - component: {fileID: 227238477}
   - component: {fileID: 227238476}
   - component: {fileID: 227238475}
   m_Layer: 0
   m_Name: 2515b
+=======
+  - component: {fileID: 28993718}
+  m_Layer: 0
+  m_Name: 2593 Normal
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &227238474
+=======
+--- !u!4 &28993718
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 227238473}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
@@ -224,6 +239,19 @@ MeshFilter:
   m_GameObject: {fileID: 227238473}
   m_Mesh: {fileID: 4300000, guid: 7efb0f64050240f47beba8b299c6d253, type: 2}
 --- !u!1 &800429490
+=======
+  m_GameObject: {fileID: 28993717}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.46193978, y: 0.19134173, z: 0.19134173, w: 0.84462327}
+  m_LocalPosition: {x: 100, y: 22, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2014029712}
+  m_Father: {fileID: 1249101501}
+  m_LocalEulerAnglesHint: {x: 45, y: 45, z: 45}
+--- !u!1 &38943949
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -231,23 +259,139 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 800429491}
   - component: {fileID: 800429494}
   - component: {fileID: 800429493}
   - component: {fileID: 800429492}
+=======
+  - component: {fileID: 38943950}
+  - component: {fileID: 38943953}
+  - component: {fileID: 38943952}
+  - component: {fileID: 38943951}
   m_Layer: 0
-  m_Name: 2593
+  m_Name: 6118
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &800429491
+--- !u!4 &38943950
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38943949}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: -0, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: -70, y: 6, z: -160}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1515830853}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &38943951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38943949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23763c1ea948ad5c5ac8a5c6b1011e05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  memoText: "PROPER ROTATION MATRIX : \n6118\nTrs : \n0.00000\t0.00000\t1.00000\t0.00000\n0.00000\t-1.00000\t0.00000\t0.00000\n1.00000\t0.00000\t0.00000\t0.00000\n0.00000\t0.00000\t0.00000\t1.00000\n\n 
+    rotationMat : \nDenseMatrix 3x3-Double\n0   0  1\n0  -1  0\n1   0  0\n\n  normalized_m
+    : \n0, 0, 1\n0, -1, 0\n1, 0, 0\n  quaternion : (0, 0.707106781186547, 0, 0.707106781186548)\n 
+    rotation : \n(0.70711, 0.00000, 0.70711, 0.00000)\n  rotate X : 0  / Y : 90 
+    / Z : 180"
+--- !u!23 &38943952
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38943949}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 99296ed922b3d6e4f830b8c630cc1dfb, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &38943953
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38943949}
+  m_Mesh: {fileID: 0}
+--- !u!1 &162904386
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 162904387}
+  - component: {fileID: 162904390}
+  - component: {fileID: 162904389}
+  - component: {fileID: 162904388}
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
+  m_Layer: 0
+  m_Name: 2515b
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+<<<<<<< HEAD
+--- !u!4 &800429491
+=======
+--- !u!4 &162904387
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 800429490}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: -0.5}
@@ -258,29 +402,58 @@ Transform:
   m_Father: {fileID: 1768352971}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &800429492
+=======
+  m_GameObject: {fileID: 162904386}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -120, y: 46, z: 200}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1249101501}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &162904388
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 800429490}
+=======
+  m_GameObject: {fileID: 162904386}
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 23763c1ea948ad5c5ac8a5c6b1011e05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   memoText: "PROPER ROTATION MATRIX : \n2593\ntrs : 0.00000\t0.00000\t1.00000\t-100.00000\n-1.00000\t0.00000\t0.00000\t-22.00000\n0.00000\t-1.00000\t0.00000\t0.00000\n0.00000\t0.00000\t0.00000\t1.00000\n\n 
     rotationMat : \nDenseMatrix 3x3-Double\r\n 0   0  1\r\n-1   0  0\r\n 0  -1  0\r\n\n 
     normalized_m : \n0, 0, 1\n-1, 0, 0\n0, -1, 0\n  quaternion : (-0.5, 0.5, -0.5,
     0.5)\n  rotation : \n(0.50000, -0.50000, 0.50000, -0.50000)\n  rotate X : 0 
     / Y : 90  / Z : 270"
 --- !u!23 &800429493
+=======
+  memoText: "PROPER ROTATION MATRIX : \n2515b\nTrs : \n0.00000\t0.00000\t1.00000\t0.00000\n0.00000\t1.00000\t0.00000\t0.00000\n-1.00000\t0.00000\t0.00000\t0.00000\n0.00000\t0.00000\t0.00000\t1.00000\n\n 
+    rotationMat : \nDenseMatrix 3x3-Double\n 0  0  1\n 0  1  0\n-1  0  0\n\n  normalized_m
+    : \n0, 0, 1\n0, 1, 0\n-1, 0, 0\n  quaternion : (0.707106781186548, 0, 0.707106781186547,
+    0)\n  rotation : \n(0.00000, 0.70711, 0.00000, 0.70711)\n  rotate X : 0  / Y
+    : 90  / Z : 0"
+--- !u!23 &162904389
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 800429490}
+=======
+  m_GameObject: {fileID: 162904386}
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -319,15 +492,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+<<<<<<< HEAD
 --- !u!33 &800429494
+=======
+--- !u!33 &162904390
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 800429490}
   m_Mesh: {fileID: 4300000, guid: c21de98cfbdc64042aaf2bdd8076dee4, type: 2}
 --- !u!1 &978671102
+=======
+  m_GameObject: {fileID: 162904386}
+  m_Mesh: {fileID: 4300000, guid: c303b542ce2332348a4583109c47d940, type: 2}
+--- !u!1 &164901099
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -335,23 +518,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 978671103}
   - component: {fileID: 978671106}
   - component: {fileID: 978671105}
   - component: {fileID: 978671104}
   m_Layer: 0
   m_Name: 2593
+=======
+  - component: {fileID: 164901100}
+  - component: {fileID: 164901103}
+  - component: {fileID: 164901102}
+  - component: {fileID: 164901101}
+  m_Layer: 0
+  m_Name: 2515b
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &978671103
+=======
+--- !u!4 &164901100
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 978671102}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: -0.5, z: 0.5, w: -0.5}
@@ -362,29 +559,58 @@ Transform:
   m_Father: {fileID: 1768352971}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &978671104
+=======
+  m_GameObject: {fileID: 164901099}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -120, y: 46, z: 200}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1515830853}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &164901101
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 978671102}
+=======
+  m_GameObject: {fileID: 164901099}
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 23763c1ea948ad5c5ac8a5c6b1011e05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   memoText: "PROPER ROTATION MATRIX : \n2593\ntrs : 0.00000\t0.00000\t-1.00000\t100.00000\n-1.00000\t0.00000\t0.00000\t-22.00000\n0.00000\t1.00000\t0.00000\t0.00000\n0.00000\t0.00000\t0.00000\t1.00000\n\n 
     rotationMat : \nDenseMatrix 3x3-Double\r\n 0  0  -1\r\n-1  0   0\r\n 0  1   0\r\n\n 
     normalized_m : \n0, 0, -1\n-1, 0, 0\n0, 1, 0\n  quaternion : (-0.5, -0.5, -0.5,
     0.5)\n  rotation : \n(-0.50000, -0.50000, 0.50000, -0.50000)\n  rotate X : 90 
     / Y : 90  / Z : 0"
 --- !u!23 &978671105
+=======
+  memoText: "PROPER ROTATION MATRIX : \n2515b\nTrs : \n0.00000\t0.00000\t1.00000\t0.00000\n0.00000\t1.00000\t0.00000\t0.00000\n-1.00000\t0.00000\t0.00000\t0.00000\n0.00000\t0.00000\t0.00000\t1.00000\n\n 
+    rotationMat : \nDenseMatrix 3x3-Double\n 0  0  1\n 0  1  0\n-1  0  0\n\n  normalized_m
+    : \n0, 0, 1\n0, 1, 0\n-1, 0, 0\n  quaternion : (0.707106781186548, 0, 0.707106781186547,
+    0)\n  rotation : \n(0.00000, 0.70711, 0.00000, 0.70711)\n  rotate X : 0  / Y
+    : 90  / Z : 0"
+--- !u!23 &164901102
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 978671102}
+=======
+  m_GameObject: {fileID: 164901099}
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -423,15 +649,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+<<<<<<< HEAD
 --- !u!33 &978671106
+=======
+--- !u!33 &164901103
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 978671102}
   m_Mesh: {fileID: 4300000, guid: c21de98cfbdc64042aaf2bdd8076dee4, type: 2}
 --- !u!1 &980803594
+=======
+  m_GameObject: {fileID: 164901099}
+  m_Mesh: {fileID: 0}
+--- !u!1 &305345423
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -439,23 +675,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 980803595}
   - component: {fileID: 980803598}
   - component: {fileID: 980803597}
   - component: {fileID: 980803596}
   m_Layer: 0
   m_Name: 5841
+=======
+  - component: {fileID: 305345424}
+  - component: {fileID: 305345427}
+  - component: {fileID: 305345426}
+  - component: {fileID: 305345425}
+  m_Layer: 0
+  m_Name: 2515b
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &980803595
+=======
+--- !u!4 &305345424
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 980803594}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
@@ -466,29 +716,58 @@ Transform:
   m_Father: {fileID: 1009511052}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &980803596
+=======
+  m_GameObject: {fileID: 305345423}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 120, y: 46, z: 200}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1249101501}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &305345425
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 980803594}
+=======
+  m_GameObject: {fileID: 305345423}
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 23763c1ea948ad5c5ac8a5c6b1011e05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   memoText: "PROPER ROTATION MATRIX : \n5841\ntrs : 0.00000\t0.00000\t1.00000\t230.00000\n0.00000\t1.00000\t0.00000\t-24.00000\n-1.00000\t0.00000\t0.00000\t20.00000\n0.00000\t0.00000\t0.00000\t1.00000\n\n 
     rotationMat : \nDenseMatrix 3x3-Double\r\n 0  0  1\r\n 0  1  0\r\n-1  0  0\r\n\n 
     normalized_m : \n0, 0, 1\n0, 1, 0\n-1, 0, 0\n  quaternion : (0.707106781186548,
     0, 0.707106781186547, 0)\n  rotation : \n(0.00000, 0.70711, 0.00000, 0.70711)\n 
     rotate X : 0  / Y : 90  / Z : 0"
 --- !u!23 &980803597
+=======
+  memoText: "PROPER ROTATION MATRIX : \n2515b\nTrs : \n0.00000\t0.00000\t-1.00000\t0.00000\n0.00000\t1.00000\t0.00000\t0.00000\n1.00000\t0.00000\t0.00000\t0.00000\n0.00000\t0.00000\t0.00000\t1.00000\n\n 
+    rotationMat : \nDenseMatrix 3x3-Double\n0  0  -1\n0  1   0\n1  0   0\n\n  normalized_m
+    : \n0, 0, -1\n0, 1, 0\n1, 0, 0\n  quaternion : (0.707106781186548, 0, -0.707106781186547,
+    0)\n  rotation : \n(0.00000, -0.70711, 0.00000, 0.70711)\n  rotate X : 0  / Y
+    : 270  / Z : 0"
+--- !u!23 &305345426
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 980803594}
+=======
+  m_GameObject: {fileID: 305345423}
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -505,7 +784,11 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+<<<<<<< HEAD
   - {fileID: 2100000, guid: 759a0932dbc5db342b0eaaebee31944e, type: 2}
+=======
+  - {fileID: 2100000, guid: 99296ed922b3d6e4f830b8c630cc1dfb, type: 2}
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -527,15 +810,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+<<<<<<< HEAD
 --- !u!33 &980803598
+=======
+--- !u!33 &305345427
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 980803594}
   m_Mesh: {fileID: 4300000, guid: a2b812b8ab93e5b47ac5912af9047994, type: 2}
 --- !u!1 &1009511050
+=======
+  m_GameObject: {fileID: 305345423}
+  m_Mesh: {fileID: 4300000, guid: c303b542ce2332348a4583109c47d940, type: 2}
+--- !u!1 &330597754
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -543,8 +836,220 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1009511052}
   - component: {fileID: 1009511051}
+=======
+  - component: {fileID: 330597755}
+  - component: {fileID: 330597758}
+  - component: {fileID: 330597757}
+  - component: {fileID: 330597756}
+  m_Layer: 0
+  m_Name: 2593
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &330597755
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330597754}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: -100, y: 22, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1515830853}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &330597756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330597754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23763c1ea948ad5c5ac8a5c6b1011e05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  memoText: "PROPER ROTATION MATRIX : \n2593\nTrs : \n0.00000\t0.00000\t1.00000\t0.00000\n1.00000\t0.00000\t0.00000\t0.00000\n0.00000\t1.00000\t0.00000\t0.00000\n0.00000\t0.00000\t0.00000\t1.00000\n\n 
+    rotationMat : \nDenseMatrix 3x3-Double\n0  0  1\n1  0  0\n0  1  0\n\n  normalized_m
+    : \n0, 0, 1\n1, 0, 0\n0, 1, 0\n  quaternion : (0.5, 0.5, 0.5, 0.5)\n  rotation
+    : \n(0.50000, 0.50000, 0.50000, 0.50000)\n  rotate X : 0  / Y : 90  / Z : 90"
+--- !u!23 &330597757
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330597754}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 99296ed922b3d6e4f830b8c630cc1dfb, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &330597758
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330597754}
+  m_Mesh: {fileID: 0}
+--- !u!1 &715719195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 715719196}
+  - component: {fileID: 715719199}
+  - component: {fileID: 715719198}
+  - component: {fileID: 715719197}
+  m_Layer: 0
+  m_Name: 2593
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &715719196
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715719195}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 100, y: 22, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1515830853}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &715719197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715719195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23763c1ea948ad5c5ac8a5c6b1011e05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  memoText: "PROPER ROTATION MATRIX : \n2593\nTrs : \n0.00000\t0.00000\t-1.00000\t0.00000\n1.00000\t0.00000\t0.00000\t0.00000\n0.00000\t-1.00000\t0.00000\t0.00000\n0.00000\t0.00000\t0.00000\t1.00000\n\n 
+    rotationMat : \nDenseMatrix 3x3-Double\n0   0  -1\n1   0   0\n0  -1   0\n\n 
+    normalized_m : \n0, 0, -1\n1, 0, 0\n0, -1, 0\n  quaternion : (0.5, -0.5, 0.5,
+    0.5)\n  rotation : \n(-0.50000, 0.50000, 0.50000, 0.50000)\n  rotate X : 270 
+    / Y : 90  / Z : 0"
+--- !u!23 &715719198
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715719195}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 99296ed922b3d6e4f830b8c630cc1dfb, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &715719199
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715719195}
+  m_Mesh: {fileID: 0}
+--- !u!1 &859268630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 859268632}
+  - component: {fileID: 859268631}
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
   m_Layer: 0
   m_Name: 001-test
   m_TagString: Untagged
@@ -552,39 +1057,327 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!114 &1009511051
+=======
+--- !u!114 &859268631
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1009511050}
+=======
+  m_GameObject: {fileID: 859268630}
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 23763c1ea948ad5c5ac8a5c6b1011e05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   memoText: "PROPER ROTATION MATRIX : \n001-test\ntrs : 0.01000\t0.00000\t0.00000\t0.00000\n0.00000\t0.01000\t0.00000\t0.00000\n0.00000\t0.00000\t0.01000\t0.00000\n0.00000\t0.00000\t0.00000\t1.00000\n\n 
     rotationMat : \nDenseMatrix 3x3-Double\r\n1  0  0\r\n0  1  0\r\n0  0  1\r\n\n 
     normalized_m : \n1, 0, 0\n0, 1, 0\n0, 0, 1\n  quaternion : (1, 0, 0, 0)\n  rotation
     : \n(0.00000, 0.00000, 0.00000, 1.00000)\n  rotate X : 0  / Y : 0  / Z : 0"
 --- !u!4 &1009511052
+=======
+  memoText: "PROPER ROTATION MATRIX : \n001-test\nTrs : \n0.01000\t0.00000\t0.00000\t0.00000\n0.00000\t0.01000\t0.00000\t0.00000\n0.00000\t0.00000\t0.01000\t0.00000\n0.00000\t0.00000\t0.00000\t1.00000\n\n 
+    rotationMat : \nDenseMatrix 3x3-Double\n1  0  0\n0  1  0\n0  0  1\n\n  normalized_m
+    : \n1, 0, 0\n0, 1, 0\n0, 0, 1\n  quaternion : (1, 0, 0, 0)\n  rotation : \n(0.00000,
+    0.00000, 0.00000, 1.00000)\n  rotate X : 0  / Y : 0  / Z : 0"
+--- !u!4 &859268632
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1009511050}
+=======
+  m_GameObject: {fileID: 859268630}
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: -0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children:
+<<<<<<< HEAD
   - {fileID: 1768352971}
   - {fileID: 980803595}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+  - {fileID: 1249101501}
+  - {fileID: 1827602030}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &924961177
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 924961178}
+  - component: {fileID: 924961181}
+  - component: {fileID: 924961180}
+  - component: {fileID: 924961179}
+  m_Layer: 0
+  m_Name: 2593
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &924961178
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924961177}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: -100, y: 22, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1249101501}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &924961179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924961177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23763c1ea948ad5c5ac8a5c6b1011e05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  memoText: "PROPER ROTATION MATRIX : \n2593\nTrs : \n0.00000\t0.00000\t1.00000\t0.00000\n1.00000\t0.00000\t0.00000\t0.00000\n0.00000\t1.00000\t0.00000\t0.00000\n0.00000\t0.00000\t0.00000\t1.00000\n\n 
+    rotationMat : \nDenseMatrix 3x3-Double\n0  0  1\n1  0  0\n0  1  0\n\n  normalized_m
+    : \n0, 0, 1\n1, 0, 0\n0, 1, 0\n  quaternion : (0.5, 0.5, 0.5, 0.5)\n  rotation
+    : \n(0.50000, 0.50000, 0.50000, 0.50000)\n  rotate X : 0  / Y : 90  / Z : 90"
+--- !u!23 &924961180
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924961177}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 99296ed922b3d6e4f830b8c630cc1dfb, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &924961181
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924961177}
+  m_Mesh: {fileID: 4300000, guid: ef397e8be6fb2e54b9ea5b3024d18641, type: 2}
+--- !u!1 &1104624194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1104624195}
+  - component: {fileID: 1104624198}
+  - component: {fileID: 1104624197}
+  - component: {fileID: 1104624196}
+  m_Layer: 0
+  m_Name: 6118
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1104624195
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104624194}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7071068, y: -0, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: 70, y: 6, z: -160}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1249101501}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1104624196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104624194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23763c1ea948ad5c5ac8a5c6b1011e05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  memoText: "PROPER ROTATION MATRIX : \n6118\nTrs : \n0.00000\t0.00000\t-1.00000\t0.00000\n0.00000\t-1.00000\t0.00000\t0.00000\n-1.00000\t0.00000\t0.00000\t0.00000\n0.00000\t0.00000\t0.00000\t1.00000\n\n 
+    rotationMat : \nDenseMatrix 3x3-Double\n 0   0  -1\n 0  -1   0\n-1   0   0\n\n 
+    normalized_m : \n0, 0, -1\n0, -1, 0\n-1, 0, 0\n  quaternion : (0, -0.707106781186547,
+    0, 0.707106781186548)\n  rotation : \n(-0.70711, 0.00000, 0.70711, 0.00000)\n 
+    rotate X : 0  / Y : 270  / Z : 180"
+--- !u!23 &1104624197
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104624194}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 99296ed922b3d6e4f830b8c630cc1dfb, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1104624198
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104624194}
+  m_Mesh: {fileID: 4300000, guid: 89ca70a2c9b6fab86af386b7508c1f01, type: 2}
+--- !u!1 &1249101500
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1249101501}
+  - component: {fileID: 1249101502}
+  m_Layer: 0
+  m_Name: 001-Vehicle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1249101501
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249101500}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1104624195}
+  - {fileID: 1695342601}
+  - {fileID: 924961178}
+  - {fileID: 305345424}
+  - {fileID: 162904387}
+  - {fileID: 28993718}
+  m_Father: {fileID: 859268632}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1249101502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249101500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23763c1ea948ad5c5ac8a5c6b1011e05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  memoText: "PROPER ROTATION MATRIX : \n001-Vehicle\nTrs : \n1.00000\t0.00000\t0.00000\t0.00000\n0.00000\t1.00000\t0.00000\t0.00000\n0.00000\t0.00000\t1.00000\t0.00000\n0.00000\t0.00000\t0.00000\t1.00000\n\n 
+    rotationMat : \nDenseMatrix 3x3-Double\n1  0  0\n0  1  0\n0  0  1\n\n  normalized_m
+    : \n1, 0, 0\n0, 1, 0\n0, 0, 1\n  quaternion : (1, 0, 0, 0)\n  rotation : \n(0.00000,
+    0.00000, 0.00000, 1.00000)\n  rotate X : 0  / Y : 0  / Z : 0"
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 --- !u!1 &1263748213
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,7 +1475,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+<<<<<<< HEAD
 --- !u!1 &1277774087
+=======
+--- !u!1 &1515830852
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -690,23 +1487,35 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1277774088}
   - component: {fileID: 1277774091}
   - component: {fileID: 1277774090}
   - component: {fileID: 1277774089}
   m_Layer: 0
   m_Name: 2515b
+=======
+  - component: {fileID: 1515830853}
+  - component: {fileID: 1515830854}
+  m_Layer: 0
+  m_Name: 001-Vehicle
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &1277774088
+=======
+--- !u!4 &1515830853
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1277774087}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
@@ -717,17 +1526,40 @@ Transform:
   m_Father: {fileID: 1768352971}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1277774089
+=======
+  m_GameObject: {fileID: 1515830852}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1836149190}
+  - {fileID: 38943950}
+  - {fileID: 715719196}
+  - {fileID: 330597755}
+  - {fileID: 1573278028}
+  - {fileID: 164901100}
+  m_Father: {fileID: 1940370284}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1515830854
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1277774087}
+=======
+  m_GameObject: {fileID: 1515830852}
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 23763c1ea948ad5c5ac8a5c6b1011e05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   memoText: "PROPER ROTATION MATRIX : \n2515b\ntrs : 0.00000\t0.00000\t-1.00000\t120.00000\n0.00000\t1.00000\t0.00000\t-46.00000\n1.00000\t0.00000\t0.00000\t200.00000\n0.00000\t0.00000\t0.00000\t1.00000\n\n 
     rotationMat : \nDenseMatrix 3x3-Double\r\n0  0  -1\r\n0  1   0\r\n1  0   0\r\n\n 
     normalized_m : \n0, 0, -1\n0, 1, 0\n1, 0, 0\n  quaternion : (0.707106781186548,
@@ -786,6 +1618,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1277774087}
   m_Mesh: {fileID: 4300000, guid: 7efb0f64050240f47beba8b299c6d253, type: 2}
+=======
+  memoText: "PROPER ROTATION MATRIX : \n001-Vehicle\nTrs : \n1.00000\t0.00000\t0.00000\t0.00000\n0.00000\t1.00000\t0.00000\t0.00000\n0.00000\t0.00000\t1.00000\t0.00000\n0.00000\t0.00000\t0.00000\t1.00000\n\n 
+    rotationMat : \nDenseMatrix 3x3-Double\n1  0  0\n0  1  0\n0  0  1\n\n  normalized_m
+    : \n1, 0, 0\n0, 1, 0\n0, 0, 1\n  quaternion : (1, 0, 0, 0)\n  rotation : \n(0.00000,
+    0.00000, 0.00000, 1.00000)\n  rotate X : 0  / Y : 0  / Z : 0"
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 --- !u!1 &1535534062
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,7 +1716,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &1768352970
+=======
+--- !u!1 &1573278027
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -886,21 +1728,33 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1768352971}
   - component: {fileID: 1768352972}
+=======
+  - component: {fileID: 1573278028}
+  - component: {fileID: 1573278031}
+  - component: {fileID: 1573278030}
+  - component: {fileID: 1573278029}
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
   m_Layer: 0
-  m_Name: 001-Vehicle
+  m_Name: 2515b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &1768352971
+=======
+--- !u!4 &1573278028
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1768352970}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
@@ -967,29 +1821,58 @@ Transform:
   m_Father: {fileID: 1768352971}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1795025956
+=======
+  m_GameObject: {fileID: 1573278027}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 120, y: 46, z: 200}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1515830853}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1573278029
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1795025954}
+=======
+  m_GameObject: {fileID: 1573278027}
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 23763c1ea948ad5c5ac8a5c6b1011e05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   memoText: "PROPER ROTATION MATRIX : \n6118\ntrs : 0.00000\t0.00000\t-1.00000\t70.00000\n0.00000\t-1.00000\t0.00000\t-6.00000\n-1.00000\t0.00000\t0.00000\t-160.00000\n0.00000\t0.00000\t0.00000\t1.00000\n\n 
     rotationMat : \nDenseMatrix 3x3-Double\r\n 0   0  -1\r\n 0  -1   0\r\n-1   0  
     0\r\n\n  normalized_m : \n0, 0, -1\n0, -1, 0\n-1, 0, 0\n  quaternion : (0, -0.707106781186547,
     0, 0.707106781186548)\n  rotation : \n(-0.70711, 0.00000, 0.70711, 0.00000)\n 
     rotate X : 0  / Y : 270  / Z : 180"
 --- !u!23 &1795025957
+=======
+  memoText: "PROPER ROTATION MATRIX : \n2515b\nTrs : \n0.00000\t0.00000\t-1.00000\t0.00000\n0.00000\t1.00000\t0.00000\t0.00000\n1.00000\t0.00000\t0.00000\t0.00000\n0.00000\t0.00000\t0.00000\t1.00000\n\n 
+    rotationMat : \nDenseMatrix 3x3-Double\n0  0  -1\n0  1   0\n1  0   0\n\n  normalized_m
+    : \n0, 0, -1\n0, 1, 0\n1, 0, 0\n  quaternion : (0.707106781186548, 0, -0.707106781186547,
+    0)\n  rotation : \n(0.00000, -0.70711, 0.00000, 0.70711)\n  rotate X : 0  / Y
+    : 270  / Z : 0"
+--- !u!23 &1573278030
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1795025954}
+=======
+  m_GameObject: {fileID: 1573278027}
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -1028,15 +1911,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+<<<<<<< HEAD
 --- !u!33 &1795025958
+=======
+--- !u!33 &1573278031
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1795025954}
   m_Mesh: {fileID: 4300000, guid: da5c49a0818df164295b8d60ae22c1d9, type: 2}
 --- !u!1 &1813705175
+=======
+  m_GameObject: {fileID: 1573278027}
+  m_Mesh: {fileID: 0}
+--- !u!1 &1695342600
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1044,10 +1937,17 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1813705176}
   - component: {fileID: 1813705179}
   - component: {fileID: 1813705178}
   - component: {fileID: 1813705177}
+=======
+  - component: {fileID: 1695342601}
+  - component: {fileID: 1695342604}
+  - component: {fileID: 1695342603}
+  - component: {fileID: 1695342602}
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
   m_Layer: 0
   m_Name: 6118
   m_TagString: Untagged
@@ -1055,12 +1955,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &1813705176
+=======
+--- !u!4 &1695342601
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1813705175}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0.7071068, w: 0}
@@ -1071,29 +1976,58 @@ Transform:
   m_Father: {fileID: 1768352971}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1813705177
+=======
+  m_GameObject: {fileID: 1695342600}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: -0, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: -70, y: 6, z: -160}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1249101501}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1695342602
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1813705175}
+=======
+  m_GameObject: {fileID: 1695342600}
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 23763c1ea948ad5c5ac8a5c6b1011e05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   memoText: "PROPER ROTATION MATRIX : \n6118\ntrs : 0.00000\t0.00000\t1.00000\t-70.00000\n0.00000\t-1.00000\t0.00000\t-6.00000\n1.00000\t0.00000\t0.00000\t-160.00000\n0.00000\t0.00000\t0.00000\t1.00000\n\n 
     rotationMat : \nDenseMatrix 3x3-Double\r\n0   0  1\r\n0  -1  0\r\n1   0  0\r\n\n 
     normalized_m : \n0, 0, 1\n0, -1, 0\n1, 0, 0\n  quaternion : (0, 0.707106781186547,
     0, 0.707106781186548)\n  rotation : \n(0.70711, 0.00000, 0.70711, 0.00000)\n 
     rotate X : 0  / Y : 90  / Z : 180"
 --- !u!23 &1813705178
+=======
+  memoText: "PROPER ROTATION MATRIX : \n6118\nTrs : \n0.00000\t0.00000\t1.00000\t0.00000\n0.00000\t-1.00000\t0.00000\t0.00000\n1.00000\t0.00000\t0.00000\t0.00000\n0.00000\t0.00000\t0.00000\t1.00000\n\n 
+    rotationMat : \nDenseMatrix 3x3-Double\n0   0  1\n0  -1  0\n1   0  0\n\n  normalized_m
+    : \n0, 0, 1\n0, -1, 0\n1, 0, 0\n  quaternion : (0, 0.707106781186547, 0, 0.707106781186548)\n 
+    rotation : \n(0.70711, 0.00000, 0.70711, 0.00000)\n  rotate X : 0  / Y : 90 
+    / Z : 180"
+--- !u!23 &1695342603
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1813705175}
+=======
+  m_GameObject: {fileID: 1695342600}
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -1132,18 +2066,498 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+<<<<<<< HEAD
 --- !u!33 &1813705179
+=======
+--- !u!33 &1695342604
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1813705175}
   m_Mesh: {fileID: 4300000, guid: da5c49a0818df164295b8d60ae22c1d9, type: 2}
+=======
+  m_GameObject: {fileID: 1695342600}
+  m_Mesh: {fileID: 4300000, guid: 89ca70a2c9b6fab86af386b7508c1f01, type: 2}
+--- !u!1 &1827602029
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1827602030}
+  - component: {fileID: 1827602033}
+  - component: {fileID: 1827602032}
+  - component: {fileID: 1827602031}
+  m_Layer: 0
+  m_Name: 5841
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1827602030
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827602029}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 230, y: 24, z: 20}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 859268632}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1827602031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827602029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23763c1ea948ad5c5ac8a5c6b1011e05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  memoText: "PROPER ROTATION MATRIX : \n5841\nTrs : \n0.00000\t0.00000\t1.00000\t0.00000\n0.00000\t1.00000\t0.00000\t0.00000\n-1.00000\t0.00000\t0.00000\t0.00000\n0.00000\t0.00000\t0.00000\t1.00000\n\n 
+    rotationMat : \nDenseMatrix 3x3-Double\n 0  0  1\n 0  1  0\n-1  0  0\n\n  normalized_m
+    : \n0, 0, 1\n0, 1, 0\n-1, 0, 0\n  quaternion : (0.707106781186548, 0, 0.707106781186547,
+    0)\n  rotation : \n(0.00000, 0.70711, 0.00000, 0.70711)\n  rotate X : 0  / Y
+    : 90  / Z : 0"
+--- !u!23 &1827602032
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827602029}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 759a0932dbc5db342b0eaaebee31944e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1827602033
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827602029}
+  m_Mesh: {fileID: 4300000, guid: 6bcca5d298e0cb3b1aed8cd0aa5cc23e, type: 2}
+--- !u!1 &1836149189
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1836149190}
+  - component: {fileID: 1836149193}
+  - component: {fileID: 1836149192}
+  - component: {fileID: 1836149191}
+  m_Layer: 0
+  m_Name: 6118
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1836149190
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836149189}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7071068, y: -0, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: 70, y: 6, z: -160}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1515830853}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1836149191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836149189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23763c1ea948ad5c5ac8a5c6b1011e05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  memoText: "PROPER ROTATION MATRIX : \n6118\nTrs : \n0.00000\t0.00000\t-1.00000\t0.00000\n0.00000\t-1.00000\t0.00000\t0.00000\n-1.00000\t0.00000\t0.00000\t0.00000\n0.00000\t0.00000\t0.00000\t1.00000\n\n 
+    rotationMat : \nDenseMatrix 3x3-Double\n 0   0  -1\n 0  -1   0\n-1   0   0\n\n 
+    normalized_m : \n0, 0, -1\n0, -1, 0\n-1, 0, 0\n  quaternion : (0, -0.707106781186547,
+    0, 0.707106781186548)\n  rotation : \n(-0.70711, 0.00000, 0.70711, 0.00000)\n 
+    rotate X : 0  / Y : 270  / Z : 180"
+--- !u!23 &1836149192
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836149189}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 99296ed922b3d6e4f830b8c630cc1dfb, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1836149193
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836149189}
+  m_Mesh: {fileID: 0}
+--- !u!1 &1906905526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1906905527}
+  - component: {fileID: 1906905530}
+  - component: {fileID: 1906905529}
+  - component: {fileID: 1906905528}
+  m_Layer: 0
+  m_Name: 5841
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1906905527
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906905526}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 230, y: 24, z: 20}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1940370284}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1906905528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906905526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23763c1ea948ad5c5ac8a5c6b1011e05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  memoText: "PROPER ROTATION MATRIX : \n5841\nTrs : \n0.00000\t0.00000\t1.00000\t0.00000\n0.00000\t1.00000\t0.00000\t0.00000\n-1.00000\t0.00000\t0.00000\t0.00000\n0.00000\t0.00000\t0.00000\t1.00000\n\n 
+    rotationMat : \nDenseMatrix 3x3-Double\n 0  0  1\n 0  1  0\n-1  0  0\n\n  normalized_m
+    : \n0, 0, 1\n0, 1, 0\n-1, 0, 0\n  quaternion : (0.707106781186548, 0, 0.707106781186547,
+    0)\n  rotation : \n(0.00000, 0.70711, 0.00000, 0.70711)\n  rotate X : 0  / Y
+    : 90  / Z : 0"
+--- !u!23 &1906905529
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906905526}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 759a0932dbc5db342b0eaaebee31944e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1906905530
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906905526}
+  m_Mesh: {fileID: 0}
+--- !u!1 &1940370282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1940370284}
+  - component: {fileID: 1940370283}
+  m_Layer: 0
+  m_Name: 001-test
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1940370283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940370282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23763c1ea948ad5c5ac8a5c6b1011e05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  memoText: "PROPER ROTATION MATRIX : \n001-test\nTrs : \n0.01000\t0.00000\t0.00000\t0.00000\n0.00000\t0.01000\t0.00000\t0.00000\n0.00000\t0.00000\t0.01000\t0.00000\n0.00000\t0.00000\t0.00000\t1.00000\n\n 
+    rotationMat : \nDenseMatrix 3x3-Double\n1  0  0\n0  1  0\n0  0  1\n\n  normalized_m
+    : \n1, 0, 0\n0, 1, 0\n0, 0, 1\n  quaternion : (1, 0, 0, 0)\n  rotation : \n(0.00000,
+    0.00000, 0.00000, 1.00000)\n  rotate X : 0  / Y : 0  / Z : 0"
+--- !u!4 &1940370284
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940370282}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: -0.01, y: 0.01, z: 0.01}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1515830853}
+  - {fileID: 1906905527}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2014029711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2014029712}
+  - component: {fileID: 2014029715}
+  - component: {fileID: 2014029714}
+  - component: {fileID: 2014029713}
+  m_Layer: 0
+  m_Name: 2593
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2014029712
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014029711}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.83371884, y: -0.20158397, z: 0.4759103, w: 0.19438705}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 28993718}
+  m_LocalEulerAnglesHint: {x: -7.6, y: -118.4, z: 148.28}
+--- !u!114 &2014029713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014029711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23763c1ea948ad5c5ac8a5c6b1011e05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  memoText: "PROPER ROTATION MATRIX : \n2593\nTrs : \n0.00000\t0.00000\t-1.00000\t0.00000\n1.00000\t0.00000\t0.00000\t0.00000\n0.00000\t-1.00000\t0.00000\t0.00000\n0.00000\t0.00000\t0.00000\t1.00000\n\n 
+    rotationMat : \nDenseMatrix 3x3-Double\n0   0  -1\n1   0   0\n0  -1   0\n\n 
+    normalized_m : \n0, 0, -1\n1, 0, 0\n0, -1, 0\n  quaternion : (0.5, -0.5, 0.5,
+    0.5)\n  rotation : \n(-0.50000, 0.50000, 0.50000, 0.50000)\n  rotate X : 270 
+    / Y : 90  / Z : 0"
+--- !u!23 &2014029714
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014029711}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 99296ed922b3d6e4f830b8c630cc1dfb, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2014029715
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014029711}
+  m_Mesh: {fileID: 4300000, guid: ef397e8be6fb2e54b9ea5b3024d18641, type: 2}
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1535534065}
   - {fileID: 1263748215}
+<<<<<<< HEAD
   - {fileID: 1009511052}
+=======
+  - {fileID: 1940370284}
+  - {fileID: 859268632}
+>>>>>>> 9d27eed8ce83f4ed56d6a315f55202c73f366173

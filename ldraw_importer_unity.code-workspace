@@ -10,5 +10,12 @@
 	"settings": {
 		"dotnet.defaultSolution": "ldraw_importer_unity.sln",
 		"dotnet.preferCSharpExtension": true
-	}
+	},
+	"search.followSymlinks": false,
+    "files.watcherExclude": {
+        "/media/cytrix/usbdata1/project/**": true
+    },
+    "search.exclude": {
+        "/media/cytrix/usbdata1/project/**": true
+    }
 }
