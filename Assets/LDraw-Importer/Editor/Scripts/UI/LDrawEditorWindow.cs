@@ -84,6 +84,19 @@ namespace LDraw
                 var go = model.CreateMeshGameObject(LDrawConfig.Instance.ScaleMatrix);
                 go.transform.LocalReflect(Vector3.up);
             }
+			if(GUILayout.Button("Test Value")) {
+				Debug.Log("Test Value");
+
+				// get current selected object
+				var selectedObject = Selection.activeGameObject;
+				if(selectedObject != null) {
+					Debug.Log("selectedObject : " + selectedObject);
+
+					Debug.Log("selectedObject.transform.position : " + 
+						selectedObject.transform.localToWorldMatrix );
+
+				}
+			}
         }
         private enum GeneratingType
         {
